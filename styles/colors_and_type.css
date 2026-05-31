@@ -1,0 +1,339 @@
+/* Moyee Coffee — Colors & Type
+ * The single source of truth for brand visual primitives.
+ * Source: Brand Book 2025 + the project's reference/ folder.
+ *
+ * Import once in your <head>:
+ *   <link rel="stylesheet" href="colors_and_type.css">
+ *
+ * Then write hex codes via tokens (--color-pink), never as literals.
+ */
+
+/* ─── Fonts ─────────────────────────────────────────────────────── */
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&family=Roboto+Condensed:ital,wght@0,400;0,500;0,700;1,400&display=swap');
+
+:root {
+  /* ─── Primary brand colors ──────────────────────────────── */
+  --color-pink:          #E5007D;  /* Moyee Pink. Pantone 213 C. Utility accent */
+  --color-anthracite:    #272727;  /* Pantone 419 CP. Manifesto background, footer */
+
+  /* ─── Secondary brand colors ────────────────────────────── */
+  --color-yellow:        #FFD900;  /* Pantone P 4-8 C. Manifesto accent */
+  --color-creme:         #EEECE1;  /* Pantone P 3-9 C. Soft sections, footer logo */
+  --color-fairchain:     #5D6882;  /* Pantone P 108-13 U. Infographics only */
+
+  /* ─── Canvas + text ─────────────────────────────────────── */
+  --color-canvas:        #FFFFFF;  /* Utility background */
+  --color-ink:           #212529;  /* Body text, utility headings */
+
+  /* ─── Support ───────────────────────────────────────────── */
+  --color-rose-tint:     #F2DAE6;  /* Passive info blocks (utility) */
+  --color-bordeaux:      #840048;  /* Pink hover only — never standalone */
+
+  /* ─── Packaging (brand identity per blend) ──────────────── */
+  --color-pkg-double:    #519E59;  /* Double */
+  --color-pkg-triple:    #501644;  /* Triple */
+  --color-pkg-single:    #292C7E;  /* Single Origin */
+  --color-pkg-dark:      #292C2C;  /* Dark */
+
+  /* ─── Greyscale (utility UI only) ───────────────────────── */
+  --color-grey-50:       #F8F9FA;
+  --color-grey-100:      #F1F3F5;
+  --color-grey-200:      #E9ECEF;
+  --color-grey-300:      #DEE2E6;
+  --color-grey-400:      #CED4DA;
+  --color-grey-500:      #ADB5BD;
+  --color-grey-600:      #868E96;
+  --color-grey-700:      #495057;
+  --color-grey-800:      #343A40;
+
+  /* ─── Semantic aliases ──────────────────────────────────── */
+  --fg-primary:          var(--color-ink);
+  --fg-inverse:          var(--color-canvas);
+  --fg-muted:            var(--color-grey-600);
+  --fg-link:             var(--color-pink);
+  --fg-link-hover:       var(--color-bordeaux);
+  --fg-on-manifesto:     var(--color-canvas);
+  --fg-manifesto-accent: var(--color-yellow);
+
+  --bg-primary:          var(--color-canvas);
+  --bg-manifesto:        var(--color-anthracite);
+  --bg-info:             var(--color-rose-tint);
+  --bg-soft:             var(--color-creme);
+
+  --border-default:      var(--color-grey-300);
+  --border-strong:       var(--color-ink);
+
+  /* ─── Type families ─────────────────────────────────────── */
+  --font-display:        'Oswald', 'Arial Narrow', sans-serif;
+  --font-body:           'Roboto Condensed', 'Arial Narrow', sans-serif;
+  /* (Logo wordmark is a separate licensed script font. Never typed — use PNG.) */
+
+  --weight-regular:      400;
+  --weight-medium:       500;
+  --weight-semi:         600;
+  --weight-bold:         700;
+
+  /* ─── Type scale ────────────────────────────────────────── */
+  /* Manifesto scale — big, uppercase, condensed */
+  --text-hero:           clamp(48px, 8vw, 120px);   /* H1 hero */
+  --text-h1-m:           clamp(40px, 5vw, 72px);    /* manifesto H1 */
+  --text-h2-m:           clamp(28px, 4vw, 48px);    /* manifesto H2 */
+  --text-stat:           clamp(56px, 8vw, 120px);   /* big stat number */
+
+  /* Utility scale — sentence case, comfortable */
+  --text-h1-u:           clamp(28px, 3vw, 40px);
+  --text-h2-u:           clamp(22px, 2.5vw, 36px);
+  --text-h3-u:           clamp(18px, 2vw, 28px);
+  --text-body-lg:        1.125rem; /* 18px */
+  --text-body:           1rem;     /* 16px */
+  --text-nav:            1.125rem; /* 18px */
+  --text-label:          0.875rem; /* 14px */
+  --text-caption:        0.75rem;  /* 12px */
+  --text-btn:            1rem;     /* 16px */
+
+  --leading-tight:       1.05;
+  --leading-snug:        1.2;
+  --leading-normal:      1.5;
+  --leading-loose:       1.65;
+  --tracking-tight:      -0.01em;
+  --tracking-normal:     0;
+  --tracking-wide:       0.06em;
+  --tracking-wider:      0.1em;
+
+  /* ─── Spacing ───────────────────────────────────────────── */
+  --space-1: 4px;   --space-2: 8px;   --space-3: 12px;
+  --space-4: 16px;  --space-5: 24px;  --space-6: 32px;
+  --space-7: 48px;  --space-8: 64px;  --space-9: 80px; --space-10: 120px;
+  --container-max:       1200px;
+  --container-xxl:       1400px;
+  --section-pad-u:       var(--space-9);
+  --section-pad-m:       var(--space-10);
+
+  /* ─── Radius ────────────────────────────────────────────── */
+  --radius-none:         0px;   /* manifesto — strict */
+  --radius-sm:           4px;   /* utility buttons, inputs */
+  --radius-md:           6px;   /* utility cards */
+  --radius-lg:           8px;   /* info blocks, account cards */
+  --radius-pill:         9999px;
+
+  /* ─── Shadows (utility-only) ────────────────────────────── */
+  --shadow-sm:           0 1px 4px rgba(0, 0, 0, 0.08);
+  --shadow-md:           0 2px 8px rgba(0, 0, 0, 0.10);
+  --shadow-lg:           0 4px 16px rgba(0, 0, 0, 0.12);
+  --shadow-xl:           0 8px 32px rgba(0, 0, 0, 0.16);
+
+  /* ─── Motion ────────────────────────────────────────────── */
+  --duration-fast:       160ms;
+  --duration-base:       240ms;
+  --duration-slow:       480ms;
+  --ease-out:            cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in-out:         cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ─── Element defaults ────────────────────────────────────────── */
+
+html {
+  font-family: var(--font-body);
+  font-size: 16px;
+  color: var(--fg-primary);
+  background: var(--bg-primary);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  font-size: var(--text-body);
+  line-height: var(--leading-normal);
+  color: var(--fg-primary);
+  background: var(--bg-primary);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display);
+  font-weight: var(--weight-medium);
+  line-height: var(--leading-tight);
+  margin: 0;
+  color: inherit;
+}
+
+h1 { font-size: var(--text-h1-u); }
+h2 { font-size: var(--text-h2-u); }
+h3 { font-size: var(--text-h3-u); }
+
+p {
+  margin: 0;
+  line-height: var(--leading-normal);
+}
+
+a {
+  color: var(--fg-link);
+  text-decoration: none;
+  transition: color var(--duration-fast) var(--ease-out);
+}
+a:hover {
+  color: var(--fg-link-hover);
+  text-decoration: underline;
+}
+
+button, input, select, textarea {
+  font-family: inherit;
+  font-size: inherit;
+}
+
+/* ─── Manifesto contextual scope ──────────────────────────────── */
+/* Wrap manifesto sections in .manifesto. Headings become yellow uppercase
+   on anthracite. Pink CTAs are forbidden in this scope; use .btn-manifesto. */
+.manifesto {
+  background: var(--bg-manifesto);
+  color: var(--fg-on-manifesto);
+  padding: var(--section-pad-m) var(--space-4);
+}
+.manifesto h1,
+.manifesto h2,
+.manifesto h3,
+.manifesto .display {
+  color: var(--fg-manifesto-accent);
+  text-transform: uppercase;
+  letter-spacing: var(--tracking-normal);
+  font-weight: var(--weight-medium);
+}
+.manifesto h1 { font-size: var(--text-h1-m); }
+.manifesto h2 { font-size: var(--text-h2-m); }
+.manifesto .hero { font-size: var(--text-hero); line-height: 0.92; }
+.manifesto p { color: var(--fg-on-manifesto); max-width: 60ch; }
+
+/* ─── Utility contextual scope ────────────────────────────────── */
+.utility {
+  background: var(--bg-primary);
+  color: var(--fg-primary);
+  padding: var(--section-pad-u) var(--space-4);
+}
+
+/* ─── Overline ─────────────────────────────────────────────────── */
+.overline {
+  font-family: var(--font-body);
+  font-size: var(--text-label);
+  text-transform: uppercase;
+  letter-spacing: var(--tracking-wider);
+  font-weight: var(--weight-regular);
+}
+
+/* ─── Buttons ──────────────────────────────────────────────────── */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  font-family: var(--font-display);
+  font-size: var(--text-btn);
+  font-weight: var(--weight-regular);
+  text-transform: uppercase;
+  letter-spacing: var(--tracking-wide);
+  padding: var(--space-3) var(--space-6);
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: background var(--duration-fast) var(--ease-out),
+              color var(--duration-fast) var(--ease-out);
+  text-decoration: none;
+}
+.btn:hover { text-decoration: none; }
+
+/* Utility primary — pink, slight radius */
+.btn-utility {
+  background: var(--color-pink);
+  color: var(--color-canvas);
+  border-radius: var(--radius-sm);
+}
+.btn-utility:hover { background: var(--color-bordeaux); color: var(--color-canvas); }
+
+/* Manifesto — yellow, hard corners */
+.btn-manifesto {
+  background: var(--color-yellow);
+  color: var(--color-ink);
+  border-radius: var(--radius-none);
+}
+.btn-manifesto:hover { background: #E6C200; color: var(--color-ink); }
+
+/* Secondary (utility, white/outline) */
+.btn-secondary {
+  background: var(--color-canvas);
+  color: var(--color-ink);
+  border: 1px solid var(--border-default);
+  border-radius: var(--radius-sm);
+}
+.btn-secondary:hover { background: var(--color-grey-50); color: var(--color-ink); }
+
+/* ─── Utilities ────────────────────────────────────────────────── */
+.text-pink     { color: var(--color-pink); }
+.text-yellow   { color: var(--color-yellow); }
+.bg-pink       { background: var(--color-pink); }
+.bg-yellow     { background: var(--color-yellow); }
+.bg-anthracite { background: var(--color-anthracite); }
+.bg-creme      { background: var(--color-creme); }
+
+.rotating-mark { animation: moyee-spin 12s linear infinite; transform-origin: center; }
+@keyframes moyee-spin { to { transform: rotate(360deg); } }
+
+/* ─── Responsive: sections not covered by inline-style attribute selectors ── */
+
+/* Products — 5-column grid → horizontal scroll on tablet & mobile */
+@media (max-width: 960px) {
+  .products-grid {
+    display: flex !important;
+    overflow-x: auto;
+    gap: 16px !important;
+    padding-bottom: 16px;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: thin;
+    scrollbar-color: var(--color-grey-300) transparent;
+  }
+  .products-grid::-webkit-scrollbar { height: 4px; }
+  .products-grid::-webkit-scrollbar-track { background: transparent; }
+  .products-grid::-webkit-scrollbar-thumb { background: var(--color-grey-300); border-radius: 2px; }
+
+  .products-card {
+    flex: 0 0 260px !important;
+    width: 260px;
+    min-width: 0;
+    scroll-snap-align: start;
+  }
+
+  /* FairchainBlueprint — 2-col → 1-col */
+  .blueprint-grid {
+    grid-template-columns: 1fr !important;
+    gap: 40px !important;
+  }
+
+  /* Tasting — 2-col → 1-col */
+  .tasting-grid {
+    grid-template-columns: 1fr !important;
+    gap: 36px !important;
+  }
+
+  /* Pillars — keep 3 cols but make them shorter (landscape-ish) */
+  .pillars-grid { gap: 2px !important; }
+  .pillar-cell  { aspect-ratio: 4/3 !important; }
+}
+
+@media (max-width: 600px) {
+  /* Products — slightly narrower cards on phone */
+  .products-card { flex: 0 0 220px !important; width: 220px; }
+
+  /* Pillars — horizontal scroll on phone so tall stacked images don't overwhelm */
+  .pillars-grid {
+    display: flex !important;
+    overflow-x: auto;
+    gap: 2px !important;
+    padding: 0 !important;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+  }
+  .pillar-cell {
+    flex: 0 0 80vw !important;
+    aspect-ratio: 3/4 !important;
+    scroll-snap-align: start;
+  }
+}

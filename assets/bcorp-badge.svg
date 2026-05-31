@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 160">
+  
+  <defs>
+    <clipPath id="badgeShape">
+      
+      <path d="M10 16 h100 v44 a50 50 0 0 1 -100 0 z M10 60 a50 50 0 0 0 100 0"></path>
+    </clipPath>
+  </defs>
+  
+  <g clip-path="url(#badgeShape)">
+    <rect x="0" y="0" width="120" height="160" fill="#272727"></rect>
+  </g>
+  
+  <text x="60" y="38" text-anchor="middle" fill="#EEECE1" font-family="&#39;Helvetica Neue&#39;, Arial, sans-serif" font-size="9" font-weight="700" letter-spacing="1.8">CERTIFIED</text>
+  
+  <g transform="translate(60 95)">
+    <circle cx="0" cy="-28" r="4.5" fill="#EEECE1"></circle>
+    <g fill="none" stroke="#EEECE1" stroke-width="6" stroke-linecap="square">
+      <path d="M-11 -16 v36"></path>
+      <path d="M-11 -16 h11 a9 8 0 0 1 0 16 h-11"></path>
+      <path d="M-11 0 h13 a10 10 0 0 1 0 20 h-13"></path>
+    </g>
+  </g>
+  
+  <text x="60" y="142" text-anchor="middle" fill="#EEECE1" font-family="&#39;Helvetica Neue&#39;, Arial, sans-serif" font-size="9" font-weight="700" letter-spacing="1.5">CORPORATION</text>
+</svg>

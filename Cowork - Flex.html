@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Cowork <title>B-Corps & ESG-kantoren — Moyee</title> flexkantoren — Moyee</title>
+<meta name="description" content="Moyee Fairchain Coffee — radically good coffee voor jouw kantoor.">
+<link rel="icon" href="assets/logo/favicon.svg">
+<link rel="stylesheet" href="styles/colors_and_type.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;700&family=Roboto+Condensed:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  html,body{margin:0;background:#fff;color:#212529}
+  *{box-sizing:border-box}
+  body{font-family:'Roboto Condensed','Helvetica Neue',Arial,sans-serif;-webkit-font-smoothing:antialiased}
+  h1,h2,h3,h4{font-family:'Oswald',sans-serif;font-weight:500;letter-spacing:0}
+  a{color:inherit}
+  ::selection{background:#FFD900;color:#212529}
+  input[type=range]{-webkit-appearance:none;background:transparent}
+  input[type=range]::-webkit-slider-runnable-track{height:4px;background:#DEE2E6;border-radius:2px}
+  input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:22px;height:22px;background:#E5007D;border:3px solid #fff;border-radius:50%;margin-top:-9px;cursor:pointer;box-shadow:0 1px 4px rgba(0,0,0,.2)}
+  input[type=range]::-moz-range-track{height:4px;background:#DEE2E6;border-radius:2px}
+  input[type=range]::-moz-range-thumb{width:18px;height:18px;background:#E5007D;border:3px solid #fff;border-radius:50%;cursor:pointer}
+  input[type=number]{-moz-appearance:textfield}
+  input[type=number]::-webkit-outer-spin-button,input[type=number]::-webkit-inner-spin-button{-webkit-appearance:none;margin:0}
+
+  /* image-slot baseline */
+  image-slot{display:block}
+
+  /* ─── Responsive overrides ─── */
+  .nav-hamburger { display: none !important; }
+
+  /* Tablet */
+  @media (max-width: 960px) {
+    section { padding-left: 24px !important; padding-right: 24px !important; padding-top: 80px !important; padding-bottom: 80px !important; }
+    nav { padding-left: 18px !important; padding-right: 18px !important; gap:12px !important; }
+    footer { padding-left: 24px !important; padding-right: 24px !important; padding-top: 56px !important; }
+
+    /* Hero, Story collapse */
+    [style*="grid-template-columns: 1.1fr 0.9fr"],
+    [style*="grid-template-columns: 0.8fr 1.2fr"],
+    [style*="grid-template-columns: 1fr 1fr"] {
+      grid-template-columns: 1fr !important;
+      gap: 36px !important;
+    }
+    /* Steps, Testimonials 3-col → 2-col at tablet */
+    [style*="grid-template-columns: repeat(3,1fr)"] { grid-template-columns: repeat(2,1fr) !important; gap: 18px !important; }
+    /* Pillars keeps 3-col on tablet — compact landscape */
+    .pillars-grid { grid-template-columns: repeat(3,1fr) !important; gap: 2px !important; }
+    /* Impact 4-col → 2-col */
+    [style*="grid-template-columns: repeat(4,1fr)"] { grid-template-columns: repeat(2,1fr) !important; }
+    /* Footer 1.5fr 1fr 1fr 1fr → 2-col */
+    [style*="grid-template-columns: 1.5fr 1fr 1fr 1fr"] { grid-template-columns: 1fr 1fr !important; gap: 32px !important; }
+
+    .nav-desktop { display: none !important; }
+    .nav-hamburger { display: inline-flex !important; }
+
+    .hero-eyebrow { font-size: 11px !important; }
+    .calc-card { padding: 28px 24px !important; }
+    .calc-num-input { font-size: 56px !important; width: 110px !important; }
+    .calc-result-num { font-size: 26px !important; }
+
+    .quiz-teaser-row { flex-direction: column !important; align-items: flex-start !important; gap: 22px !important; }
+    .quiz-result-grid { grid-template-columns: 1fr !important; }
+    .quiz-modal-pad { padding: 28px 24px !important; }
+    .quiz-row { grid-template-columns: auto 1fr auto !important; }
+    .quiz-row .qbar { display: none !important; }
+
+    .bcorp-hero-badge { width: 64px !important; height: 86px !important; right: 14px !important; bottom: 14px !important; }
+  }
+
+  /* Phone */
+  @media (max-width: 600px) {
+    section { padding-left: 18px !important; padding-right: 18px !important; padding-top: 56px !important; padding-bottom: 56px !important; }
+    nav { padding: 10px 16px !important; }
+    footer { padding: 48px 18px 28px !important; }
+
+    .notice-bar { display: none !important; }
+    [style*="grid-template-columns: repeat(4,1fr)"] { grid-template-columns: 1fr !important; gap: 0 !important; }
+    [style*="grid-template-columns: repeat(4,1fr)"] > * { border-right: 0 !important; border-bottom: 1px solid #F1F3F5 !important; }
+    [style*="grid-template-columns: 1.5fr 1fr 1fr 1fr"] { grid-template-columns: 1fr !important; gap: 24px !important; }
+
+    .hero { padding: 64px 20px 72px !important; }
+    .hero-image { aspect-ratio: 4/3 !important; }
+    .hero-cta { width: 100% !important; justify-content: center !important; }
+
+    .calc-num-input { font-size: 48px !important; width: 96px !important; }
+    .calc-input-row { flex-wrap: wrap !important; gap: 10px !important; }
+    .calc-result-num { font-size: 22px !important; }
+    .calc-formula { font-size: 13px !important; }
+    .calc-card { padding: 22px 18px !important; gap: 28px !important; }
+
+    .quiz-teaser { padding: 40px 20px !important; }
+    .quiz-teaser-row { gap: 20px !important; }
+    .quiz-teaser-row .quiz-button { width: 100% !important; justify-content: center !important; }
+    .quiz-modal-pad { padding: 24px 20px !important; }
+    .quiz-modal-shell { max-height: 100vh !important; height: 100vh !important; border-top-width: 3px !important; }
+    .quiz-modal-overlay { padding: 0 !important; }
+    .quiz-q-title { font-size: 22px !important; }
+    .quiz-option { padding: 14px 16px !important; font-size: 14px !important; gap: 10px !important; }
+    .quiz-option-letter { width: 24px !important; height: 24px !important; font-size: 11px !important; }
+
+    .cta-button { width: 100% !important; justify-content: center !important; }
+    .impact-num { font-size: clamp(48px,12vw,72px) !important; }
+
+    .bcorp-hero-badge { width: 56px !important; height: 76px !important; }
+    /* 3-col grids → 1-col on phone */
+    [style*="grid-template-columns: repeat(3,1fr)"] { grid-template-columns: 1fr !important; gap: 16px !important; }
+    /* Pillars stays 3-col on phone — horizontal scroll from colors_and_type.css */
+    .pillars-grid { grid-template-columns: repeat(3,1fr) !important; }
+  }
+</style>
+
+<script src="vendor/react.js"></script>
+<script src="vendor/react-dom.js"></script>
+<script src="vendor/babel.min.js"></script>
+<script src="shared/image-slot.js"></script>
+</head>
+<body>
+<div id="root"></div>
+
+<script type="text/babel" src="shared/components.jsx"></script>
+<script type="text/babel" src="shared/calculator.jsx"></script>
+<script type="text/babel" src="shared/quiz.jsx"></script>
+<script type="text/babel" src="shared/landing-sections.jsx"></script>
+<script type="text/babel" src="shared/pages-data.jsx"></script>
+<script type="text/babel" src="shared/tweaks-panel.jsx"></script>
+<script type="text/babel" src="shared/moyee-tweaks.jsx"></script>
+<script type="text/babel" src="shared/landing-page.jsx"></script>
+<script type="text/babel" data-presets="env,react">
+  ReactDOM.createRoot(document.getElementById('root')).render(<LandingPage pageKey="cowork"/>);
+</script>
+</body>
+</html>
