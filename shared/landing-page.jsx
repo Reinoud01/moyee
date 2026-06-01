@@ -53,10 +53,10 @@ function LandingPage({pageKey}) {
         <FairchainPillars data={data}/>
         <Steps data={data}/>
         <Products/>
-        <PriceValue/>
         <Calculator/>
         <QuizTeaser onOpen={() => setQuizOpen(true)}/>
         <FullBleedQuote data={data} quote={manifestoQuote}/>
+        <PriceValue/>
         <FairchainBlueprint/>
         <Testimonials data={data}/>
         <Impact data={data}/>
