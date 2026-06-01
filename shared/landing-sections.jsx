@@ -1,7 +1,7 @@
 // Landing-page sections — Hero, Story, Steps, Testimonials, Impact, FinalCTA
 // Data-driven: each section takes its content from the page-data registry.
 
-const PROEFPAKKET_URL = 'https://www.moyeecoffee.com/nl/shop/3-smaakpakketten-750-gram-90?category=1#attribute_values=3';
+const PROEFPAKKET_URL = 'https://www.moyeecoffee.com/shop/4-flavour-pack-4-kg-1640#attribute_values=3';
 
 /* ───── Hero (manifesto) ───── */
 function Hero({ data, showBcorpBadge = false }) {
