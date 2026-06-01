@@ -407,7 +407,7 @@ const PAGE_DATA = {
     title: 'Verzekeraars & financiële dienstverleners, Moyee',
     hero: {
       eyebrow: 'Verzekeringen & financiële dienstverlening',
-      headline: ['Duurzaam beleggen is strategie.', 'Je koffie ook.'],
+      headline: ['Duurzaam beleggen.', 'Duurzame koffie.'],
       subline: 'Financiële instellingen staan steeds vaker voor de vraag: klopt onze eigen inkoop bij wat we uitdragen? Moyee is de koffie waarbij het antwoord ja is.',
       ctaPrimary: 'Vraag een proefpakket aan',
       imagePlaceholder: 'Sleep een foto van jullie kantoor / boardroom',
@@ -445,7 +445,7 @@ const PAGE_DATA = {
       title: 'Insurers & financial services, Moyee',
       hero: {
         eyebrow: 'Insurance & financial services',
-        headline: ['Sustainable investing is strategy.', 'So is your coffee.'],
+        headline: ['Sustainable investing.', 'Sustainable coffee.'],
         subline: 'Financial institutions increasingly face the question: does our own procurement match what we stand for? Moyee is the coffee where the answer is yes.',
         ctaPrimary: 'Request a trial package',
         imagePlaceholder: 'Drop a photo of your office / boardroom here',
