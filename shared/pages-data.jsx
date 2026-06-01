@@ -19,7 +19,7 @@ const PAGE_DATA = {
     },
     steps: [
       'Bereken hoeveel koffie jullie team nodig heeft en kies je blend',
-      'Koffie wordt geroosterd in Ethiopië of Kenia — direct naar jullie kantoor',
+      'Koffie wordt geroosterd in Ethiopië of Kenia, direct naar jullie kantoor',
       'Ontvang je Fairchain-impactrapportage: traceerbare data voor je ESG-dossier',
     ],
     testimonials: {
@@ -57,7 +57,7 @@ const PAGE_DATA = {
       },
       steps: [
         'Calculate how much coffee your team needs and choose your blend',
-        'Coffee is roasted in Ethiopia or Kenya — delivered directly to your office',
+        'Coffee is roasted in Ethiopia or Kenya, delivered directly to your office',
         'Receive your Fairchain impact report: traceable data for your ESG dossier',
       ],
       testimonials: {
@@ -98,7 +98,7 @@ const PAGE_DATA = {
       highlight: 'Fairchain betekent: geboerd, geroosterd en verpakt in het productieland. Minder tussenschakels, meer waarde voor de mensen achter de boon. Elke kop koffie die jouw team drinkt, is het bewijs dat het anders kan. Dat is het soort detail dat bij mensen blijft.',
     },
     steps: [
-      'Bereken hoeveel koffie jullie team verbruikt — de calculator doet het werk',
+      'Bereken hoeveel koffie jullie team verbruikt, de calculator doet het werk',
       'Kies een blend die past bij hoe jullie werken: sterk voor lange dagen, licht voor de loop',
       'Maandelijkse levering aan kantoor. Geen gedoe, geen nadenken',
     ],
@@ -136,7 +136,7 @@ const PAGE_DATA = {
         highlight: 'Fairchain means: farmed, roasted and packaged in the country of origin. Fewer intermediaries, more value for the people behind the bean. Every cup your team drinks is proof that it can be different. That is the kind of detail that sticks.',
       },
       steps: [
-        'Calculate how much coffee your team uses — the calculator does the work',
+        'Calculate how much coffee your team uses, the calculator does the work',
         'Choose a blend that fits how you work: strong for long days, light for the flow',
         'Monthly delivery to the office. No hassle, no thinking',
       ],
@@ -173,14 +173,14 @@ const PAGE_DATA = {
       imagePlaceholder: 'Sleep een sfeerfoto van jullie studio',
     },
     story: {
-      heading: 'Een merk dat staat voor iets — net als jullie',
+      heading: 'Een merk dat staat voor iets, net als jullie',
       body: 'Wij noemen het Fairchain. Geen marketingterm, maar een model. We kopen niet van de keten. We zijn de keten. Geboerd, geroosterd en verpakt in Ethiopië en Kenia. De designers, roosters en logistici daar verdienen eerlijk. En jij krijgt koffie met een verhaal dat je zelf niet beter had kunnen verzinnen.',
       highlight: 'Goede bureaus weten: het product is het verhaal. Bij Moyee is het omgekeerde ook waar. Het verhaal is het product. Elke verpakking, elke kop, elke levering draagt het systeem dat eerlijk is. Niet als toevoeging, maar als kern. Dat herkennen jullie.',
     },
     steps: [
       'Kies een blend die past bij de sfeer van jullie kantoor',
-      'Levering aan jullie studio — maandelijks, geen gedoe',
-      "Zet Moyee neer als statement — op tafel bij de klant, op de foto, op jullie kanalen",
+      'Levering aan jullie studio, maandelijks, geen gedoe',
+      'Zet Moyee neer als statement: op tafel bij de klant, op de foto, op jullie kanalen',
     ],
     testimonials: {
       label: 'Studios en bureaus die al voor Moyee kozen',
@@ -211,14 +211,14 @@ const PAGE_DATA = {
         imagePlaceholder: 'Drop an atmosphere photo of your studio here',
       },
       story: {
-        heading: 'A brand that stands for something — just like you',
+        heading: 'A brand that stands for something, just like you',
         body: "We call it Fairchain. Not a marketing term, but a model. We don't buy from the chain. We are the chain. Farmed, roasted and packaged in Ethiopia and Kenya. The designers, roasters and logistics staff there are paid fairly. And you get coffee with a story you couldn't have invented better yourself.",
         highlight: "Good agencies know: the product is the story. At Moyee, the reverse is also true. The story is the product. Every package, every cup, every delivery carries the system that is fair. Not as an add-on, but at the core. You recognise that.",
       },
       steps: [
         'Choose a blend that fits the atmosphere of your studio',
-        'Delivery to your studio — monthly, no hassle',
-        'Put Moyee out as a statement — on the table with clients, in photos, on your channels',
+        'Delivery to your studio, monthly, no hassle',
+        'Put Moyee out as a statement: on the table with clients, in photos, on your channels',
       ],
       testimonials: {
         label: 'Studios and agencies that already chose Moyee',
@@ -277,7 +277,7 @@ const PAGE_DATA = {
     impact: { label: 'De feiten' },
     cta: {
       heading: 'Ontvang een proefpakket voor het kantoor.',
-      sub: 'Geen verplichtingen. Gewoon koffie — en een verhaal om bij te bewaren.',
+      sub: 'Geen verplichtingen. Gewoon koffie, met een verhaal om bij te bewaren.',
       primary: 'Vraag een proefpakket aan',
       secondary: 'Plan een kennismaking',
     },
@@ -315,7 +315,7 @@ const PAGE_DATA = {
       impact: { label: 'The facts' },
       cta: {
         heading: 'Receive a trial package for the office.',
-        sub: 'No obligations. Just coffee — and a story worth keeping.',
+        sub: 'No obligations. Just coffee, with a story worth keeping.',
         primary: 'Request a trial package',
         secondary: 'Schedule an intro call',
       },
@@ -328,18 +328,18 @@ const PAGE_DATA = {
     hero: {
       eyebrow: 'Cowork & flexkantoren',
       headline: ['Jouw leden verwachten het beste.', 'Ook van de koffie.'],
-      subline: 'Eén contract, honderden gebruikers. Moyee levert specialty koffie die jouw community iets geeft om over te praten — en een verhaal dat past bij waarom ze hier werken.',
+      subline: 'Eén contract, honderden gebruikers. Moyee levert specialty koffie die jouw community iets geeft om over te praten, met een verhaal dat past bij waarom ze hier werken.',
       ctaPrimary: 'Vraag een proefpakket aan',
       imagePlaceholder: 'Sleep een sfeerfoto van jullie coworkruimte',
     },
     story: {
       heading: 'Koffie die de community bouwt',
-      body: 'Een coworkspace is meer dan bureaus en wifi. Het gevoel begint bij de koffie. Moyee brengt specialty kwaliteit én een verhaal dat leden direct herkennen: eerlijk, transparant en gemaakt door mensen die er echt beter van worden. Dat is iets om trots op te zijn — en om te delen.',
+      body: 'Een coworkspace is meer dan bureaus en wifi. Het gevoel begint bij de koffie. Moyee brengt specialty kwaliteit én een verhaal dat leden direct herkennen: eerlijk, transparant en gemaakt door mensen die er echt beter van worden. Dat is iets om trots op te zijn, en om te delen.',
       highlight: 'Fairchain betekent dat elke kilo koffie wordt geboerd, geroosterd en verpakt in het productieland. Geen verspilde marge aan tussenschakels. Jij biedt je leden een product dat verhalen opwekt. Dat is het verschil tussen koffie als bijzaak en koffie als deel van je merk.',
     },
     steps: [
-      'Bereken hoeveel koffie jouw space maandelijks nodig heeft — we helpen rekenen',
-      'Één levering, één factuur — ook bij meerdere vestigingen',
+      'Bereken hoeveel koffie jouw space maandelijks nodig heeft, we helpen rekenen',
+      'Één levering, één factuur, ook bij meerdere vestigingen',
       'Leden vragen ernaar. Dan heb je meteen een gesprek over waarom jij dit bewust kiest',
     ],
     testimonials: {
@@ -349,7 +349,7 @@ const PAGE_DATA = {
         {client:'Spaces Amsterdam',
           quote:'Leden merken de kwaliteit meteen. En als ze vragen waar het vandaan komt, hebben we een goed verhaal.'},
         {client:'B. Amsterdam',
-          quote:'In een community draait alles om sfeer en gevoel. Moyee draagt daarin bij — elke dag opnieuw.'},
+          quote:'In een community draait alles om sfeer en gevoel. Moyee draagt daarin bij, elke dag opnieuw.'},
         {client:'Tribes Utrecht',
           quote:'Het gaat verder dan koffie. Het is een keuze die zegt: we denken na over alles wat we hier neerzetten.'},
       ],
@@ -357,7 +357,7 @@ const PAGE_DATA = {
     impact: { label: 'Impact per bestelling' },
     cta: {
       heading: 'Zet Moyee neer in jouw space.',
-      sub: 'Vraag een proefpakket aan — wij zorgen voor de rest.',
+      sub: 'Vraag een proefpakket aan, wij zorgen voor de rest.',
       primary: 'Vraag een proefpakket aan',
       secondary: 'Plan een kennismaking',
     },
@@ -366,18 +366,18 @@ const PAGE_DATA = {
       hero: {
         eyebrow: 'Cowork & flex offices',
         headline: ['Your members expect the best.', 'Including the coffee.'],
-        subline: 'One contract, hundreds of users. Moyee delivers specialty coffee that gives your community something to talk about — and a story that fits why they work here.',
+        subline: 'One contract, hundreds of users. Moyee delivers specialty coffee that gives your community something to talk about, with a story that fits why they work here.',
         ctaPrimary: 'Request a trial package',
         imagePlaceholder: 'Drop an atmosphere photo of your cowork space here',
       },
       story: {
         heading: 'Coffee that builds community',
-        body: 'A coworking space is more than desks and wifi. The feeling starts with the coffee. Moyee brings specialty quality and a story members recognise right away: fair, transparent and made by people who genuinely benefit from it. That is something to be proud of — and to share.',
+        body: 'A coworking space is more than desks and wifi. The feeling starts with the coffee. Moyee brings specialty quality and a story members recognise right away: fair, transparent and made by people who genuinely benefit from it. That is something to be proud of, and to share.',
         highlight: 'Fairchain means every kilo of coffee is farmed, roasted and packaged in the country of origin. No wasted margin on intermediaries. You offer your members a product that sparks conversations. That is the difference between coffee as an afterthought and coffee as part of your brand.',
       },
       steps: [
-        'Calculate how much coffee your space needs monthly — we help with the maths',
-        'One delivery, one invoice — even across multiple locations',
+        'Calculate how much coffee your space needs monthly, we help with the maths',
+        'One delivery, one invoice, even across multiple locations',
         'Members ask about it. Then you have a conversation about why you chose this consciously.',
       ],
       testimonials: {
@@ -387,7 +387,7 @@ const PAGE_DATA = {
           {client:'Spaces Amsterdam',
             quote:'Members notice the quality right away. And when they ask where it comes from, we have a great story.'},
           {client:'B. Amsterdam',
-            quote:'In a community everything is about atmosphere and feeling. Moyee contributes to that — every day.'},
+            quote:'In a community everything is about atmosphere and feeling. Moyee contributes to that, every day.'},
           {client:'Tribes Utrecht',
             quote:'It goes beyond coffee. It is a choice that says: we think carefully about everything we put here.'},
         ],
@@ -395,7 +395,7 @@ const PAGE_DATA = {
       impact: { label: 'Impact per order' },
       cta: {
         heading: 'Put Moyee in your space.',
-        sub: 'Request a trial package — we take care of the rest.',
+        sub: 'Request a trial package, we take care of the rest.',
         primary: 'Request a trial package',
         secondary: 'Schedule an intro call',
       },
@@ -414,13 +414,13 @@ const PAGE_DATA = {
     },
     story: {
       heading: 'Inkoop die klopt bij jullie ESG-raamwerk',
-      body: 'Banken, verzekeraars en vermogensbeheerders stellen strengere eisen aan hun eigen leveranciers. Moyee voldoet aan die eisen — niet als certificeringsstrategie, maar omdat het businessmodel van begin tot eind traceerbaar en eerlijk is. Van boer tot factuur, alles verantwoord.',
-      highlight: 'Fairchain is geen label maar een model. Elke kilo koffie wordt geproduceerd, geroosterd en verpakt in het productieland. De marges blijven in de keten waar ze horen. Jij kunt dat aantonen — in het leveranciersregister, in de jaarrekening, aan toezichthouders.',
+      body: 'Banken, verzekeraars en vermogensbeheerders stellen strengere eisen aan hun eigen leveranciers. Moyee voldoet aan die eisen, niet als certificeringsstrategie, maar omdat het businessmodel van begin tot eind traceerbaar en eerlijk is. Van boer tot factuur, alles verantwoord.',
+      highlight: 'Fairchain is geen label maar een model. Elke kilo koffie wordt geproduceerd, geroosterd en verpakt in het productieland. De marges blijven in de keten waar ze horen. Jij kunt dat aantonen: in het leveranciersregister, in de jaarrekening, aan toezichthouders.',
     },
     steps: [
-      'Bereken jullie verbruik — geschikt voor kleine teams én grote kantoorlocaties',
+      'Bereken jullie verbruik, geschikt voor kleine teams én grote kantoorlocaties',
       'Ontvang een Fairchain-impactoverzicht voor jullie leveranciersdossier',
-      'Vaste maandlevering, vaste prijs — geen verrassingen op de factuur',
+      'Vaste maandlevering, vaste prijs. Geen verrassingen op de factuur.',
     ],
     testimonials: {
       label: 'Organisaties die je kent',
@@ -437,7 +437,7 @@ const PAGE_DATA = {
     impact: { label: 'Aantoonbare impact per bestelling' },
     cta: {
       heading: 'Koffie die past in jullie leveranciersdossier.',
-      sub: 'Ontvang een proefpakket en een impactoverzicht — geschikt voor ESG-rapportage.',
+      sub: 'Ontvang een proefpakket en een impactoverzicht, geschikt voor ESG-rapportage.',
       primary: 'Vraag een proefpakket aan',
       secondary: 'Plan een kennismaking',
     },
@@ -452,13 +452,13 @@ const PAGE_DATA = {
       },
       story: {
         heading: 'Procurement that fits your ESG framework',
-        body: 'Banks, insurers and asset managers set increasingly strict requirements on their own suppliers. Moyee meets those requirements — not as a certification strategy, but because the business model is traceable and fair from start to finish. From farm to invoice, everything accountable.',
-        highlight: 'Fairchain is not a label but a model. Every kilo of coffee is produced, roasted and packaged in the country of origin. Margins stay in the chain where they belong. You can demonstrate that — in the supplier register, in the annual report, to regulators.',
+        body: 'Banks, insurers and asset managers set increasingly strict requirements on their own suppliers. Moyee meets those requirements, not as a certification strategy, but because the business model is traceable and fair from start to finish. From farm to invoice, everything accountable.',
+        highlight: 'Fairchain is not a label but a model. Every kilo of coffee is produced, roasted and packaged in the country of origin. Margins stay in the chain where they belong. You can demonstrate that: in the supplier register, in the annual report, to regulators.',
       },
       steps: [
-        'Calculate your usage — suitable for small teams and large office locations',
+        'Calculate your usage, suitable for small teams and large office locations',
         'Receive a Fairchain impact overview for your supplier dossier',
-        'Fixed monthly delivery, fixed price — no surprises on the invoice',
+        'Fixed monthly delivery, fixed price. No surprises on the invoice.',
       ],
       testimonials: {
         label: 'Organisations you know',
@@ -475,7 +475,7 @@ const PAGE_DATA = {
       impact: { label: 'Demonstrable impact per order' },
       cta: {
         heading: 'Coffee that fits your supplier dossier.',
-        sub: 'Receive a trial package and an impact overview — suitable for ESG reporting.',
+        sub: 'Receive a trial package and an impact overview, suitable for ESG reporting.',
         primary: 'Request a trial package',
         secondary: 'Schedule an intro call',
       },
@@ -488,18 +488,18 @@ const PAGE_DATA = {
     hero: {
       eyebrow: 'Boutique HoReCa',
       headline: ['Je gasten onthouden de koffie.', 'Geef ze een reden.'],
-      subline: 'Voor onafhankelijke cafés, boutique hotels en restaurants die bewust kiezen wat er op tafel staat — en dat verhaal kunnen vertellen.',
+      subline: 'Voor onafhankelijke cafés, boutique hotels en restaurants die bewust kiezen wat er op tafel staat en dat verhaal kunnen vertellen.',
       ctaPrimary: 'Bestel een proefpakket',
       imagePlaceholder: 'Sleep een sfeerfoto van jullie zaak',
     },
     story: {
       heading: 'Koffie die onderdeel wordt van jouw verhaal',
-      body: 'Boutique horeca onderscheidt zich niet op grootte, maar op karakter. Elke keuze — van meubels tot muziek — vertelt wie je bent. Moyee past in dat plaatje: specialty kwaliteit, een traceerbare herkomst en een systeem dat eerlijk is voor iedereen in de keten. Gasten waarderen dat. En ze komen terug.',
-      highlight: 'Fairchain: geboerd, geroosterd en verpakt in Ethiopië of Kenia. Geen tussenhandel, geen onbekende herkomst. Als gast vraag je waar de koffie vandaan komt — als eigenaar kun je het antwoord geven. Dat is het gesprek dat jou onderscheidt van de keten om de hoek.',
+      body: 'Boutique horeca onderscheidt zich niet op grootte, maar op karakter. Elke keuze, van meubels tot muziek, vertelt wie je bent. Moyee past in dat plaatje: specialty kwaliteit, een traceerbare herkomst en een systeem dat eerlijk is voor iedereen in de keten. Gasten waarderen dat. En ze komen terug.',
+      highlight: 'Fairchain: geboerd, geroosterd en verpakt in Ethiopië of Kenia. Geen tussenhandel, geen onbekende herkomst. Als gast vraag je waar de koffie vandaan komt. Als eigenaar kun je het antwoord geven. Dat is het gesprek dat jou onderscheidt van de keten om de hoek.',
     },
     steps: [
-      'Kies een blend die past bij jouw zaak — van licht en fruitig tot donker en intens',
-      'Levering op jouw planning — per week, per twee weken of maandelijks',
+      'Kies een blend die past bij jouw zaak: van licht en fruitig tot donker en intens',
+      'Levering op jouw planning: per week, per twee weken of maandelijks',
       'Gebruik het verhaal: kaartjes, QR-codes en content krijg je mee van ons',
     ],
     testimonials: {
@@ -517,7 +517,7 @@ const PAGE_DATA = {
     impact: { label: 'Wat jouw bestelling doet' },
     cta: {
       heading: 'Ontdek of Moyee bij jouw zaak past.',
-      sub: 'Bestel een proefpakket — proef het zelf voordat je beslist.',
+      sub: 'Bestel een proefpakket, proef het zelf voordat je beslist.',
       primary: 'Bestel een proefpakket',
       secondary: 'Plan een kennismaking',
     },
@@ -526,18 +526,18 @@ const PAGE_DATA = {
       hero: {
         eyebrow: 'Boutique HoReCa',
         headline: ['Your guests remember the coffee.', 'Give them a reason.'],
-        subline: 'For independent cafés, boutique hotels and restaurants that consciously choose what goes on the table — and can tell that story.',
+        subline: 'For independent cafés, boutique hotels and restaurants that consciously choose what goes on the table and can tell that story.',
         ctaPrimary: 'Order a trial package',
         imagePlaceholder: 'Drop an atmosphere photo of your venue here',
       },
       story: {
         heading: 'Coffee that becomes part of your story',
-        body: 'Boutique hospitality differentiates itself not on size, but on character. Every choice — from furniture to music — tells who you are. Moyee fits that picture: specialty quality, a traceable origin and a system that is fair for everyone in the chain. Guests appreciate that. And they come back.',
-        highlight: 'Fairchain: farmed, roasted and packaged in Ethiopia or Kenya. No middlemen, no unknown origin. When a guest asks where the coffee comes from — you can answer. That is the conversation that sets you apart from the chain around the corner.',
+        body: 'Boutique hospitality differentiates itself not on size, but on character. Every choice, from furniture to music, tells who you are. Moyee fits that picture: specialty quality, a traceable origin and a system that is fair for everyone in the chain. Guests appreciate that. And they come back.',
+        highlight: 'Fairchain: farmed, roasted and packaged in Ethiopia or Kenya. No middlemen, no unknown origin. When a guest asks where the coffee comes from, you can answer. That is the conversation that sets you apart from the chain around the corner.',
       },
       steps: [
-        'Choose a blend that fits your venue — from light and fruity to dark and intense',
-        'Delivery on your schedule — weekly, fortnightly or monthly',
+        'Choose a blend that fits your venue: from light and fruity to dark and intense',
+        'Delivery on your schedule: weekly, fortnightly or monthly',
         'Use the story: table cards, QR codes and content come with your order',
       ],
       testimonials: {
@@ -555,7 +555,7 @@ const PAGE_DATA = {
       impact: { label: 'What your order does' },
       cta: {
         heading: 'Find out if Moyee fits your venue.',
-        sub: 'Order a trial package — taste it yourself before you decide.',
+        sub: 'Order a trial package, taste it yourself before you decide.',
         primary: 'Order a trial package',
         secondary: 'Schedule an intro call',
       },
@@ -568,7 +568,7 @@ const PAGE_DATA = {
     hero: {
       eyebrow: "Impact NGO's & fondsen",
       headline: ['Impact op papier.', 'Impact in je kop.'],
-      subline: 'Voor organisaties die niet alleen praten over impact, maar het ook inkopen. Moyee is de koffie die de theorie in de praktijk brengt — elke dag, elke kop.',
+      subline: 'Voor organisaties die niet alleen praten over impact, maar het ook inkopen. Moyee is de koffie die de theorie in de praktijk brengt. Elke dag, elke kop.',
       ctaPrimary: 'Vraag een proefpakket aan',
       imagePlaceholder: 'Sleep een sfeerfoto van jullie kantoor of project',
     },
@@ -578,8 +578,8 @@ const PAGE_DATA = {
       highlight: 'Traditionele koffieketens laten de marge achter in de rijke landen. Moyee draait dat om. Elke kilo die jij bestelt, houdt waarde in de producerende gemeenschap. Dat is precies de theorie van verandering die jullie ook toepassen. Geen donatie, maar een verdienmodel. Dat kun je uitleggen aan je board, je donateurs én je team.',
     },
     steps: [
-      'Bereken hoeveel koffie jullie kantoor nodig heeft — ook voor evenementen en donateursbijeenkomsten',
-      'Ontvang een Fairchain-impactoverzicht — geschikt voor jullie jaarverslag',
+      'Bereken hoeveel koffie jullie kantoor nodig heeft, ook voor evenementen en donateursbijeenkomsten',
+      'Ontvang een Fairchain-impactoverzicht, geschikt voor jullie jaarverslag',
       'Koffie die het gesprek op gang brengt bij elke vergadering en elk bezoek',
     ],
     testimonials: {
@@ -606,7 +606,7 @@ const PAGE_DATA = {
       hero: {
         eyebrow: "Impact NGOs & foundations",
         headline: ['Impact on paper.', 'Impact in your cup.'],
-        subline: 'For organisations that not only talk about impact, but also procure it. Moyee is the coffee that puts theory into practice — every day, every cup.',
+        subline: 'For organisations that not only talk about impact, but also procure it. Moyee is the coffee that puts theory into practice. Every day, every cup.',
         ctaPrimary: 'Request a trial package',
         imagePlaceholder: 'Drop a photo of your office or project here',
       },
@@ -616,8 +616,8 @@ const PAGE_DATA = {
         highlight: 'Traditional coffee chains leave the margin in wealthy countries. Moyee reverses that. Every kilo you order keeps value in the producing community. That is exactly the theory of change you apply too. Not a donation, but a business model. You can explain that to your board, your donors and your team.',
       },
       steps: [
-        'Calculate how much coffee your office needs — including events and donor gatherings',
-        'Receive a Fairchain impact overview — suitable for your annual report',
+        'Calculate how much coffee your office needs, including events and donor gatherings',
+        'Receive a Fairchain impact overview, suitable for your annual report',
         'Coffee that sparks the conversation at every meeting and every visit',
       ],
       testimonials: {
