@@ -327,7 +327,7 @@ const PAGE_DATA = {
     title: 'Cowork & flexkantoren — Moyee',
     hero: {
       eyebrow: 'Cowork & flexkantoren',
-      headline: ['Jouw leden verwachten het beste.', 'De koffie ook.'],
+      headline: ['Jouw leden verwachten het beste.', 'Ook van de koffie.'],
       subline: 'Eén contract, honderden gebruikers. Moyee levert specialty koffie die jouw community iets geeft om over te praten — en een verhaal dat past bij waarom ze hier werken.',
       ctaPrimary: 'Vraag een proefpakket aan',
       imagePlaceholder: 'Sleep een sfeerfoto van jullie coworkruimte',
@@ -365,7 +365,7 @@ const PAGE_DATA = {
       title: 'Cowork & flex offices — Moyee',
       hero: {
         eyebrow: 'Cowork & flex offices',
-        headline: ['Your members expect the best.', 'So does the coffee.'],
+        headline: ['Your members expect the best.', 'Including the coffee.'],
         subline: 'One contract, hundreds of users. Moyee delivers specialty coffee that gives your community something to talk about — and a story that fits why they work here.',
         ctaPrimary: 'Request a trial package',
         imagePlaceholder: 'Drop an atmosphere photo of your cowork space here',
