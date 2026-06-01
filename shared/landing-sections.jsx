@@ -757,12 +757,12 @@ function PriceValue() {
               <div style={{ marginTop: 24, borderTop: '1px solid rgba(255,255,255,0.25)', paddingTop: 24 }}>
                 <h3 style={{ fontFamily: 'Oswald,sans-serif', fontWeight: 500, fontSize: 20, color: '#fff', textTransform: 'uppercase', margin: '0 0 12px' }}>{t.specTitle}</h3>
                 <p style={{ color: 'rgba(255,255,255,0.9)', fontSize: 14, lineHeight: 1.6, margin: '0 0 20px' }}>{t.specBody}</p>
-                <div style={{ display: 'flex', flexDirection: 'column', gap: 14 }}>
+                <div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
                   {t.specPoints.map(pt => (
-                    <div key={pt.label} style={{ display: 'flex', gap: 12 }}>
-                      <span style={{ fontFamily: 'Oswald,sans-serif', fontSize: 12, textTransform: 'uppercase', letterSpacing: '0.08em', color: '#FFD900', whiteSpace: 'nowrap', paddingTop: 2, minWidth: 120 }}>{pt.label}</span>
-                      <span style={{ color: 'rgba(255,255,255,0.9)', fontSize: 14, lineHeight: 1.55 }}>{pt.text}</span>
-                    </div>
+                    <p key={pt.label} style={{ margin: 0, color: 'rgba(255,255,255,0.9)', fontSize: 14, lineHeight: 1.6 }}>
+                      <span style={{ fontFamily: 'Oswald,sans-serif', fontSize: 12, textTransform: 'uppercase', letterSpacing: '0.08em', color: '#FFD900', marginRight: 8 }}>{pt.label}:</span>
+                      {pt.text}
+                    </p>
                   ))}
                 </div>
               </div>
