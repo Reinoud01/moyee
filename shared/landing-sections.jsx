@@ -675,4 +675,103 @@ function StickyButtons() {
   );
 }
 
-Object.assign(window, { Hero, Story, Steps, Testimonials, Impact, FinalCTA, FullBleedQuote, FairchainPillars, Products, FairchainBlueprint, Tasting, Contact, StickyButtons });
+/* ───── Price & Value — specialty coffee uitleg + prijspropositie ───── */
+function PriceValue() {
+  const {lang} = React.useContext(window.LangContext);
+  const [open, setOpen] = React.useState(false);
+
+  const t = lang === 'en' ? {
+    eyebrow: 'Price & quality',
+    heading: 'Specialty coffee. Surprisingly affordable.',
+    intro: 'Most specialty coffee brands charge a premium. Moyee cuts out the middlemen — we roast at origin. That saving goes to the farmer and to you. Sometimes up to 2× cheaper than comparable specialty brands.',
+    priceFrom: 'From',
+    priceUnit: '/ kg',
+    priceSub: 'Specialty grade. Roasted in Ethiopia or Kenya.',
+    toggleShow: 'What is specialty coffee?',
+    toggleHide: 'Close',
+    specTitle: 'What is specialty coffee?',
+    specBody: 'Specialty coffee is the highest quality coffee, produced with extreme care from plantation to cup. It is fully traceable and assessed by certified experts (Q-graders) on a 100-point scale.',
+    specPoints: [
+      { label: 'Score 80+', text: 'The coffee must score at least 80 out of 100 in a professional cupping session according to Specialty Coffee Association standards.' },
+      { label: 'No defects', text: 'Specialty beans have zero taste-ruining defects — no rotten or unripe beans.' },
+      { label: 'Distinctive terroir', text: 'The unique character of the soil, climate and altitude is clearly perceptible in the cup.' },
+      { label: 'Full traceability', text: 'You know exactly where the coffee comes from — traceable to a cooperative, farmer, region or even a single micro-lot.' },
+      { label: 'Arabica only', text: 'Specialty coffee always comes from the high-quality Arabica plant, known for its complexity of flavour.' },
+    ],
+  } : {
+    eyebrow: 'Prijs & kwaliteit',
+    heading: 'Specialty coffee. Verrassend betaalbaar.',
+    intro: 'De meeste specialty koffiemerken rekenen een flinke toeslag. Moyee snijdt de tussenschakels eruit — wij roosteren aan de bron. Die besparing gaat naar de boer én naar jou. Soms wel 2× goedkoper dan vergelijkbare specialty merken.',
+    priceFrom: 'Vanaf',
+    priceUnit: '/ kg',
+    priceSub: 'Specialty grade. Geroosterd in Ethiopië of Kenia.',
+    toggleShow: 'Wat is specialty coffee?',
+    toggleHide: 'Sluiten',
+    specTitle: 'Wat is specialty coffee?',
+    specBody: 'Specialty coffee is de allerhoogste kwaliteit koffie, geproduceerd met extreme zorg en aandacht vanaf de plantage tot in jouw kopje. Volledig traceerbaar en beoordeeld door gecertificeerde experts (Q-graders) op een schaal van 100 punten.',
+    specPoints: [
+      { label: 'Score 80+', text: 'De koffie moet tijdens een professionele cupping minimaal 80 van de 100 punten behalen volgens de normen van de Specialty Coffee Association.' },
+      { label: 'Geen defecten', text: 'Specialty bonen hebben géén smaakverpestende afwijkingen, zoals rotte of onrijpe bonen.' },
+      { label: 'Onderscheidend terroir', text: 'Het unieke karakter van de grond, het klimaat en de hoogte waarop de koffie groeit, is duidelijk proefbaar in de kop.' },
+      { label: 'Volledige transparantie', text: 'Je weet precies waar de koffie vandaan komt, traceerbaar tot een specifieke coöperatie, boer, regio of zelfs micro-kavel.' },
+      { label: 'Alleen Arabica', text: 'Specialty coffee is altijd afkomstig van de hoogwaardige Arabica-plant, bekend om zijn complexiteit in smaak.' },
+    ],
+  };
+
+  return (
+    <section style={{ background: '#272727', padding: '100px 40px' }}>
+      <div style={{ maxWidth: 1280, margin: '0 auto' }}>
+        <Reveal>
+          <span style={{ fontSize: 12, letterSpacing: '0.24em', textTransform: 'uppercase', color: '#E5007D', fontWeight: 500 }}>{t.eyebrow}</span>
+          <h2 style={{ fontFamily: 'Oswald,sans-serif', fontWeight: 500, fontSize: 'clamp(32px,4vw,54px)', color: '#fff', textTransform: 'uppercase', margin: '12px 0 0', lineHeight: 1.05 }}>{t.heading}</h2>
+        </Reveal>
+
+        <div style={{ marginTop: 48, display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 40, alignItems: 'start' }}>
+          {/* Left: price block */}
+          <Reveal>
+            <div style={{ background: '#1a1a1a', padding: '36px 32px', borderLeft: '4px solid #FFD900' }}>
+              <div style={{ fontSize: 13, color: 'rgba(255,255,255,0.5)', fontFamily: 'Oswald,sans-serif', textTransform: 'uppercase', letterSpacing: '0.12em', marginBottom: 8 }}>{t.priceFrom}</div>
+              <div style={{ display: 'flex', alignItems: 'baseline', gap: 6 }}>
+                <span style={{ fontFamily: 'Oswald,sans-serif', fontSize: 'clamp(64px,8vw,96px)', color: '#FFD900', fontWeight: 500, lineHeight: 1 }}>€ 21</span>
+                <span style={{ fontFamily: 'Oswald,sans-serif', fontSize: 22, color: 'rgba(255,255,255,0.5)' }}>{t.priceUnit}</span>
+              </div>
+              <p style={{ color: 'rgba(255,255,255,0.6)', fontSize: 14, margin: '12px 0 0', lineHeight: 1.5 }}>{t.priceSub}</p>
+            </div>
+          </Reveal>
+
+          {/* Right: intro text + toggle */}
+          <Reveal delay={100}>
+            <p style={{ color: 'rgba(255,255,255,0.82)', fontSize: 17, lineHeight: 1.65, margin: '0 0 24px' }}>{t.intro}</p>
+
+            <button onClick={() => setOpen(o => !o)} style={{
+              background: 'transparent', border: '1px solid rgba(255,255,255,0.25)', color: '#FFD900',
+              fontFamily: 'Oswald,sans-serif', fontSize: 13, textTransform: 'uppercase', letterSpacing: '0.10em',
+              padding: '10px 18px', cursor: 'pointer', display: 'inline-flex', alignItems: 'center', gap: 8,
+              transition: 'border-color 200ms',
+            }}>
+              {open ? t.toggleHide : t.toggleShow}
+              <span style={{ fontSize: 18, lineHeight: 1, transform: open ? 'rotate(180deg)' : 'none', transition: 'transform 240ms', display: 'inline-block' }}>↓</span>
+            </button>
+
+            {open && (
+              <div style={{ marginTop: 24, borderTop: '1px solid rgba(255,255,255,0.1)', paddingTop: 24 }}>
+                <h3 style={{ fontFamily: 'Oswald,sans-serif', fontWeight: 500, fontSize: 20, color: '#fff', textTransform: 'uppercase', margin: '0 0 12px' }}>{t.specTitle}</h3>
+                <p style={{ color: 'rgba(255,255,255,0.7)', fontSize: 14, lineHeight: 1.6, margin: '0 0 20px' }}>{t.specBody}</p>
+                <div style={{ display: 'flex', flexDirection: 'column', gap: 14 }}>
+                  {t.specPoints.map(pt => (
+                    <div key={pt.label} style={{ display: 'flex', gap: 12 }}>
+                      <span style={{ fontFamily: 'Oswald,sans-serif', fontSize: 12, textTransform: 'uppercase', letterSpacing: '0.08em', color: '#FFD900', whiteSpace: 'nowrap', paddingTop: 2, minWidth: 120 }}>{pt.label}</span>
+                      <span style={{ color: 'rgba(255,255,255,0.65)', fontSize: 14, lineHeight: 1.55 }}>{pt.text}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
+          </Reveal>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+Object.assign(window, { Hero, Story, Steps, Testimonials, Impact, FinalCTA, FullBleedQuote, FairchainPillars, Products, PriceValue, FairchainBlueprint, Tasting, Contact, StickyButtons });
