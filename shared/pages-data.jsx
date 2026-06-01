@@ -20,7 +20,7 @@ const PAGE_DATA = {
     steps: [
       'Bereken hoeveel koffie jullie team nodig heeft en kies je blend',
       'Koffie wordt geroosterd in Ethiopië of Kenia, direct naar jullie kantoor',
-      'Ontvang je Fairchain-impactrapportage: traceerbare data voor je ESG-dossier',
+      'Ontvang specialty koffie voor een waanzinnige prijs',
     ],
     testimonials: {
       label: 'Klanten die je herkent',
@@ -58,7 +58,7 @@ const PAGE_DATA = {
       steps: [
         'Calculate how much coffee your team needs and choose your blend',
         'Coffee is roasted in Ethiopia or Kenya, delivered directly to your office',
-        'Receive your Fairchain impact report: traceable data for your ESG dossier',
+        'Receive specialty coffee at an unbeatable price',
       ],
       testimonials: {
         label: 'Clients you recognise',
