@@ -50,13 +50,13 @@ function LandingPage({pageKey}) {
         <Nav active={pageKey}/>
         <Hero data={data} showBcorpBadge={pageKey === 'bcorp'}/>
         <Story data={data}/>
+        <PriceValue/>
         <FairchainPillars data={data}/>
         <Steps data={data}/>
         <Products/>
         <Calculator/>
         <QuizTeaser onOpen={() => setQuizOpen(true)}/>
         <FullBleedQuote data={data} quote={manifestoQuote}/>
-        <PriceValue/>
         <FairchainBlueprint/>
         <Testimonials data={data}/>
         <Impact data={data}/>

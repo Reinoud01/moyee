@@ -719,32 +719,32 @@ function PriceValue() {
   };
 
   return (
-    <section style={{ background: '#272727', padding: '100px 40px' }}>
+    <section style={{ background: '#E5007D', padding: '100px 40px' }}>
       <div style={{ maxWidth: 1280, margin: '0 auto' }}>
         <Reveal>
-          <span style={{ fontSize: 12, letterSpacing: '0.24em', textTransform: 'uppercase', color: '#E5007D', fontWeight: 500 }}>{t.eyebrow}</span>
+          <span style={{ fontSize: 12, letterSpacing: '0.24em', textTransform: 'uppercase', color: '#FFD900', fontWeight: 500 }}>{t.eyebrow}</span>
           <h2 style={{ fontFamily: 'Oswald,sans-serif', fontWeight: 500, fontSize: 'clamp(32px,4vw,54px)', color: '#fff', textTransform: 'uppercase', margin: '12px 0 0', lineHeight: 1.05 }}>{t.heading}</h2>
         </Reveal>
 
         <div style={{ marginTop: 48, display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 40, alignItems: 'start' }}>
           {/* Left: price block */}
           <Reveal>
-            <div style={{ background: '#1a1a1a', padding: '36px 32px', borderLeft: '4px solid #FFD900' }}>
-              <div style={{ fontSize: 13, color: 'rgba(255,255,255,0.5)', fontFamily: 'Oswald,sans-serif', textTransform: 'uppercase', letterSpacing: '0.12em', marginBottom: 8 }}>{t.priceFrom}</div>
+            <div style={{ background: 'rgba(0,0,0,0.15)', padding: '36px 32px', borderLeft: '4px solid #FFD900' }}>
+              <div style={{ fontSize: 13, color: 'rgba(255,255,255,0.7)', fontFamily: 'Oswald,sans-serif', textTransform: 'uppercase', letterSpacing: '0.12em', marginBottom: 8 }}>{t.priceFrom}</div>
               <div style={{ display: 'flex', alignItems: 'baseline', gap: 6 }}>
                 <span style={{ fontFamily: 'Oswald,sans-serif', fontSize: 'clamp(64px,8vw,96px)', color: '#FFD900', fontWeight: 500, lineHeight: 1 }}>€ 21</span>
-                <span style={{ fontFamily: 'Oswald,sans-serif', fontSize: 22, color: 'rgba(255,255,255,0.5)' }}>{t.priceUnit}</span>
+                <span style={{ fontFamily: 'Oswald,sans-serif', fontSize: 22, color: 'rgba(255,255,255,0.7)' }}>{t.priceUnit}</span>
               </div>
-              <p style={{ color: 'rgba(255,255,255,0.6)', fontSize: 14, margin: '12px 0 0', lineHeight: 1.5 }}>{t.priceSub}</p>
+              <p style={{ color: 'rgba(255,255,255,0.85)', fontSize: 14, margin: '12px 0 0', lineHeight: 1.5 }}>{t.priceSub}</p>
             </div>
           </Reveal>
 
           {/* Right: intro text + toggle */}
           <Reveal delay={100}>
-            <p style={{ color: 'rgba(255,255,255,0.82)', fontSize: 17, lineHeight: 1.65, margin: '0 0 24px' }}>{t.intro}</p>
+            <p style={{ color: '#fff', fontSize: 17, lineHeight: 1.65, margin: '0 0 24px' }}>{t.intro}</p>
 
             <button onClick={() => setOpen(o => !o)} style={{
-              background: 'transparent', border: '1px solid rgba(255,255,255,0.25)', color: '#FFD900',
+              background: 'transparent', border: '1px solid rgba(255,255,255,0.4)', color: '#FFD900',
               fontFamily: 'Oswald,sans-serif', fontSize: 13, textTransform: 'uppercase', letterSpacing: '0.10em',
               padding: '10px 18px', cursor: 'pointer', display: 'inline-flex', alignItems: 'center', gap: 8,
               transition: 'border-color 200ms',
@@ -754,14 +754,14 @@ function PriceValue() {
             </button>
 
             {open && (
-              <div style={{ marginTop: 24, borderTop: '1px solid rgba(255,255,255,0.1)', paddingTop: 24 }}>
+              <div style={{ marginTop: 24, borderTop: '1px solid rgba(255,255,255,0.25)', paddingTop: 24 }}>
                 <h3 style={{ fontFamily: 'Oswald,sans-serif', fontWeight: 500, fontSize: 20, color: '#fff', textTransform: 'uppercase', margin: '0 0 12px' }}>{t.specTitle}</h3>
-                <p style={{ color: 'rgba(255,255,255,0.7)', fontSize: 14, lineHeight: 1.6, margin: '0 0 20px' }}>{t.specBody}</p>
+                <p style={{ color: 'rgba(255,255,255,0.9)', fontSize: 14, lineHeight: 1.6, margin: '0 0 20px' }}>{t.specBody}</p>
                 <div style={{ display: 'flex', flexDirection: 'column', gap: 14 }}>
                   {t.specPoints.map(pt => (
                     <div key={pt.label} style={{ display: 'flex', gap: 12 }}>
                       <span style={{ fontFamily: 'Oswald,sans-serif', fontSize: 12, textTransform: 'uppercase', letterSpacing: '0.08em', color: '#FFD900', whiteSpace: 'nowrap', paddingTop: 2, minWidth: 120 }}>{pt.label}</span>
-                      <span style={{ color: 'rgba(255,255,255,0.65)', fontSize: 14, lineHeight: 1.55 }}>{pt.text}</span>
+                      <span style={{ color: 'rgba(255,255,255,0.9)', fontSize: 14, lineHeight: 1.55 }}>{pt.text}</span>
                     </div>
                   ))}
                 </div>
