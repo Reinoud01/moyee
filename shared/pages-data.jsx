@@ -567,7 +567,7 @@ const PAGE_DATA = {
     title: "Impact NGO's & fondsen, Moyee",
     hero: {
       eyebrow: "Impact NGO's & fondsen",
-      headline: ['Jullie missie hangt aan de muur.', 'Je koffie ook.'],
+      headline: ['Impact op papier.', 'Impact in je kop.'],
       subline: 'Voor organisaties die niet alleen praten over impact, maar het ook inkopen. Moyee is de koffie die de theorie in de praktijk brengt — elke dag, elke kop.',
       ctaPrimary: 'Vraag een proefpakket aan',
       imagePlaceholder: 'Sleep een sfeerfoto van jullie kantoor of project',
@@ -605,7 +605,7 @@ const PAGE_DATA = {
       title: "Impact NGOs & foundations, Moyee",
       hero: {
         eyebrow: "Impact NGOs & foundations",
-        headline: ['Your mission is on the wall.', 'So is your coffee.'],
+        headline: ['Impact on paper.', 'Impact in your cup.'],
         subline: 'For organisations that not only talk about impact, but also procure it. Moyee is the coffee that puts theory into practice — every day, every cup.',
         ctaPrimary: 'Request a trial package',
         imagePlaceholder: 'Drop a photo of your office or project here',
