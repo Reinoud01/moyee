@@ -4,7 +4,7 @@
 const PAGE_DATA = {
   bcorp: {
     key: 'bcorp',
-    title: 'B-Corps & ESG-kantoren — Moyee',
+    title: 'B-Corps & ESG-kantoren, Moyee',
     hero: {
       eyebrow: 'B-Corp & ESG-kantoren',
       headline: ['Jij bent gecertificeerd.', 'Je koffie ook.'],
@@ -42,7 +42,7 @@ const PAGE_DATA = {
       secondary: 'Plan een kennismaking',
     },
     en: {
-      title: 'B-Corps & ESG offices — Moyee',
+      title: 'B-Corps & ESG offices, Moyee',
       hero: {
         eyebrow: 'B-Corp & ESG offices',
         headline: ["You're certified.", 'Your coffee too.'],
@@ -84,7 +84,7 @@ const PAGE_DATA = {
 
   tech: {
     key: 'tech',
-    title: 'Tech scale-ups & People and Culture — Moyee',
+    title: 'Tech scale-ups & People and Culture, Moyee',
     hero: {
       eyebrow: 'Tech scale-ups & People and Culture',
       headline: ['Je hebt overal over nagedacht.', 'Nu de koffie.'],
@@ -122,7 +122,7 @@ const PAGE_DATA = {
       secondary: 'Plan een kennismaking',
     },
     en: {
-      title: 'Tech scale-ups & People and Culture — Moyee',
+      title: 'Tech scale-ups & People and Culture, Moyee',
       hero: {
         eyebrow: 'Tech scale-ups & People and Culture',
         headline: ["You've thought of everything.", 'Now the coffee.'],
@@ -164,7 +164,7 @@ const PAGE_DATA = {
 
   creative: {
     key: 'creative',
-    title: 'Creatieve agencies — Moyee',
+    title: 'Creatieve agencies, Moyee',
     hero: {
       eyebrow: 'Creatieve agencies',
       headline: ['Jullie verkopen verhalen.', 'Dit is er een goeie.'],
@@ -202,7 +202,7 @@ const PAGE_DATA = {
       secondary: 'Plan een kennismaking',
     },
     en: {
-      title: 'Creative agencies — Moyee',
+      title: 'Creative agencies, Moyee',
       hero: {
         eyebrow: 'Creative agencies',
         headline: ['You sell stories.', 'This is a good one.'],
@@ -244,7 +244,7 @@ const PAGE_DATA = {
 
   professional: {
     key: 'professional',
-    title: 'Professional services — Moyee',
+    title: 'Professional services, Moyee',
     hero: {
       eyebrow: 'Professional services',
       headline: ['Integriteit zit in de details.', 'Inclusief de koffie.'],
@@ -282,7 +282,7 @@ const PAGE_DATA = {
       secondary: 'Plan een kennismaking',
     },
     en: {
-      title: 'Professional services — Moyee',
+      title: 'Professional services, Moyee',
       hero: {
         eyebrow: 'Professional services',
         headline: ['Integrity is in the details.', 'Including the coffee.'],
@@ -324,7 +324,7 @@ const PAGE_DATA = {
 
   cowork: {
     key: 'cowork',
-    title: 'Cowork & flexkantoren — Moyee',
+    title: 'Cowork & flexkantoren, Moyee',
     hero: {
       eyebrow: 'Cowork & flexkantoren',
       headline: ['Jouw leden verwachten het beste.', 'Ook van de koffie.'],
@@ -362,7 +362,7 @@ const PAGE_DATA = {
       secondary: 'Plan een kennismaking',
     },
     en: {
-      title: 'Cowork & flex offices — Moyee',
+      title: 'Cowork & flex offices, Moyee',
       hero: {
         eyebrow: 'Cowork & flex offices',
         headline: ['Your members expect the best.', 'Including the coffee.'],
@@ -404,7 +404,7 @@ const PAGE_DATA = {
 
   finance: {
     key: 'finance',
-    title: 'Verzekeraars & financiële dienstverleners — Moyee',
+    title: 'Verzekeraars & financiële dienstverleners, Moyee',
     hero: {
       eyebrow: 'Verzekeringen & financiële dienstverlening',
       headline: ['Duurzaam beleggen is strategie.', 'Je koffie ook.'],
@@ -442,7 +442,7 @@ const PAGE_DATA = {
       secondary: 'Plan een kennismaking',
     },
     en: {
-      title: 'Insurers & financial services — Moyee',
+      title: 'Insurers & financial services, Moyee',
       hero: {
         eyebrow: 'Insurance & financial services',
         headline: ['Sustainable investing is strategy.', 'So is your coffee.'],
@@ -484,7 +484,7 @@ const PAGE_DATA = {
 
   horeca: {
     key: 'horeca',
-    title: 'Boutique HoReCa — Moyee',
+    title: 'Boutique HoReCa, Moyee',
     hero: {
       eyebrow: 'Boutique HoReCa',
       headline: ['Je gasten onthouden de koffie.', 'Geef ze een reden.'],
@@ -522,7 +522,7 @@ const PAGE_DATA = {
       secondary: 'Plan een kennismaking',
     },
     en: {
-      title: 'Boutique HoReCa — Moyee',
+      title: 'Boutique HoReCa, Moyee',
       hero: {
         eyebrow: 'Boutique HoReCa',
         headline: ['Your guests remember the coffee.', 'Give them a reason.'],
@@ -564,7 +564,7 @@ const PAGE_DATA = {
 
   ngo: {
     key: 'ngo',
-    title: "Impact NGO's & fondsen — Moyee",
+    title: "Impact NGO's & fondsen, Moyee",
     hero: {
       eyebrow: "Impact NGO's & fondsen",
       headline: ['Jullie missie hangt aan de muur.', 'Je koffie ook.'],
@@ -602,7 +602,7 @@ const PAGE_DATA = {
       secondary: 'Plan een kennismaking',
     },
     en: {
-      title: "Impact NGOs & foundations — Moyee",
+      title: "Impact NGOs & foundations, Moyee",
       hero: {
         eyebrow: "Impact NGOs & foundations",
         headline: ['Your mission is on the wall.', 'So is your coffee.'],
