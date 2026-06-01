@@ -181,12 +181,12 @@ function Impact({ data }) {
   const {lang} = React.useContext(window.LangContext);
 
   const numbers = lang === 'en' ? [
-    { n: '100%',   l: 'Roasted in Ethiopia or Kenya' },
+    { n: '80%',    l: 'Roasted in Ethiopia or Kenya' },
     { n: '+40%',   l: 'More income for the farmer vs. fairtrade' },
     { n: '10,000', l: 'Farmers in the Fairchain network' },
     { n: '2',      l: 'Own roasteries in Africa' },
   ] : [
-    { n: '100%',   l: 'Geroosterd in Ethiopië of Kenia' },
+    { n: '80%',    l: 'Geroosterd in Ethiopië of Kenia' },
     { n: '+40%',   l: 'Meer inkomen voor de boer vs. fairtrade' },
     { n: '10.000', l: 'Boeren in het Fairchain-netwerk' },
     { n: '2',      l: 'Eigen branderijen in Afrika' },
@@ -434,13 +434,13 @@ function Products() {
         <div className="products-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(5,1fr)', gap: 20 }}>
           {items.map((p, i) =>
           <Reveal key={p.title} className="products-card" delay={i * 80} style={{ background: '#fff', borderRadius: 6, overflow: 'hidden', display: 'flex', flexDirection: 'column', boxShadow: '0 1px 4px rgba(0,0,0,0.06)', transition: 'box-shadow 240ms, transform 240ms' }}>
-              <div style={{ position: 'relative', background: '#F8F9FA', padding: '22px 14px 14px', display: 'flex', justifyContent: 'center', alignItems: 'flex-end', aspectRatio: '1/1', overflow: 'hidden' }}>
+              <a href={p.url} target="_blank" rel="noreferrer" style={{ position: 'relative', background: '#F8F9FA', padding: '22px 14px 14px', display: 'flex', justifyContent: 'center', alignItems: 'flex-end', aspectRatio: '1/1', overflow: 'hidden', textDecoration: 'none', cursor: 'pointer' }}>
                 {p.hi && <span style={{ position: 'absolute', top: 14, left: 14, background: '#FFD900', color: '#212529', padding: '5px 10px', fontFamily: 'Oswald,sans-serif', fontSize: 10, letterSpacing: '0.10em', textTransform: 'uppercase', fontWeight: 500, zIndex: 1 }}>Bestseller</span>}
                 {p.badge && <span style={{ position: 'absolute', top: 14, left: 14, background: '#272727', color: '#FFD900', padding: '5px 10px', fontFamily: 'Oswald,sans-serif', fontSize: 10, letterSpacing: '0.10em', textTransform: 'uppercase', fontWeight: 500, zIndex: 1 }}>{p.badge}</span>}
                 <img src={p.src} alt={p.title} style={{ maxHeight: '100%', maxWidth: '100%', objectFit: 'contain', filter: 'drop-shadow(4px 6px 14px rgba(0,0,0,0.18))', transition: 'transform 480ms ease-out' }}
               onMouseOver={(e) => e.currentTarget.style.transform = 'scale(1.05)'}
               onMouseOut={(e) => e.currentTarget.style.transform = 'scale(1)'} />
-              </div>
+              </a>
               <div style={{ padding: '20px 22px 24px', display: 'flex', flexDirection: 'column', gap: 8, flex: 1 }}>
                 <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', gap: 8 }}>
                   <h3 style={{ fontFamily: 'Oswald,sans-serif', fontWeight: 500, fontSize: 22, color: '#212529', margin: 0, textTransform: 'uppercase', lineHeight: 1.05 }}>{p.title}</h3>
@@ -459,7 +459,7 @@ function Products() {
                 </div>
                 <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginTop: 14, paddingTop: 14, borderTop: '1px solid #F1F3F5' }}>
                   <span style={{ fontFamily: 'Oswald,sans-serif', color: '#E5007D', fontSize: 20, fontWeight: 500 }}>{p.price}<small style={{ fontSize: 11, color: '#868E96', fontWeight: 400, marginLeft: 4 }}>/ kg</small></span>
-                  <a href={p.url} target="_blank" rel="noreferrer" style={{ color: '#E5007D', fontFamily: 'Oswald,sans-serif', fontSize: 11, textTransform: 'uppercase', letterSpacing: '0.08em', cursor: 'pointer', display: 'inline-flex', alignItems: 'center', gap: 4, textDecoration: 'none' }}>{detailsLabel} <IconArrow size={13} /></a>
+                  <a href={p.url} target="_blank" rel="noreferrer" style={{ background: '#E5007D', color: '#fff', fontFamily: 'Oswald,sans-serif', fontSize: 12, textTransform: 'uppercase', letterSpacing: '0.08em', cursor: 'pointer', display: 'inline-flex', alignItems: 'center', gap: 6, textDecoration: 'none', padding: '8px 14px' }}>{detailsLabel} <IconArrow size={13} /></a>
                 </div>
               </div>
             </Reveal>
