@@ -739,36 +739,35 @@ function PriceValue() {
             </div>
           </Reveal>
 
-          {/* Right: intro text + toggle */}
+          {/* Right: intro text + toggle button */}
           <Reveal delay={100}>
             <p style={{ color: '#fff', fontSize: 17, lineHeight: 1.65, margin: '0 0 24px' }}>{t.intro}</p>
-
             <button onClick={() => setOpen(o => !o)} style={{
               background: 'transparent', border: '1px solid rgba(255,255,255,0.4)', color: '#FFD900',
               fontFamily: 'Oswald,sans-serif', fontSize: 13, textTransform: 'uppercase', letterSpacing: '0.10em',
               padding: '10px 18px', cursor: 'pointer', display: 'inline-flex', alignItems: 'center', gap: 8,
-              transition: 'border-color 200ms',
             }}>
               {open ? t.toggleHide : t.toggleShow}
               <span style={{ fontSize: 18, lineHeight: 1, transform: open ? 'rotate(180deg)' : 'none', transition: 'transform 240ms', display: 'inline-block' }}>↓</span>
             </button>
-
-            {open && (
-              <div style={{ marginTop: 24, borderTop: '1px solid rgba(255,255,255,0.25)', paddingTop: 24 }}>
-                <h3 style={{ fontFamily: 'Oswald,sans-serif', fontWeight: 500, fontSize: 20, color: '#fff', textTransform: 'uppercase', margin: '0 0 12px' }}>{t.specTitle}</h3>
-                <p style={{ color: 'rgba(255,255,255,0.9)', fontSize: 14, lineHeight: 1.6, margin: '0 0 20px' }}>{t.specBody}</p>
-                <div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
-                  {t.specPoints.map(pt => (
-                    <p key={pt.label} style={{ margin: 0, color: 'rgba(255,255,255,0.9)', fontSize: 14, lineHeight: 1.6 }}>
-                      <span style={{ fontFamily: 'Oswald,sans-serif', fontSize: 12, textTransform: 'uppercase', letterSpacing: '0.08em', color: '#FFD900', marginRight: 8 }}>{pt.label}:</span>
-                      {pt.text}
-                    </p>
-                  ))}
-                </div>
-              </div>
-            )}
           </Reveal>
         </div>
+
+        {/* Specialty coffee uitleg — full width, buiten de grid */}
+        {open && (
+          <div style={{ marginTop: 40, borderTop: '1px solid rgba(255,255,255,0.25)', paddingTop: 32 }}>
+            <h3 style={{ fontFamily: 'Oswald,sans-serif', fontWeight: 500, fontSize: 22, color: '#fff', textTransform: 'uppercase', margin: '0 0 14px' }}>{t.specTitle}</h3>
+            <p style={{ color: 'rgba(255,255,255,0.9)', fontSize: 15, lineHeight: 1.65, margin: '0 0 20px', maxWidth: '72ch' }}>{t.specBody}</p>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: 10, maxWidth: '72ch' }}>
+              {t.specPoints.map(pt => (
+                <p key={pt.label} style={{ margin: 0, color: 'rgba(255,255,255,0.9)', fontSize: 14, lineHeight: 1.65 }}>
+                  <span style={{ fontFamily: 'Oswald,sans-serif', fontSize: 12, textTransform: 'uppercase', letterSpacing: '0.08em', color: '#FFD900', marginRight: 8 }}>{pt.label}:</span>
+                  {pt.text}
+                </p>
+              ))}
+            </div>
+          </div>
+        )}
       </div>
     </section>
   );
