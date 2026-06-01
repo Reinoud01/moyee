@@ -100,7 +100,7 @@ const PAGE_DATA = {
     steps: [
       'Bereken hoeveel koffie jullie team verbruikt, de calculator doet het werk',
       'Kies een blend die past bij hoe jullie werken: sterk voor lange dagen, licht voor de loop',
-      'Maandelijkse levering aan kantoor. Geen gedoe, geen nadenken',
+      'Ontvang specialty koffie voor een waanzinnige prijs',
     ],
     testimonials: {
       label: 'Bedrijven die je kent',
@@ -138,7 +138,7 @@ const PAGE_DATA = {
       steps: [
         'Calculate how much coffee your team uses, the calculator does the work',
         'Choose a blend that fits how you work: strong for long days, light for the flow',
-        'Monthly delivery to the office. No hassle, no thinking',
+        'Receive specialty coffee at an unbeatable price',
       ],
       testimonials: {
         label: 'Companies you know',
@@ -180,7 +180,7 @@ const PAGE_DATA = {
     steps: [
       'Kies een blend die past bij de sfeer van jullie kantoor',
       'Levering aan jullie studio, maandelijks, geen gedoe',
-      'Zet Moyee neer als statement: op tafel bij de klant, op de foto, op jullie kanalen',
+      'Ontvang specialty koffie voor een waanzinnige prijs',
     ],
     testimonials: {
       label: 'Studios en bureaus die al voor Moyee kozen',
@@ -218,7 +218,7 @@ const PAGE_DATA = {
       steps: [
         'Choose a blend that fits the atmosphere of your studio',
         'Delivery to your studio, monthly, no hassle',
-        'Put Moyee out as a statement: on the table with clients, in photos, on your channels',
+        'Receive specialty coffee at an unbeatable price',
       ],
       testimonials: {
         label: 'Studios and agencies that already chose Moyee',
@@ -260,7 +260,7 @@ const PAGE_DATA = {
     steps: [
       'Bereken hoeveel koffie jullie kantoor maandelijks verbruikt',
       'Kies een blend — specialty niveau, voor de klant aan tafel en de vergadering erna',
-      'Vaste maandlevering. Geen nadenken, geen bestellingen, geen tekort',
+      'Ontvang specialty koffie voor een waanzinnige prijs',
     ],
     testimonials: {
       label: 'Kantoren die al voor Moyee kozen',
@@ -298,7 +298,7 @@ const PAGE_DATA = {
       steps: [
         'Calculate how much coffee your office uses monthly',
         'Choose a blend — specialty level, for the client at the table and the meeting after',
-        'Fixed monthly delivery. No thinking, no orders, no shortage',
+        'Receive specialty coffee at an unbeatable price',
       ],
       testimonials: {
         label: 'Offices that already chose Moyee',
@@ -340,7 +340,7 @@ const PAGE_DATA = {
     steps: [
       'Bereken hoeveel koffie jouw space maandelijks nodig heeft, we helpen rekenen',
       'Één levering, één factuur, ook bij meerdere vestigingen',
-      'Leden vragen ernaar. Dan heb je meteen een gesprek over waarom jij dit bewust kiest',
+      'Ontvang specialty koffie voor een waanzinnige prijs',
     ],
     testimonials: {
       label: 'Spaces die al voor Moyee kozen',
@@ -378,7 +378,7 @@ const PAGE_DATA = {
       steps: [
         'Calculate how much coffee your space needs monthly, we help with the maths',
         'One delivery, one invoice, even across multiple locations',
-        'Members ask about it. Then you have a conversation about why you chose this consciously.',
+        'Receive specialty coffee at an unbeatable price',
       ],
       testimonials: {
         label: 'Spaces that already chose Moyee',
@@ -420,7 +420,7 @@ const PAGE_DATA = {
     steps: [
       'Bereken jullie verbruik, geschikt voor kleine teams én grote kantoorlocaties',
       'Ontvang een Fairchain-impactoverzicht voor jullie leveranciersdossier',
-      'Vaste maandlevering, vaste prijs. Geen verrassingen op de factuur.',
+      'Ontvang specialty koffie voor een waanzinnige prijs',
     ],
     testimonials: {
       label: 'Organisaties die je kent',
@@ -458,7 +458,7 @@ const PAGE_DATA = {
       steps: [
         'Calculate your usage, suitable for small teams and large office locations',
         'Receive a Fairchain impact overview for your supplier dossier',
-        'Fixed monthly delivery, fixed price. No surprises on the invoice.',
+        'Receive specialty coffee at an unbeatable price',
       ],
       testimonials: {
         label: 'Organisations you know',
@@ -500,7 +500,7 @@ const PAGE_DATA = {
     steps: [
       'Kies een blend die past bij jouw zaak: van licht en fruitig tot donker en intens',
       'Levering op jouw planning: per week, per twee weken of maandelijks',
-      'Gebruik het verhaal: kaartjes, QR-codes en content krijg je mee van ons',
+      'Ontvang specialty koffie voor een waanzinnige prijs',
     ],
     testimonials: {
       label: 'Zaken die al voor Moyee kozen',
@@ -538,7 +538,7 @@ const PAGE_DATA = {
       steps: [
         'Choose a blend that fits your venue: from light and fruity to dark and intense',
         'Delivery on your schedule: weekly, fortnightly or monthly',
-        'Use the story: table cards, QR codes and content come with your order',
+        'Receive specialty coffee at an unbeatable price',
       ],
       testimonials: {
         label: 'Venues that already chose Moyee',
@@ -580,7 +580,7 @@ const PAGE_DATA = {
     steps: [
       'Bereken hoeveel koffie jullie kantoor nodig heeft, ook voor evenementen en donateursbijeenkomsten',
       'Ontvang een Fairchain-impactoverzicht, geschikt voor jullie jaarverslag',
-      'Koffie die het gesprek op gang brengt bij elke vergadering en elk bezoek',
+      'Ontvang specialty koffie voor een waanzinnige prijs',
     ],
     testimonials: {
       label: 'Organisaties die je kent',
@@ -618,7 +618,7 @@ const PAGE_DATA = {
       steps: [
         'Calculate how much coffee your office needs, including events and donor gatherings',
         'Receive a Fairchain impact overview, suitable for your annual report',
-        'Coffee that sparks the conversation at every meeting and every visit',
+        'Receive specialty coffee at an unbeatable price',
       ],
       testimonials: {
         label: 'Organisations you know',
