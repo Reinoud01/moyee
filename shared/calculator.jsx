@@ -1,4 +1,4 @@
-// Calculator — EXACT reuse from MKB Landing.
+// Calculator, EXACT reuse from MKB Landing.
 // Renders identically across all 4 landing pages.
 
 function Calculator() {
@@ -18,7 +18,7 @@ function Calculator() {
   const t = lang === 'en' ? {
     eyebrow:    'Calculate your subscription',
     heading:    <>How much coffee does <span style={{color:'#E5007D'}}>your office</span> need?</>,
-    subline:    'We calculate with 3 cups per day per drinker (1 cup = 9 grams), 5 days a week. Slide or type — we calculate along.',
+    subline:    'We calculate with 3 cups per day per drinker (1 cup = 9 grams), 5 days a week. Slide or type, we calculate along.',
     inputLabel: 'Number of coffee drinkers at the office',
     colleagues: "colleagues",
     formula:    'Our calculation',
@@ -33,7 +33,7 @@ function Calculator() {
   } : {
     eyebrow:    'Bereken je abonnement',
     heading:    <>Hoeveel koffie heeft <span style={{color:'#E5007D'}}>jullie kantoor</span> nodig?</>,
-    subline:    'We rekenen met 3 kopjes per dag per drinker (1 kopje = 9 gram), 5 dagen per week. Schuif of typ — we rekenen mee.',
+    subline:    'We rekenen met 3 kopjes per dag per drinker (1 kopje = 9 gram), 5 dagen per week. Schuif of typ, we rekenen mee.',
     inputLabel: 'Aantal koffiedrinkers op kantoor',
     colleagues: "collega's",
     formula:    'Onze rekensom',

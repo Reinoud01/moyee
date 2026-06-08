@@ -8,14 +8,14 @@ const PAGE_DATA = {
     hero: {
       eyebrow: 'B-Corp & ESG-kantoren',
       headline: ['Jij bent gecertificeerd.', 'Je koffie ook.'],
-      subline: 'Gewone koffie laat 10% van de waarde achter in het productieland. Moyee laat 50% achter — geboerd, gebrand én verpakt in Ethiopië en Kenia. Geen claim maar een businessmodel, en aantoonbaar in je ESG-rapport.',
+      subline: 'Gewone koffie laat 10% van de waarde achter in het productieland. Moyee laat 50% achter, geboerd, gebrand én verpakt in Ethiopië en Kenia. Geen claim maar een businessmodel, en aantoonbaar in je ESG-rapport.',
       ctaPrimary: 'Vraag een proefpakket aan',
       imagePlaceholder: 'Sleep hier een foto van je kantoor / impact-rapport',
     },
     story: {
       heading: 'Van Fairchain naar jouw jaarverslag',
-      body: 'B-Corp vraagt om keuzes in de hele keten, ook in je inkoop. Moyee bóuwt die keten zelf: elke kilo maakt werk, kennis en inkomen in Ethiopië en Kenia. Wij betaalden leefbaar inkomen en brandden aan de bron al in 2012 — toen niemand het erover had. Geen donatie, een verdienmodel. Dat heet Fairchain.',
-      highlight: 'Gewone koffie wordt elders gebrand, zodat marge én kennis bij de groothandel blijven. Bij Moyee gebeurt alles in het productieland — en elke kilo die je team drinkt haalt 49 kg CO₂ uit de lucht. Geen footprint maar een handprint. Dat vertellen we niet, dat bewijzen we: in cijfers die je zo in je rapportage zet.',
+      body: 'B-Corp vraagt om keuzes in de hele keten, ook in je inkoop. Moyee bóuwt die keten zelf: elke kilo maakt werk, kennis en inkomen in Ethiopië en Kenia. Wij betaalden leefbaar inkomen en brandden aan de bron al in 2012, toen niemand het erover had. Geen donatie, een verdienmodel. Dat heet Fairchain.',
+      highlight: 'Gewone koffie wordt elders gebrand, zodat marge én kennis bij de groothandel blijven. Bij Moyee gebeurt alles in het productieland, en elke kilo die je team drinkt haalt 49 kg CO₂ uit de lucht. Geen footprint maar een handprint. Dat vertellen we niet, dat bewijzen we: in cijfers die je zo in je rapportage zet.',
     },
     steps: [
       'Bereken hoeveel koffie jullie team nodig heeft en kies je blend',
@@ -46,14 +46,14 @@ const PAGE_DATA = {
       hero: {
         eyebrow: 'B-Corp & ESG offices',
         headline: ["You're certified.", 'Your coffee too.'],
-        subline: 'Ordinary coffee leaves 10% of the value in the country of origin. Moyee leaves 50% — farmed, roasted and packaged in Ethiopia and Kenya. Not a claim but a business model, and demonstrable in your ESG report.',
+        subline: 'Ordinary coffee leaves 10% of the value in the country of origin. Moyee leaves 50%, farmed, roasted and packaged in Ethiopia and Kenya. Not a claim but a business model, and demonstrable in your ESG report.',
         ctaPrimary: 'Request a trial package',
         imagePlaceholder: 'Drop a photo of your office / impact report here',
       },
       story: {
         heading: 'From Fairchain to your annual report',
-        body: 'B-Corp requires choices throughout the chain, procurement included. Moyee builds that chain itself: every kilo creates work, knowledge and income in Ethiopia and Kenya. We paid living incomes and roasted at origin back in 2012 — when no one was talking about it. Not a donation, a business model. That is called Fairchain.',
-        highlight: 'Ordinary coffee is roasted elsewhere, so margin and expertise stay with wholesalers. At Moyee everything happens in the country of origin — and every kilo your team drinks removes 49 kg of CO₂ from the air. Not a footprint but a handprint. We do not tell that story, we prove it: in numbers you can drop straight into your reporting.',
+        body: 'B-Corp requires choices throughout the chain, procurement included. Moyee builds that chain itself: every kilo creates work, knowledge and income in Ethiopia and Kenya. We paid living incomes and roasted at origin back in 2012, when no one was talking about it. Not a donation, a business model. That is called Fairchain.',
+        highlight: 'Ordinary coffee is roasted elsewhere, so margin and expertise stay with wholesalers. At Moyee everything happens in the country of origin, and every kilo your team drinks removes 49 kg of CO₂ from the air. Not a footprint but a handprint. We do not tell that story, we prove it: in numbers you can drop straight into your reporting.',
       },
       steps: [
         'Calculate how much coffee your team needs and choose your blend',
@@ -94,8 +94,8 @@ const PAGE_DATA = {
     },
     story: {
       heading: 'Koffie die je team iets te vertellen heeft',
-      body: 'Moyee is gebouwd op een idee dat je team meteen snapt: wat als je de keten niet inkoopt maar zélf bent? Geboerd, gebrand en verpakt in Ethiopië en Kenia, met 50% van de waarde die aan de bron blijft in plaats van 10%. Dat verhaal gaat vanzelf rond op kantoor — niet omdat je het uitlegt, maar omdat het op de verpakking staat.',
-      highlight: 'Fairchain betekent: geboerd, gebrand en verpakt in het productieland, met leefbaar inkomen voor de boer sinds 2012. Minder tussenschakels, meer waarde voor de mensen achter de boon. Elke kop die je team drinkt haalt bovendien 49 kg CO₂ uit de lucht. Dat is het soort detail dat blijft hangen — en waar nieuwe mensen naar vragen.',
+      body: 'Moyee is gebouwd op een idee dat je team meteen snapt: wat als je de keten niet inkoopt maar zélf bent? Geboerd, gebrand en verpakt in Ethiopië en Kenia, met 50% van de waarde die aan de bron blijft in plaats van 10%. Dat verhaal gaat vanzelf rond op kantoor, niet omdat je het uitlegt, maar omdat het op de verpakking staat.',
+      highlight: 'Fairchain betekent: geboerd, gebrand en verpakt in het productieland, met leefbaar inkomen voor de boer sinds 2012. Minder tussenschakels, meer waarde voor de mensen achter de boon. Elke kop die je team drinkt haalt bovendien 49 kg CO₂ uit de lucht. Dat is het soort detail dat blijft hangen, en waar nieuwe mensen naar vragen.',
     },
     steps: [
       'Bereken hoeveel koffie jullie team verbruikt, de calculator doet het werk',
@@ -132,8 +132,8 @@ const PAGE_DATA = {
       },
       story: {
         heading: 'Coffee your team has something to talk about',
-        body: "Moyee is built on an idea your team will get right away: what if you do not buy the supply chain but are it? Farmed, roasted and packaged in Ethiopia and Kenya, with 50% of the value staying at origin instead of 10%. That story spreads around the office on its own — not because you explain it, but because it says so on the packaging.",
-        highlight: 'Fairchain means: farmed, roasted and packaged in the country of origin, with a living income for the farmer since 2012. Fewer intermediaries, more value for the people behind the bean. Every cup your team drinks also removes 49 kg of CO₂ from the air. That is the kind of detail that sticks — and that new hires ask about.',
+        body: "Moyee is built on an idea your team will get right away: what if you do not buy the supply chain but are it? Farmed, roasted and packaged in Ethiopia and Kenya, with 50% of the value staying at origin instead of 10%. That story spreads around the office on its own, not because you explain it, but because it says so on the packaging.",
+        highlight: 'Fairchain means: farmed, roasted and packaged in the country of origin, with a living income for the farmer since 2012. Fewer intermediaries, more value for the people behind the bean. Every cup your team drinks also removes 49 kg of CO₂ from the air. That is the kind of detail that sticks, and that new hires ask about.',
       },
       steps: [
         'Calculate how much coffee your team uses, the calculator does the work',
@@ -167,15 +167,15 @@ const PAGE_DATA = {
     title: 'Creatieve agencies, Moyee',
     hero: {
       eyebrow: 'Creatieve agencies',
-      headline: ['Jullie verkopen verhalen.', 'Dit is er een goeie.'],
-      subline: 'Moyee draaide het systeem achter koffie volledig om: niet de keten inkopen, maar de keten zíjn. Van boer tot beker, alles anders. Precies het soort verhaal waar jullie van houden — en dit klopt tot op de cent.',
+      headline: ['Jullie verkopen verhalen.', 'Dit is een hele goeie.'],
+      subline: 'Moyee draaide het systeem achter koffie volledig om: niet de keten inkopen, maar de keten zíjn. Van boer tot beker, alles anders. Precies het soort verhaal waar jullie van houden, en dit klopt tot op de cent.',
       ctaPrimary: 'Bestel een proefpakket',
       imagePlaceholder: 'Sleep een sfeerfoto van jullie studio',
     },
     story: {
       heading: 'Een merk dat staat voor iets, net als jullie',
-      body: 'Wij noemen het Fairchain. Geen marketingterm, een model. We kopen niet van de keten — we zíjn de keten. Geboerd, gebrand en verpakt in Ethiopië en Kenia, met 50% van de waarde aan de bron in plaats van 10%. De designers, branders en logistici daar verdienen een leefbaar inkomen. En jij krijgt koffie met een verhaal dat je zelf niet beter had kunnen verzinnen — en dat we kunnen bewijzen.',
-      highlight: 'Goede bureaus weten: het product is het verhaal. Bij Moyee is het omgekeerde ook waar — het verhaal ís het product. We doen niet aan story telling maar aan story proving: elke kop haalt 49 kg CO₂ uit de lucht, elke boer krijgt leefbaar inkomen sinds 2012. Niet als toevoeging, maar als kern. Dat herkennen jullie.',
+      body: 'Wij noemen het Fairchain. Geen marketingterm, een model. We kopen niet van de keten, we zíjn de keten. Geboerd, gebrand en verpakt in Ethiopië en Kenia, met 50% van de waarde aan de bron in plaats van 10%. De designers, branders en logistici daar verdienen een leefbaar inkomen. En jij krijgt koffie met een verhaal dat je zelf niet beter had kunnen verzinnen, en dat we kunnen bewijzen.',
+      highlight: 'Goede bureaus weten: het product is het verhaal. Bij Moyee is het omgekeerde ook waar, het verhaal ís het product. We doen niet aan story telling maar aan story proving: elke kop haalt 49 kg CO₂ uit de lucht, elke boer krijgt leefbaar inkomen sinds 2012. Niet als toevoeging, maar als kern. Dat herkennen jullie.',
     },
     steps: [
       'Kies een blend die past bij de sfeer van jullie kantoor',
@@ -206,14 +206,14 @@ const PAGE_DATA = {
       hero: {
         eyebrow: 'Creative agencies',
         headline: ['You sell stories.', 'This is a good one.'],
-        subline: 'Moyee flipped the coffee system completely: not buying the chain, but being it. From farm to cup, everything different. Exactly the kind of story you love — and this one holds up to the cent.',
+        subline: 'Moyee flipped the coffee system completely: not buying the chain, but being it. From farm to cup, everything different. Exactly the kind of story you love, and this one holds up to the cent.',
         ctaPrimary: 'Order a trial package',
         imagePlaceholder: 'Drop an atmosphere photo of your studio here',
       },
       story: {
         heading: 'A brand that stands for something, just like you',
-        body: "We call it Fairchain. Not a marketing term, a model. We do not buy from the chain — we are the chain. Farmed, roasted and packaged in Ethiopia and Kenya, with 50% of the value staying at origin instead of 10%. The designers, roasters and logistics staff there earn a living income. And you get coffee with a story you could not have invented better yourself — and that we can prove.",
-        highlight: "Good agencies know: the product is the story. At Moyee the reverse is also true — the story is the product. We do not do story telling but story proving: every cup removes 49 kg of CO₂ from the air, every farmer has earned a living income since 2012. Not as an add-on, but at the core. You recognise that.",
+        body: "We call it Fairchain. Not a marketing term, a model. We do not buy from the chain, we are the chain. Farmed, roasted and packaged in Ethiopia and Kenya, with 50% of the value staying at origin instead of 10%. The designers, roasters and logistics staff there earn a living income. And you get coffee with a story you could not have invented better yourself, and that we can prove.",
+        highlight: "Good agencies know: the product is the story. At Moyee the reverse is also true, the story is the product. We do not do story telling but story proving: every cup removes 49 kg of CO₂ from the air, every farmer has earned a living income since 2012. Not as an add-on, but at the core. You recognise that.",
       },
       steps: [
         'Choose a blend that fits the atmosphere of your studio',
@@ -255,11 +255,11 @@ const PAGE_DATA = {
     story: {
       heading: 'Koffie die past bij hoe jij je werk doet',
       body: 'Moyee maakt de koffieketen volledig traceerbaar: van boer tot factuur, leefbaar beloond, van begin tot eind. 50% van de waarde blijft aan de bron, tegen 10% in de gewone keten. Als je elke dag werkt aan precisie en standaarden voor anderen, past Moyee bij hoe jij je kantoor runt. Niet als statement, maar als logische consequentie.',
-      highlight: 'Fairchain is geen label maar een model. Elke kilo wordt geproduceerd, gebrand en verpakt in het land van herkomst — geen tussenschakels die de waarde afromen. Leefbaar inkomen voor de boer sinds 2012, traceerbaar tot de coöperatie voor jou, specialty-grade in de kop. Dat is het soort keuze waar je geen tweede keer over hoeft na te denken.',
+      highlight: 'Fairchain is geen label maar een model. Elke kilo wordt geproduceerd, gebrand en verpakt in het land van herkomst, geen tussenschakels die de waarde afromen. Leefbaar inkomen voor de boer sinds 2012, traceerbaar tot de coöperatie voor jou, specialty-grade in de kop. Dat is het soort keuze waar je geen tweede keer over hoeft na te denken.',
     },
     steps: [
       'Bereken hoeveel koffie jullie kantoor maandelijks verbruikt',
-      'Kies een blend — specialty niveau, voor de klant aan tafel en de vergadering erna',
+      'Kies een blend, specialty niveau, voor de klant aan tafel en de vergadering erna',
       'Ontvang specialty koffie voor een waanzinnige prijs',
     ],
     testimonials: {
@@ -293,11 +293,11 @@ const PAGE_DATA = {
       story: {
         heading: 'Coffee that fits how you do your work',
         body: 'Moyee makes the coffee chain fully traceable: from farm to invoice, paid a living income, from start to finish. 50% of the value stays at origin, against 10% in the ordinary chain. If you work every day on precision and standards for others, Moyee fits how you run your office. Not as a statement, but as a logical consequence.',
-        highlight: 'Fairchain is not a label but a model. Every kilo is produced, roasted and packaged in the country of origin — no intermediaries skimming the value. A living income for the farmer since 2012, traceable to the cooperative for you, specialty-grade in the cup. That is the kind of choice you do not have to think twice about.',
+        highlight: 'Fairchain is not a label but a model. Every kilo is produced, roasted and packaged in the country of origin, no intermediaries skimming the value. A living income for the farmer since 2012, traceable to the cooperative for you, specialty-grade in the cup. That is the kind of choice you do not have to think twice about.',
       },
       steps: [
         'Calculate how much coffee your office uses monthly',
-        'Choose a blend — specialty level, for the client at the table and the meeting after',
+        'Choose a blend, specialty level, for the client at the table and the meeting after',
         'Receive specialty coffee at an unbeatable price',
       ],
       testimonials: {
@@ -335,7 +335,7 @@ const PAGE_DATA = {
     story: {
       heading: 'Koffie die de community bouwt',
       body: 'Een coworkspace is meer dan bureaus en wifi. Het gevoel begint bij de koffie. Moyee brengt specialty kwaliteit én een verhaal dat leden direct herkennen: geboerd, gebrand en verpakt aan de bron, met 50% van de waarde die daar blijft in plaats van 10%. Dat is iets om trots op te zijn, en om te delen.',
-      highlight: 'Fairchain betekent dat elke kilo wordt geboerd, gebrand en verpakt in het productieland — leefbaar inkomen voor de boer sinds 2012, en 49 kg CO₂ uit de lucht per kilo. Geen verspilde marge aan tussenschakels. Jij biedt je leden een product dat verhalen opwekt. Dat is het verschil tussen koffie als bijzaak en koffie als deel van je merk.',
+      highlight: 'Fairchain betekent dat elke kilo wordt geboerd, gebrand en verpakt in het productieland, leefbaar inkomen voor de boer sinds 2012, en 49 kg CO₂ uit de lucht per kilo. Geen verspilde marge aan tussenschakels. Jij biedt je leden een product dat verhalen opwekt. Dat is het verschil tussen koffie als bijzaak en koffie als deel van je merk.',
     },
     steps: [
       'Bereken hoeveel koffie jouw space maandelijks nodig heeft, we helpen rekenen',
@@ -373,7 +373,7 @@ const PAGE_DATA = {
       story: {
         heading: 'Coffee that builds community',
         body: 'A coworking space is more than desks and wifi. The feeling starts with the coffee. Moyee brings specialty quality and a story members recognise right away: farmed, roasted and packaged at origin, with 50% of the value staying there instead of 10%. That is something to be proud of, and to share.',
-        highlight: 'Fairchain means every kilo is farmed, roasted and packaged in the country of origin — a living income for the farmer since 2012, and 49 kg of CO₂ removed from the air per kilo. No wasted margin on intermediaries. You offer your members a product that sparks conversations. That is the difference between coffee as an afterthought and coffee as part of your brand.',
+        highlight: 'Fairchain means every kilo is farmed, roasted and packaged in the country of origin, a living income for the farmer since 2012, and 49 kg of CO₂ removed from the air per kilo. No wasted margin on intermediaries. You offer your members a product that sparks conversations. That is the difference between coffee as an afterthought and coffee as part of your brand.',
       },
       steps: [
         'Calculate how much coffee your space needs monthly, we help with the maths',
@@ -495,7 +495,7 @@ const PAGE_DATA = {
     story: {
       heading: 'Koffie die onderdeel wordt van jouw verhaal',
       body: 'Boutique horeca onderscheidt zich niet op grootte, maar op karakter. Elke keuze, van meubels tot muziek, vertelt wie je bent. Moyee past in dat plaatje: specialty-grade koffie, traceerbaar tot de coöperatie, met 50% van de waarde die aan de bron blijft in plaats van 10%. Gasten proeven het verschil. En ze komen terug.',
-      highlight: 'Fairchain: geboerd, gebrand en verpakt in Ethiopië of Kenia. Geen tussenhandel, geen onbekende herkomst — leefbaar inkomen voor de boer sinds 2012 en 49 kg CO₂ uit de lucht per kilo. Als een gast vraagt waar de koffie vandaan komt, geef jij het hele verhaal. Dat is het gesprek dat jou onderscheidt van de keten om de hoek.',
+      highlight: 'Fairchain: geboerd, gebrand en verpakt in Ethiopië of Kenia. Geen tussenhandel, geen onbekende herkomst, leefbaar inkomen voor de boer sinds 2012 en 49 kg CO₂ uit de lucht per kilo. Als een gast vraagt waar de koffie vandaan komt, geef jij het hele verhaal. Dat is het gesprek dat jou onderscheidt van de keten om de hoek.',
     },
     steps: [
       'Kies een blend die past bij jouw zaak: van licht en fruitig tot donker en intens',
@@ -533,7 +533,7 @@ const PAGE_DATA = {
       story: {
         heading: 'Coffee that becomes part of your story',
         body: 'Boutique hospitality differentiates itself not on size, but on character. Every choice, from furniture to music, tells who you are. Moyee fits that picture: specialty-grade coffee, traceable to the cooperative, with 50% of the value staying at origin instead of 10%. Guests taste the difference. And they come back.',
-        highlight: 'Fairchain: farmed, roasted and packaged in Ethiopia or Kenya. No middlemen, no unknown origin — a living income for the farmer since 2012 and 49 kg of CO₂ removed from the air per kilo. When a guest asks where the coffee comes from, you tell the whole story. That is the conversation that sets you apart from the chain around the corner.',
+        highlight: 'Fairchain: farmed, roasted and packaged in Ethiopia or Kenya. No middlemen, no unknown origin, a living income for the farmer since 2012 and 49 kg of CO₂ removed from the air per kilo. When a guest asks where the coffee comes from, you tell the whole story. That is the conversation that sets you apart from the chain around the corner.',
       },
       steps: [
         'Choose a blend that fits your venue: from light and fruity to dark and intense',
@@ -574,8 +574,8 @@ const PAGE_DATA = {
     },
     story: {
       heading: 'Inkoop als impactmiddel',
-      body: "Fondsen en NGO's werken aan rechtvaardigheid in de wereld. Die keuze stopt niet bij de deur van het kantoor. Moyee is gebouwd op hetzelfde principe: niemand achterlaten. Onze Fairchain-aanpak zorgt dat boeren in Ethiopië en Kenia niet alleen telen, maar ook branden en verpakken — zo blijft 50% van de waarde aan de bron in plaats van 10%, met leefbaar inkomen sinds 2012. Dat heet systemische impact.",
-      highlight: 'Traditionele koffieketens laten de marge achter in de rijke landen. Moyee draait dat om: elke kilo houdt waarde in de producerende gemeenschap én haalt 49 kg CO₂ uit de lucht — een handprint, geen footprint. Dat is precies de theory of change die jullie ook toepassen. Geen donatie, een verdienmodel. Dat leg je zo uit aan je board, je donateurs én je team.',
+      body: "Fondsen en NGO's werken aan rechtvaardigheid in de wereld. Die keuze stopt niet bij de deur van het kantoor. Moyee is gebouwd op hetzelfde principe: niemand achterlaten. Onze Fairchain-aanpak zorgt dat boeren in Ethiopië en Kenia niet alleen telen, maar ook branden en verpakken, zo blijft 50% van de waarde aan de bron in plaats van 10%, met leefbaar inkomen sinds 2012. Dat heet systemische impact.",
+      highlight: 'Traditionele koffieketens laten de marge achter in de rijke landen. Moyee draait dat om: elke kilo houdt waarde in de producerende gemeenschap én haalt 49 kg CO₂ uit de lucht, een handprint, geen footprint. Dat is precies de theory of change die jullie ook toepassen. Geen donatie, een verdienmodel. Dat leg je zo uit aan je board, je donateurs én je team.',
     },
     steps: [
       'Bereken hoeveel koffie jullie kantoor nodig heeft, ook voor evenementen en donateursbijeenkomsten',
@@ -612,8 +612,8 @@ const PAGE_DATA = {
       },
       story: {
         heading: 'Procurement as an impact tool',
-        body: 'Foundations and NGOs work on justice in the world. That choice does not stop at the office door. Moyee is built on the same principle: leave no one behind. Our Fairchain approach ensures that farmers in Ethiopia and Kenya do not just grow, but also roast and package — so 50% of the value stays at origin instead of 10%, with a living income since 2012. That is systemic impact.',
-        highlight: 'Traditional coffee chains leave the margin in wealthy countries. Moyee reverses that: every kilo keeps value in the producing community and removes 49 kg of CO₂ from the air — a handprint, not a footprint. That is exactly the theory of change you apply too. Not a donation, a business model. You can explain that to your board, your donors and your team.',
+        body: 'Foundations and NGOs work on justice in the world. That choice does not stop at the office door. Moyee is built on the same principle: leave no one behind. Our Fairchain approach ensures that farmers in Ethiopia and Kenya do not just grow, but also roast and package, so 50% of the value stays at origin instead of 10%, with a living income since 2012. That is systemic impact.',
+        highlight: 'Traditional coffee chains leave the margin in wealthy countries. Moyee reverses that: every kilo keeps value in the producing community and removes 49 kg of CO₂ from the air, a handprint, not a footprint. That is exactly the theory of change you apply too. Not a donation, a business model. You can explain that to your board, your donors and your team.',
       },
       steps: [
         'Calculate how much coffee your office needs, including events and donor gatherings',

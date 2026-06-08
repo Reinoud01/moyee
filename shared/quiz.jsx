@@ -1,4 +1,4 @@
-// Quiz module — "Wat is jouw smaak?" / "What's your taste?"
+// Quiz module, "Wat is jouw smaak?" / "What's your taste?"
 // Scored quiz that maps preferences onto the 5 Moyee coffees.
 
 const useQuizState = React.useState;
@@ -11,14 +11,14 @@ const COFFEES = {
       name: 'Single', sub: 'Single Origin Limu · Ethiopia', roast: 'Light roast',
       notes: 'Citrus, jasmijn, bergamot, rode bessen, cacao', body: 'Levendig & helder', price: '€ 27,00',
       color: '#292C7E', img: 'assets/products/single.webp',
-      why: 'Onze kroonjuweel — langzaam gebrand op 197°C. De floraalste, friste koffie die we hebben. Voor wie zwarte koffie en filterzettingen kan waarderen.',
+      why: 'Onze kroonjuweel, langzaam gebrand op 197°C. De floraalste, friste koffie die we hebben. Voor wie zwarte koffie en filterzettingen kan waarderen.',
       url: 'https://www.moyeecoffee.com/shop/single-1-kg-4',
     },
     double: {
       name: 'Double', sub: 'Limu × Jimma · Ethiopia', roast: 'Light–medium roast',
       notes: 'Honing, sinaasappel, melkchocolade', body: 'In balans', price: '€ 25,00',
       color: '#519E59', img: 'assets/products/double.webp',
-      why: 'De allrounder. Fruitige Limu en zoete Jimma in perfecte balans. Werkt op filter én espresso — ideaal voor een gemengde koffiekeuken op kantoor.',
+      why: 'De allrounder. Fruitige Limu en zoete Jimma in perfecte balans. Werkt op filter én espresso, ideaal voor een gemengde koffiekeuken op kantoor.',
       url: 'https://www.moyeecoffee.com/shop/double-1-kg-5',
     },
     triple: {
@@ -32,14 +32,14 @@ const COFFEES = {
       name: 'Dark Roast', sub: 'East African Blend', roast: 'Dark roast',
       notes: 'Donkere chocolade, geroosterde noten, intens', body: 'Vol, rond, krachtig', price: '€ 21,00',
       color: '#292C2C', img: 'assets/products/dark.webp',
-      why: "Onze meest intense en minst zure koffie. Voor liefhebbers van pittige espresso en stevige melkdrankjes — en collega's die van Lavazza/Illy komen.",
+      why: "Onze meest intense en minst zure koffie. Voor liefhebbers van pittige espresso en stevige melkdrankjes, en collega's die van Lavazza/Illy komen.",
       url: 'https://www.moyeecoffee.com/shop/dark-1-kg-7',
     },
     microlot: {
       name: 'Emma Microlot', sub: 'Specialty · Limited release', roast: 'Light roast · specialty grade',
       notes: 'Complex, hoge cupping score, exclusief', body: 'Verfijnd, voor de connaisseur', price: '€ 33,50',
       color: '#840048', img: 'assets/products/lion-hills.webp',
-      why: 'Onze limited specialty microlot. Geselecteerd voor de koffie-nerd die het allerbeste van het beste wil. Beperkte voorraad — alleen te krijgen zolang de oogst duurt.',
+      why: 'Onze limited specialty microlot. Geselecteerd voor de koffie-nerd die het allerbeste van het beste wil. Beperkte voorraad, alleen te krijgen zolang de oogst duurt.',
       url: 'https://www.moyeecoffee.com/shop',
     },
   },
@@ -48,14 +48,14 @@ const COFFEES = {
       name: 'Single', sub: 'Single Origin Limu · Ethiopia', roast: 'Light roast',
       notes: 'Citrus, jasmine, bergamot, red berries, cacao', body: 'Lively & bright', price: '€ 27.00',
       color: '#292C7E', img: 'assets/products/single.webp',
-      why: 'Our crown jewel — slow-roasted at 197°C. The most floral, freshest coffee we have. For those who appreciate black coffee and filter methods.',
+      why: 'Our crown jewel, slow-roasted at 197°C. The most floral, freshest coffee we have. For those who appreciate black coffee and filter methods.',
       url: 'https://www.moyeecoffee.com/shop/single-1-kg-4',
     },
     double: {
       name: 'Double', sub: 'Limu × Jimma · Ethiopia', roast: 'Light–medium roast',
       notes: 'Honey, orange, milk chocolate', body: 'In balance', price: '€ 25.00',
       color: '#519E59', img: 'assets/products/double.webp',
-      why: 'The all-rounder. Fruity Limu and sweet Jimma in perfect balance. Works on filter and espresso — ideal for a mixed coffee kitchen at the office.',
+      why: 'The all-rounder. Fruity Limu and sweet Jimma in perfect balance. Works on filter and espresso, ideal for a mixed coffee kitchen at the office.',
       url: 'https://www.moyeecoffee.com/shop/double-1-kg-5',
     },
     triple: {
@@ -69,14 +69,14 @@ const COFFEES = {
       name: 'Dark Roast', sub: 'East African Blend', roast: 'Dark roast',
       notes: 'Dark chocolate, roasted nuts, intense', body: 'Full, round, powerful', price: '€ 21.00',
       color: '#292C2C', img: 'assets/products/dark.webp',
-      why: "Our most intense and least acidic coffee. For lovers of strong espresso and robust milk drinks — and colleagues who come from Lavazza/Illy.",
+      why: "Our most intense and least acidic coffee. For lovers of strong espresso and robust milk drinks, and colleagues who come from Lavazza/Illy.",
       url: 'https://www.moyeecoffee.com/shop/dark-1-kg-7',
     },
     microlot: {
       name: 'Emma Microlot', sub: 'Specialty · Limited release', roast: 'Light roast · specialty grade',
       notes: 'Complex, high cupping score, exclusive', body: 'Refined, for the connoisseur', price: '€ 33.50',
       color: '#840048', img: 'assets/products/lion-hills.webp',
-      why: 'Our limited specialty microlot. Selected for the coffee nerd who wants the very best of the best. Limited stock — only available while the harvest lasts.',
+      why: 'Our limited specialty microlot. Selected for the coffee nerd who wants the very best of the best. Limited stock, only available while the harvest lasts.',
       url: 'https://www.moyeecoffee.com/shop',
     },
   },
@@ -98,7 +98,7 @@ const QUESTIONS = {
     {
       id: 'acidity', q: 'Wat is jullie smaak?',
       sub: 'Je koffie kan intens zijn (dark roast) of frisser (met wat aciditeit). Hou je van wat zuren in je koffie?',
-      opts: ['Liever helemaal niet zuur: ik hou van intens','Een vleugje zuren is prima','Stevig — laat het smaken','Geef mij maar levendig & fris'],
+      opts: ['Liever helemaal niet zuur: ik hou van intens','Een vleugje zuren is prima','Stevig, laat het smaken','Geef mij maar levendig & fris'],
     },
     {
       id: 'roast', q: 'Welke branding past bij jou?',
@@ -107,29 +107,29 @@ const QUESTIONS = {
     },
     {
       id: 'intensity', q: 'Hoe sterk mag het smaken?',
-      sub: 'Sterkte gaat over intensiteit en body — hoeveel "punch" heeft die kop?',
-      opts: ['Subtiel & verfijnd','In balans, niet te heftig','Stevig — laat het smaken',"Vol & krachtig — recht voor z'n raap"],
+      sub: 'Sterkte gaat over intensiteit en body, hoeveel "punch" heeft die kop?',
+      opts: ['Subtiel & verfijnd','In balans, niet te heftig','Stevig, laat het smaken',"Vol & krachtig, recht voor z'n raap"],
     },
     {
       id: 'specialty', q: 'Hoe veel ben je met koffie bezig?',
       sub: 'Even concreet: zoek je een specialty-ervaring of gewoon iets lekkers in de mok?',
-      opts: ['Specialty — ik ben best een koffie-nerd','Lekkere everyday-koffie zonder fratsen','Iets gangbaars dat iedereen lekker vindt','Het allerbeste, koste wat het kost'],
+      opts: ['Specialty, ik ben best een koffie-nerd','Lekkere everyday-koffie zonder fratsen','Iets gangbaars dat iedereen lekker vindt','Het allerbeste, koste wat het kost'],
     },
     {
       id: 'drink', q: 'Hoe drink je je koffie het liefst?',
-      opts: ['Zwart, filter of pour-over','Espresso puur','Cappuccino, latte, met melk','Een mix — hangt van de dag af'],
+      opts: ['Zwart, filter of pour-over','Espresso puur','Cappuccino, latte, met melk','Een mix, hangt van de dag af'],
     },
     {
       id: 'machine', q: 'Wat voor machine staat er op kantoor?',
       sub: 'We leveren bonen heel, of voorgemalen als filter- of espressomaling.',
-      opts: ['Espressomachine met bonenmaler','Volautomaat (bonen erin, kop eruit)','Filter / V60 / Chemex / Moccamaster','Weet ik nog niet — adviseer me'],
+      opts: ['Espressomachine met bonenmaler','Volautomaat (bonen erin, kop eruit)','Filter / V60 / Chemex / Moccamaster','Weet ik nog niet, adviseer me'],
     },
   ],
   en: [
     {
       id: 'acidity', q: "What's your taste?",
       sub: 'Your coffee can be intense (dark roast) or fresher (with some acidity). Do you like some acidity in your coffee?',
-      opts: ['Prefer no acidity at all: I like it intense','A hint of acidity is fine','Substantial — let it shine','Give me lively & fresh'],
+      opts: ['Prefer no acidity at all: I like it intense','A hint of acidity is fine','Substantial, let it shine','Give me lively & fresh'],
     },
     {
       id: 'roast', q: 'Which roast level suits you?',
@@ -138,22 +138,22 @@ const QUESTIONS = {
     },
     {
       id: 'intensity', q: 'How intense should it taste?',
-      sub: 'Intensity is about body — how much punch does that cup have?',
-      opts: ['Subtle & refined','Balanced, not too heavy','Substantial — let it shine','Full & powerful — straight to the point'],
+      sub: 'Intensity is about body, how much punch does that cup have?',
+      opts: ['Subtle & refined','Balanced, not too heavy','Substantial, let it shine','Full & powerful, straight to the point'],
     },
     {
       id: 'specialty', q: 'How into coffee are you?',
       sub: 'Honestly: are you looking for a specialty experience or just something tasty in the mug?',
-      opts: ["Specialty — I'm quite the coffee nerd",'Good everyday coffee without fuss','Something common that everyone likes','The very best, whatever it costs'],
+      opts: ["Specialty, I'm quite the coffee nerd",'Good everyday coffee without fuss','Something common that everyone likes','The very best, whatever it costs'],
     },
     {
       id: 'drink', q: 'How do you prefer your coffee?',
-      opts: ['Black, filter or pour-over','Pure espresso','Cappuccino, latte, with milk','A mix — depends on the day'],
+      opts: ['Black, filter or pour-over','Pure espresso','Cappuccino, latte, with milk','A mix, depends on the day'],
     },
     {
       id: 'machine', q: 'What machine is at the office?',
       sub: 'We deliver whole beans, or pre-ground as filter or espresso grind.',
-      opts: ['Espresso machine with bean grinder','Bean-to-cup machine','Filter / V60 / Chemex / Moccamaster','Not sure yet — advise me'],
+      opts: ['Espresso machine with bean grinder','Bean-to-cup machine','Filter / V60 / Chemex / Moccamaster','Not sure yet, advise me'],
     },
   ],
 };
@@ -168,7 +168,7 @@ function buildQuestions(lang) {
 
 function QuizButton({onOpen}) {
   const {lang} = React.useContext(window.LangContext);
-  const label = lang === 'en' ? "What's your taste? — Take the quiz" : 'Wat is jouw smaak? — Doe de quiz';
+  const label = lang === 'en' ? "What's your taste? Take the quiz" : 'Wat is jouw smaak? Doe de quiz';
   return (
     <button onClick={onOpen} className="quiz-button" style={{
       background:'#272727',color:'#FFD900',
@@ -362,7 +362,7 @@ function QuizResult({scores, lang, onRestart, onClose}) {
     shopBtn:      'Visit shop ↗',
     restTitle:    'The rest of the range',
     restart:      '↺ Redo the quiz',
-    tastingCta:   <>Not sure? <a href="https://www.moyeecoffee.com/nl/shop/3-smaakpakketten-750-gram-90?category=1#attribute_values=3" target="_blank" rel="noreferrer" style={{color:'#FFD900',textDecoration:'underline'}}>Order a trial package</a> — drink, compare, choose.</>,
+    tastingCta:   <>Not sure? <a href="https://www.moyeecoffee.com/nl/shop/3-smaakpakketten-750-gram-90?category=1#attribute_values=3" target="_blank" rel="noreferrer" style={{color:'#FFD900',textDecoration:'underline'}}>Order a trial package</a>, drink, compare, choose.</>,
   } : {
     matchLabel:   'Jouw match',
     matchHeading: <>Onze <span style={{color:'#FFD900'}}>{top.name}</span> past het best</>,
@@ -372,7 +372,7 @@ function QuizResult({scores, lang, onRestart, onClose}) {
     shopBtn:      'Bekijk shop ↗',
     restTitle:    'De rest van het pakket',
     restart:      '↺ Quiz opnieuw doen',
-    tastingCta:   <>Niet zeker? <a href="https://www.moyeecoffee.com/nl/shop/3-smaakpakketten-750-gram-90?category=1#attribute_values=3" target="_blank" rel="noreferrer" style={{color:'#FFD900',textDecoration:'underline'}}>Bestel een proefpakket</a> — drink, vergelijk, kies.</>,
+    tastingCta:   <>Niet zeker? <a href="https://www.moyeecoffee.com/nl/shop/3-smaakpakketten-750-gram-90?category=1#attribute_values=3" target="_blank" rel="noreferrer" style={{color:'#FFD900',textDecoration:'underline'}}>Bestel een proefpakket</a>, drink, vergelijk, kies.</>,
   };
 
   return (

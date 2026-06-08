@@ -1,4 +1,4 @@
-// Moyee landing pages — shared chrome (NoticeBar, Nav, Footer, Reveal, icons)
+// Moyee landing pages, shared chrome (NoticeBar, Nav, Footer, Reveal, icons)
 
 const {useState, useEffect, useRef, useContext} = React;
 
@@ -85,7 +85,7 @@ function NoticeBar() {
   );
 }
 
-/* ───── Navigation — landing-page version with page-cluster switcher ───── */
+/* ───── Navigation, landing-page version with page-cluster switcher ───── */
 const ALL_PAGES = [
   {key:'bcorp',         nl:'B-Corp & ESG',         en:'B-Corp & ESG',         file:'B-Corp - ESG.html'},
   {key:'tech',          nl:'Tech scale-ups',        en:'Tech scale-ups',       file:'Tech Scale-ups.html'},
@@ -209,8 +209,8 @@ function Footer() {
   ];
 
   const tagline = lang === 'en'
-    ? 'Radically good coffee with radical impact. Since 2012, from Amsterdam — roasted in Addis Ababa & Amsterdam-Noord.'
-    : 'Radically good coffee with radical impact. Sinds 2012, vanuit Amsterdam — gebrand in Addis Abeba & Amsterdam-Noord.';
+    ? 'Radically good coffee with radical impact. Since 2012, from Amsterdam, roasted in Addis Ababa & Amsterdam-Noord.'
+    : 'Radically good coffee with radical impact. Sinds 2012, vanuit Amsterdam, gebrand in Addis Abeba & Amsterdam-Noord.';
 
   const legalLinks = lang === 'en'
     ? ['Privacy','Terms','CoC 12345678']

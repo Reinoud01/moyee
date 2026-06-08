@@ -1,4 +1,4 @@
-// Landing-page sections — Hero, Story, Steps, Testimonials, Impact, FinalCTA
+// Landing-page sections, Hero, Story, Steps, Testimonials, Impact, FinalCTA
 // Data-driven: each section takes its content from the page-data registry.
 
 const PROEFPAKKET_URL = 'https://www.moyeecoffee.com/shop/4-flavour-pack-4-kg-1640#attribute_values=3';
@@ -100,7 +100,7 @@ function Story({ data }) {
 
 }
 
-/* ───── Hoe het werkt — 3 stappen ───── */
+/* ───── Hoe het werkt, 3 stappen ───── */
 function Steps({ data }) {
   const {lang} = React.useContext(window.LangContext);
   const eyebrow = lang === 'en' ? 'How it works'        : 'Hoe het werkt';
@@ -263,7 +263,7 @@ function FinalCTA({ data }) {
 
 }
 
-/* ───── Full-bleed partner quote — manifesto image with yellow overlay ───── */
+/* ───── Full-bleed partner quote, manifesto image with yellow overlay ───── */
 function FullBleedQuote({ data, quote }) {
   return (
     <section style={{
@@ -275,7 +275,7 @@ function FullBleedQuote({ data, quote }) {
     }}>
       <image-slot
         id={`fullbleed-${data.key}`}
-        placeholder="Sleep een breedformaat sfeerfoto hier — koffiebar, team, productie"
+        placeholder="Sleep een breedformaat sfeerfoto hier, koffiebar, team, productie"
         shape="rect"
         style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', display: 'block', background: '#1a1a1a', color: '#FFD900', zIndex: 0 }}>
       </image-slot>
@@ -297,12 +297,12 @@ function FullBleedQuote({ data, quote }) {
 
 }
 
-/* ───── Fairchain pillars — 3 images with yellow caption ───── */
+/* ───── Fairchain pillars, 3 images with yellow caption ───── */
 function FairchainPillars({ data }) {
   const {lang} = React.useContext(window.LangContext);
 
   const heading = lang === 'en'
-    ? <><span style={{ color: '#E5007D' }}>Fairchain</span> coffee — what is it?</>
+    ? <><span style={{ color: '#E5007D' }}>Fairchain</span> coffee, what is it?</>
     : <>Wat is <span style={{ color: '#E5007D' }}>Fairchain</span> koffie?</>;
 
   const pillars = lang === 'en' ? [
@@ -357,7 +357,7 @@ function FairchainPillars({ data }) {
 
 }
 
-/* ───── Products grid (5 koffies — EXACT from MKB Landing) ───── */
+/* ───── Products grid (5 koffies, EXACT from MKB Landing) ───── */
 function Products() {
   const {lang} = React.useContext(window.LangContext);
 
@@ -373,35 +373,35 @@ function Products() {
   const items = (lang === 'en' ? [
     { src: 'assets/products/single.webp', intensity: 2, acidity: 5, hi: false,
       title: 'Single Origin', tag: 'Bright & refined',
-      copy: 'One origin, one bean. Delicate and fruity with a hint of honey. High acidity, low intensity — for those who appreciate nuance.' },
+      copy: 'One origin, one bean. Delicate and fruity with a hint of honey. High acidity, low intensity, for those who appreciate nuance.' },
     { src: 'assets/products/double.webp', intensity: 3, acidity: 3, hi: false,
       title: 'Double Blend', tag: 'In balance',
-      copy: 'A blend of two beans. Full-bodied with fruit and chocolate. Medium acidity, slightly higher intensity — the all-rounder for the office.' },
+      copy: 'A blend of two beans. Full-bodied with fruit and chocolate. Medium acidity, slightly higher intensity, the all-rounder for the office.' },
     { src: 'assets/products/triple.webp', intensity: 4, acidity: 2, hi: true,
       title: 'Triple Blend', tag: 'Crowd-pleaser',
-      copy: 'Blend of three beans, from bean to bag. Full and creamy with chocolate — more approachable and intense. The coffee everyone likes.' },
+      copy: 'Blend of three beans, from bean to bag. Full and creamy with chocolate, more approachable and intense. The coffee everyone likes.' },
     { src: 'assets/products/dark.webp', intensity: 5, acidity: 1, hi: false,
       title: 'Dark Roast', tag: 'Deep & round',
-      copy: 'Traditional Italian style with notes of brown sugar and almond. Our most intense — and least acidic — coffee.' },
+      copy: 'Traditional Italian style with notes of brown sugar and almond. Our most intense, and least acidic, coffee.' },
     { src: 'assets/products/lion-hills.webp', intensity: 3, acidity: 4, hi: false, badge: 'Microlot',
       title: 'Emma Microlot', tag: 'Limited edition',
-      copy: 'Our Microlot Series — a single-farm specialty from Ethiopia, with distinctive citrus and floral notes. For the connoisseur.' },
+      copy: 'Our Microlot Series, a single-farm specialty from Ethiopia, with distinctive citrus and floral notes. For the connoisseur.' },
   ] : [
     { src: 'assets/products/single.webp', intensity: 2, acidity: 5, hi: false,
       title: 'Single Origin', tag: 'Helder & verfijnd',
-      copy: 'Eén herkomst, één boon. Delicaat, fruitig met een vleugje honing. Hoge aciditeit, lage intensiteit — voor wie nuance proeft.' },
+      copy: 'Eén herkomst, één boon. Delicaat, fruitig met een vleugje honing. Hoge aciditeit, lage intensiteit, voor wie nuance proeft.' },
     { src: 'assets/products/double.webp', intensity: 3, acidity: 3, hi: false,
       title: 'Double Blend', tag: 'In balans',
-      copy: 'Mix van twee bonen. Full-bodied met fruit en chocolade. Medium aciditeit, iets hogere intensiteit — de allrounder voor op kantoor.' },
+      copy: 'Mix van twee bonen. Full-bodied met fruit en chocolade. Medium aciditeit, iets hogere intensiteit, de allrounder voor op kantoor.' },
     { src: 'assets/products/triple.webp', intensity: 4, acidity: 2, hi: true,
       title: 'Triple Blend', tag: 'Crowd-pleaser',
-      copy: 'Blend van drie bonen, from bean to bag. Vol en romig met chocolade — toegankelijker en intenser. De koffie die iedereen lekker vindt.' },
+      copy: 'Blend van drie bonen, from bean to bag. Vol en romig met chocolade, toegankelijker en intenser. De koffie die iedereen lekker vindt.' },
     { src: 'assets/products/dark.webp', intensity: 5, acidity: 1, hi: false,
       title: 'Dark Roast', tag: 'Diep & rond',
-      copy: 'Traditionele Italiaanse stijl met noten van bruine suiker en amandel. Onze meest intense — en minst zure — koffie.' },
+      copy: 'Traditionele Italiaanse stijl met noten van bruine suiker en amandel. Onze meest intense, en minst zure, koffie.' },
     { src: 'assets/products/lion-hills.webp', intensity: 3, acidity: 4, hi: false, badge: 'Microlot',
       title: 'Emma Microlot', tag: 'Limited edition',
-      copy: 'Onze Microlot Series — een single-farm specialty uit Ethiopië, met kenmerkende citrus- en bloemennoten. Voor de fijnproever.' },
+      copy: 'Onze Microlot Series, een single-farm specialty uit Ethiopië, met kenmerkende citrus- en bloemennoten. Voor de fijnproever.' },
   ]).map((item, i) => ({...item, ...PRODUCT_META[i]}));
 
   const sectionLabel  = lang === 'en' ? 'Our coffee'                          : 'Onze koffie';
@@ -414,8 +414,8 @@ function Products() {
   const detailsLabel   = lang === 'en' ? 'Details'   : 'Details';
   const unsureTitle    = lang === 'en' ? "Not sure which one fits?" : 'Niet zeker welke past?';
   const unsureSub      = lang === 'en'
-    ? "We'll send you a trial package with all four — drink, compare, choose."
-    : 'We sturen je een proefpakket met alle vier — drink, vergelijk, kies.';
+    ? "We'll send you a trial package with all four, drink, compare, choose."
+    : 'We sturen je een proefpakket met alle vier, drink, vergelijk, kies.';
   const unsureCta      = lang === 'en' ? 'Request trial package' : 'Vraag proefpakket aan';
 
   return (
@@ -486,8 +486,8 @@ function FairchainBlueprint() {
 
   const heading = 'Fairchain is our blueprint for the future of coffee';
   const body = lang === 'en'
-    ? "FairChain is not charity but a viable business model — designed to leave more added value in the communities where our coffee grows. By roasting in the origin country, paying farmers living incomes and protecting their forests (and planting many new ones), we've created a Fairchain blueprint — and we invite others to follow. The only real downside: brands like us earn less profit. That's why the big coffee multinationals and typical venture capitalists don't love us. It took us 12 years — falling, getting up, trying again — but we now dare to say that Fairchain is a very real blueprint for the future of coffee."
-    : "FairChain is geen liefdadigheid maar een levensvatbaar bedrijfsmodel — ontworpen om méér toegevoegde waarde achter te laten in de gemeenschappen waar onze koffie groeit. Door te branden in het herkomstland, boeren leefbare inkomens te betalen en hun bossen te beschermen (en massaal nieuwe bossen aan te planten), hebben we een Fairchain-blueprint gemaakt — en we nodigen anderen uit om te volgen. Het enige grote nadeel: merken als wij verdienen minder winst. Daarom houden de grote koffie-multinationals en typische venture capitalists niet zo van ons. Het kostte ons 12 jaar — vallen, opstaan, opnieuw proberen — maar inmiddels durven we te zeggen dat Fairchain een heel reële blauwdruk is voor de toekomst van koffie.";
+    ? "FairChain is not charity but a viable business model, designed to leave more added value in the communities where our coffee grows. By roasting in the origin country, paying farmers living incomes and protecting their forests (and planting many new ones), we've created a Fairchain blueprint, and we invite others to follow. The only real downside: brands like us earn less profit. That's why the big coffee multinationals and typical venture capitalists don't love us. It took us 12 years, falling, getting up, trying again, but we now dare to say that Fairchain is a very real blueprint for the future of coffee."
+    : "FairChain is geen liefdadigheid maar een levensvatbaar bedrijfsmodel, ontworpen om méér toegevoegde waarde achter te laten in de gemeenschappen waar onze koffie groeit. Door te branden in het herkomstland, boeren leefbare inkomens te betalen en hun bossen te beschermen (en massaal nieuwe bossen aan te planten), hebben we een Fairchain-blueprint gemaakt, en we nodigen anderen uit om te volgen. Het enige grote nadeel: merken als wij verdienen minder winst. Daarom houden de grote koffie-multinationals en typische venture capitalists niet zo van ons. Het kostte ons 12 jaar, vallen, opstaan, opnieuw proberen, maar inmiddels durven we te zeggen dat Fairchain een heel reële blauwdruk is voor de toekomst van koffie.";
 
   const cta = lang === 'en' ? 'Get the coffee' : 'Haal de koffie';
 
@@ -588,11 +588,11 @@ function Contact() {
     : 'Geen formulier-met-15-velden. Geen ticketnummer. Wel een Moyista die je kent en terugbelt.';
 
   const ways = lang === 'en' ? [
-    { ic: <IconPhone size={28} />, h: 'Call us',              sub: 'Mon–Fri · 9:00–17:30', v: '020 — 737 22 95',     href: 'tel:+31207372295' },
+    { ic: <IconPhone size={28} />, h: 'Call us',              sub: 'Mon–Fri · 9:00–17:30', v: '020 737 22 95',     href: 'tel:+31207372295' },
     { ic: <IconMail  size={28} />, h: 'Email us',             sub: 'Response within 1 working day', v: 'b2b@moyeecoffee.com', href: 'mailto:b2b@moyeecoffee.com' },
     { ic: <IconChat  size={28} />, h: 'Chat with a Moyista',  sub: 'Mon–Fri · 9:00–17:30', v: 'Start chat →',        href: '#' },
   ] : [
-    { ic: <IconPhone size={28} />, h: 'Bel ons',              sub: 'Ma–vr · 9:00–17:30', v: '020 — 737 22 95',     href: 'tel:+31207372295' },
+    { ic: <IconPhone size={28} />, h: 'Bel ons',              sub: 'Ma–vr · 9:00–17:30', v: '020 737 22 95',     href: 'tel:+31207372295' },
     { ic: <IconMail  size={28} />, h: 'Mail ons',             sub: 'Reactie binnen 1 werkdag', v: 'b2b@moyeecoffee.com', href: 'mailto:b2b@moyeecoffee.com' },
     { ic: <IconChat  size={28} />, h: 'Chat met een Moyista', sub: 'Ma–vr · 9:00–17:30', v: 'Start chat →',        href: '#' },
   ];
@@ -675,7 +675,7 @@ function StickyButtons() {
   );
 }
 
-/* ───── Price & Value — specialty coffee uitleg + prijspropositie ───── */
+/* ───── Price & Value, specialty coffee uitleg + prijspropositie ───── */
 function PriceValue() {
   const {lang} = React.useContext(window.LangContext);
   const [open, setOpen] = React.useState(false);
@@ -683,7 +683,7 @@ function PriceValue() {
   const t = lang === 'en' ? {
     eyebrow: 'Price & quality',
     heading: 'Specialty coffee. Surprisingly affordable.',
-    intro: 'Most specialty coffee brands charge a premium. Moyee cuts out the middlemen — we roast at origin. That saving goes to the farmer and to you. Sometimes up to 2× cheaper than comparable specialty brands.',
+    intro: 'Most specialty coffee brands charge a premium. Moyee cuts out the middlemen, we roast at origin. That saving goes to the farmer and to you. Sometimes up to 2× cheaper than comparable specialty brands.',
     priceFrom: 'From',
     priceUnit: '/ kg',
     priceSub: 'Specialty grade. Roasted in Ethiopia or Kenya.',
@@ -693,15 +693,15 @@ function PriceValue() {
     specBody: 'Specialty coffee is the highest quality coffee, produced with extreme care from plantation to cup. It is fully traceable and assessed by certified experts (Q-graders) on a 100-point scale.',
     specPoints: [
       { label: 'Score 80+', text: 'The coffee must score at least 80 out of 100 in a professional cupping session according to Specialty Coffee Association standards.' },
-      { label: 'No defects', text: 'Specialty beans have zero taste-ruining defects — no rotten or unripe beans.' },
+      { label: 'No defects', text: 'Specialty beans have zero taste-ruining defects, no rotten or unripe beans.' },
       { label: 'Distinctive terroir', text: 'The unique character of the soil, climate and altitude is clearly perceptible in the cup.' },
-      { label: 'Full traceability', text: 'You know exactly where the coffee comes from — traceable to a cooperative, farmer, region or even a single micro-lot.' },
+      { label: 'Full traceability', text: 'You know exactly where the coffee comes from, traceable to a cooperative, farmer, region or even a single micro-lot.' },
       { label: 'Arabica only', text: 'Specialty coffee always comes from the high-quality Arabica plant, known for its complexity of flavour.' },
     ],
   } : {
     eyebrow: 'Prijs & kwaliteit',
     heading: 'Specialty coffee. Verrassend betaalbaar.',
-    intro: 'De meeste specialty koffiemerken rekenen een flinke toeslag. Moyee snijdt de tussenschakels eruit — wij branden aan de bron. Die besparing gaat naar de boer én naar jou. Soms wel 2× goedkoper dan vergelijkbare specialty merken.',
+    intro: 'De meeste specialty koffiemerken rekenen een flinke toeslag. Moyee snijdt de tussenschakels eruit, wij branden aan de bron. Die besparing gaat naar de boer én naar jou. Soms wel 2× goedkoper dan vergelijkbare specialty merken.',
     priceFrom: 'Vanaf',
     priceUnit: '/ kg',
     priceSub: 'Specialty grade. Gebrand in Ethiopië of Kenia.',
@@ -753,7 +753,7 @@ function PriceValue() {
           </Reveal>
         </div>
 
-        {/* Specialty coffee uitleg — full width, buiten de grid */}
+        {/* Specialty coffee uitleg, full width, buiten de grid */}
         {open && (
           <div style={{ marginTop: 40, borderTop: '1px solid rgba(255,255,255,0.25)', paddingTop: 32 }}>
             <h3 style={{ fontFamily: 'Oswald,sans-serif', fontWeight: 500, fontSize: 22, color: '#fff', textTransform: 'uppercase', margin: '0 0 14px' }}>{t.specTitle}</h3>
