@@ -11,7 +11,7 @@ const COFFEES = {
       name: 'Single', sub: 'Single Origin Limu · Ethiopia', roast: 'Light roast',
       notes: 'Citrus, jasmijn, bergamot, rode bessen, cacao', body: 'Levendig & helder', price: '€ 27,00',
       color: '#292C7E', img: 'assets/products/single.webp',
-      why: 'Onze kroonjuweel — slow-roasted op 197°C. De floraalste, friste koffie die we hebben. Voor wie zwarte koffie en filterzettingen kan waarderen.',
+      why: 'Onze kroonjuweel — langzaam gebrand op 197°C. De floraalste, friste koffie die we hebben. Voor wie zwarte koffie en filterzettingen kan waarderen.',
       url: 'https://www.moyeecoffee.com/shop/single-1-kg-4',
     },
     double: {
@@ -102,7 +102,7 @@ const QUESTIONS = {
     },
     {
       id: 'roast', q: 'Welke branding past bij jou?',
-      sub: 'Licht = behoud van origin-smaken. Donker = vollere, geroosterde tonen.',
+      sub: 'Licht = behoud van origin-smaken. Donker = vollere, gebrande tonen.',
       opts: ['Licht gebrand','Medium gebrand','Donker gebrand','Geen voorkeur'],
     },
     {
@@ -112,7 +112,7 @@ const QUESTIONS = {
     },
     {
       id: 'specialty', q: 'Hoe veel ben je met koffie bezig?',
-      sub: 'Eerlijk: zoek je een specialty-ervaring of gewoon iets lekkers in de mok?',
+      sub: 'Even concreet: zoek je een specialty-ervaring of gewoon iets lekkers in de mok?',
       opts: ['Specialty — ik ben best een koffie-nerd','Lekkere everyday-koffie zonder fratsen','Iets gangbaars dat iedereen lekker vindt','Het allerbeste, koste wat het kost'],
     },
     {

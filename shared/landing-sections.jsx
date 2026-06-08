@@ -186,7 +186,7 @@ function Impact({ data }) {
     { n: '10,000', l: 'Farmers in the Fairchain network' },
     { n: '2',      l: 'Own roasteries in Africa' },
   ] : [
-    { n: '80%',    l: 'Geroosterd in Ethiopië of Kenia' },
+    { n: '80%',    l: 'Gebrand in Ethiopië of Kenia' },
     { n: '+40%',   l: 'Meer inkomen voor de boer vs. fairtrade' },
     { n: '10.000', l: 'Boeren in het Fairchain-netwerk' },
     { n: '2',      l: 'Eigen branderijen in Afrika' },
@@ -487,7 +487,7 @@ function FairchainBlueprint() {
   const heading = 'Fairchain is our blueprint for the future of coffee';
   const body = lang === 'en'
     ? "FairChain is not charity but a viable business model — designed to leave more added value in the communities where our coffee grows. By roasting in the origin country, paying farmers living incomes and protecting their forests (and planting many new ones), we've created a Fairchain blueprint — and we invite others to follow. The only real downside: brands like us earn less profit. That's why the big coffee multinationals and typical venture capitalists don't love us. It took us 12 years — falling, getting up, trying again — but we now dare to say that Fairchain is a very real blueprint for the future of coffee."
-    : "FairChain is geen liefdadigheid maar een levensvatbaar bedrijfsmodel — ontworpen om méér toegevoegde waarde achter te laten in de gemeenschappen waar onze koffie groeit. Door te roosteren in het herkomstland, boeren leefbare inkomens te betalen en hun bossen te beschermen (en massaal nieuwe bossen aan te planten), hebben we een Fairchain-blueprint gemaakt — en we nodigen anderen uit om te volgen. Het enige grote nadeel: merken als wij verdienen minder winst. Daarom houden de grote koffie-multinationals en typische venture capitalists niet zo van ons. Het kostte ons 12 jaar — vallen, opstaan, opnieuw proberen — maar inmiddels durven we te zeggen dat Fairchain een heel reële blauwdruk is voor de toekomst van koffie.";
+    : "FairChain is geen liefdadigheid maar een levensvatbaar bedrijfsmodel — ontworpen om méér toegevoegde waarde achter te laten in de gemeenschappen waar onze koffie groeit. Door te branden in het herkomstland, boeren leefbare inkomens te betalen en hun bossen te beschermen (en massaal nieuwe bossen aan te planten), hebben we een Fairchain-blueprint gemaakt — en we nodigen anderen uit om te volgen. Het enige grote nadeel: merken als wij verdienen minder winst. Daarom houden de grote koffie-multinationals en typische venture capitalists niet zo van ons. Het kostte ons 12 jaar — vallen, opstaan, opnieuw proberen — maar inmiddels durven we te zeggen dat Fairchain een heel reële blauwdruk is voor de toekomst van koffie.";
 
   const cta = lang === 'en' ? 'Get the coffee' : 'Haal de koffie';
 
@@ -701,10 +701,10 @@ function PriceValue() {
   } : {
     eyebrow: 'Prijs & kwaliteit',
     heading: 'Specialty coffee. Verrassend betaalbaar.',
-    intro: 'De meeste specialty koffiemerken rekenen een flinke toeslag. Moyee snijdt de tussenschakels eruit — wij roosteren aan de bron. Die besparing gaat naar de boer én naar jou. Soms wel 2× goedkoper dan vergelijkbare specialty merken.',
+    intro: 'De meeste specialty koffiemerken rekenen een flinke toeslag. Moyee snijdt de tussenschakels eruit — wij branden aan de bron. Die besparing gaat naar de boer én naar jou. Soms wel 2× goedkoper dan vergelijkbare specialty merken.',
     priceFrom: 'Vanaf',
     priceUnit: '/ kg',
-    priceSub: 'Specialty grade. Geroosterd in Ethiopië of Kenia.',
+    priceSub: 'Specialty grade. Gebrand in Ethiopië of Kenia.',
     toggleShow: 'Wat is specialty coffee?',
     toggleHide: 'Sluiten',
     specTitle: 'Wat is specialty coffee?',
