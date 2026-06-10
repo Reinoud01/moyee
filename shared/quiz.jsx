@@ -359,8 +359,8 @@ function QuizResult({scores, lang, onRestart, onClose}) {
     matchSub:     'Based on your 6 answers.',
     flavorLabel:  'Taste profile',
     quoteBtn:     'Request quote →',
-    shopBtn:      'Visit shop ↗',
-    restTitle:    'The rest of the range',
+    shopBtn:      'Visit shop',
+    restTitle:    'The other roasts',
     restart:      '↺ Redo the quiz',
     tastingCta:   <>Not sure? <a href="https://www.moyeecoffee.com/nl/shop/3-smaakpakketten-750-gram-90?category=1#attribute_values=3" target="_blank" rel="noreferrer" style={{color:'#FFD900',textDecoration:'underline'}}>Order a trial package</a>, drink, compare, choose.</>,
   } : {
@@ -369,8 +369,8 @@ function QuizResult({scores, lang, onRestart, onClose}) {
     matchSub:     'Op basis van jouw 6 antwoorden.',
     flavorLabel:  'Smaakprofiel',
     quoteBtn:     'Vraag offerte aan →',
-    shopBtn:      'Bekijk shop ↗',
-    restTitle:    'De rest van het pakket',
+    shopBtn:      'Bekijk shop',
+    restTitle:    'De andere roasts',
     restart:      '↺ Quiz opnieuw doen',
     tastingCta:   <>Niet zeker? <a href="https://www.moyeecoffee.com/nl/shop/3-smaakpakketten-750-gram-90?category=1#attribute_values=3" target="_blank" rel="noreferrer" style={{color:'#FFD900',textDecoration:'underline'}}>Bestel een proefpakket</a>, drink, vergelijk, kies.</>,
   };

@@ -117,7 +117,7 @@ function Steps({ data }) {
             {heading}
           </h2>
         </Reveal>
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3,1fr)', gap: 32 }}>
+        <div className="hscroll-mobile steps-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(3,1fr)', gap: 32 }}>
           {data.steps.map((s, i) =>
           <Reveal key={i} delay={i * 120} style={{
             padding: '42px 36px 40px', background: 'rgba(255,255,255,0.04)',
@@ -149,7 +149,7 @@ function Testimonials({ data }) {
             {data.testimonials.heading}
           </h2>
         </Reveal>
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3,1fr)', gap: 24 }}>
+        <div className="hscroll-mobile testimonials-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(3,1fr)', gap: 24 }}>
           {data.testimonials.items.map((t, i) =>
           <Reveal key={i} delay={i * 100} style={{
             background: '#fff', padding: '40px 36px',
@@ -203,7 +203,7 @@ function Impact({ data }) {
             {subheading}
           </h2>
         </Reveal>
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4,1fr)', gap: 0, borderTop: '1px solid #F1F3F5', borderBottom: '1px solid #F1F3F5' }}>
+        <div className="hscroll-mobile impact-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(4,1fr)', gap: 0, borderTop: '1px solid #F1F3F5', borderBottom: '1px solid #F1F3F5' }}>
           {numbers.map((s, i) =>
           <Reveal key={i} delay={i * 80} style={{
             padding: '48px 32px',
@@ -607,7 +607,7 @@ function Contact() {
           </h2>
           <p style={{ fontSize: 17, color: '#495057', margin: 0 }}>{subline}</p>
         </Reveal>
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3,1fr)', gap: 24 }}>
+        <div className="hscroll-mobile contact-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(3,1fr)', gap: 24 }}>
           {ways.map((w, i) =>
           <Reveal key={i} delay={i * 90}>
               <a href={w.href} className="contact-card" style={{
