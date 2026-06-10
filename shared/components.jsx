@@ -139,7 +139,7 @@ function Nav({active}) {
       padding:'14px 40px',background:'#fff',
       borderBottom:'1px solid #F1F3F5',
     }}>
-      <a href="../b-corps/" style={{cursor:'pointer',display:'flex',alignItems:'center'}}>
+      <a href="../b-corps/" className="nav-logo" style={{cursor:'pointer',display:'flex',alignItems:'center'}}>
         <img src="../assets/logo/lockup-black.png" alt="moyee" style={{height:32}}/>
       </a>
 
@@ -150,7 +150,7 @@ function Nav({active}) {
 
       <div className="nav-utility" style={{display:'flex',gap:12,alignItems:'center'}}>
         <LangToggle/>
-        <a href="https://www.moyeecoffee.com/shop/4-flavour-pack-4-kg-1640#attribute_values=3" target="_blank" rel="noreferrer" style={{color:'#E5007D',fontFamily:'Oswald,sans-serif',fontSize:14,textTransform:'uppercase',letterSpacing:'0.08em',textDecoration:'none',padding:'10px 18px',border:'1px solid #E5007D'}}>{ctaLabel}</a>
+        <a className="nav-cta" href="https://www.moyeecoffee.com/shop/4-flavour-pack-4-kg-1640#attribute_values=3" target="_blank" rel="noreferrer" style={{color:'#E5007D',fontFamily:'Oswald,sans-serif',fontSize:14,textTransform:'uppercase',letterSpacing:'0.08em',textDecoration:'none',padding:'10px 18px',border:'1px solid #E5007D'}}>{ctaLabel}</a>
 
         <button aria-label={mobileOpen ? closeLabel : openLabel} className="nav-hamburger" onClick={() => setMobileOpen(o => !o)} style={{
           background:'transparent',border:0,padding:8,cursor:'pointer',color:'#212529',

@@ -2,7 +2,7 @@
 <html lang="nl">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=5,viewport-fit=cover">
 <title>Verzekeringen <title>B-Corps & ESG-kantoren, Moyee</title> financiële dienstverlening, Moyee</title>
 <meta name="description" content="Moyee Fairchain Coffee — radically good coffee voor jouw kantoor.">
 <link rel="icon" href="../assets/logo/favicon.svg">
@@ -11,7 +11,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;700&family=Roboto+Condensed:wght@400;700&display=swap" rel="stylesheet">
 <style>
-  html,body{margin:0;background:#fff;color:#212529}
+  html,body{margin:0;background:#fff;color:#212529;overflow-x:hidden;max-width:100vw}
   *{box-sizing:border-box}
   body{font-family:'Roboto Condensed','Helvetica Neue',Arial,sans-serif;-webkit-font-smoothing:antialiased}
   h1,h2,h3,h4{font-family:'Oswald',sans-serif;font-weight:500;letter-spacing:0}
@@ -104,6 +104,11 @@
     .cta-button { width: 100% !important; justify-content: center !important; }
     .impact-num { font-size: clamp(48px,12vw,72px) !important; }
 
+    .nav-cta { display: none !important; }
+    .nav-logo img { height: 26px !important; }
+    nav { gap: 10px !important; padding: 8px 14px !important; }
+    .nav-utility { gap: 8px !important; margin-left: auto !important; }
+    .hero-image:has(image-slot[style*="display: none"]) { display: none !important; }
     .bcorp-hero-badge { width: 56px !important; height: 76px !important; }
     /* 3-col grids → 1-col on phone */
     [style*="grid-template-columns: repeat(3,1fr)"] { grid-template-columns: 1fr !important; gap: 16px !important; }
