@@ -64,7 +64,7 @@ function Hero({ data, showBcorpBadge = false }) {
           }}
           onMouseOver={(e) => e.currentTarget.style.transform = 'translateY(-2px) scale(1.04)'}
           onMouseOut={(e) => e.currentTarget.style.transform = 'translateY(0) scale(1)'}>
-              <img src="assets/bcorp-badge.png" alt="Certified B Corporation"
+              <img src="/assets/bcorp-badge.png" alt="Certified B Corporation"
             style={{ width: '100%', height: '100%', display: 'block' }} />
             </a>
           }
@@ -371,35 +371,35 @@ function Products() {
   ];
 
   const items = (lang === 'en' ? [
-    { src: 'assets/products/single.webp', intensity: 2, acidity: 5, hi: false,
+    { src: '/assets/products/single.webp', intensity: 2, acidity: 5, hi: false,
       title: 'Single Origin', tag: 'Bright & refined',
       copy: 'One origin, one bean. Delicate and fruity with a hint of honey. High acidity, low intensity, for those who appreciate nuance.' },
-    { src: 'assets/products/double.webp', intensity: 3, acidity: 3, hi: false,
+    { src: '/assets/products/double.webp', intensity: 3, acidity: 3, hi: false,
       title: 'Double Blend', tag: 'In balance',
       copy: 'A blend of two beans. Full-bodied with fruit and chocolate. Medium acidity, slightly higher intensity, the all-rounder for the office.' },
-    { src: 'assets/products/triple.webp', intensity: 4, acidity: 2, hi: true,
+    { src: '/assets/products/triple.webp', intensity: 4, acidity: 2, hi: true,
       title: 'Triple Blend', tag: 'Crowd-pleaser',
       copy: 'Blend of three beans, from bean to bag. Full and creamy with chocolate, more approachable and intense. The coffee everyone likes.' },
-    { src: 'assets/products/dark.webp', intensity: 5, acidity: 1, hi: false,
+    { src: '/assets/products/dark.webp', intensity: 5, acidity: 1, hi: false,
       title: 'Dark Roast', tag: 'Deep & round',
       copy: 'Traditional Italian style with notes of brown sugar and almond. Our most intense, and least acidic, coffee.' },
-    { src: 'assets/products/lion-hills.webp', intensity: 3, acidity: 4, hi: false, badge: 'Microlot',
+    { src: '/assets/products/lion-hills.webp', intensity: 3, acidity: 4, hi: false, badge: 'Microlot',
       title: 'Emma Microlot', tag: 'Limited edition',
       copy: 'Our Microlot Series, a single-farm specialty from Ethiopia, with distinctive citrus and floral notes. For the connoisseur.' },
   ] : [
-    { src: 'assets/products/single.webp', intensity: 2, acidity: 5, hi: false,
+    { src: '/assets/products/single.webp', intensity: 2, acidity: 5, hi: false,
       title: 'Single Origin', tag: 'Helder & verfijnd',
       copy: 'Eén herkomst, één boon. Delicaat, fruitig met een vleugje honing. Hoge aciditeit, lage intensiteit, voor wie nuance proeft.' },
-    { src: 'assets/products/double.webp', intensity: 3, acidity: 3, hi: false,
+    { src: '/assets/products/double.webp', intensity: 3, acidity: 3, hi: false,
       title: 'Double Blend', tag: 'In balans',
       copy: 'Mix van twee bonen. Full-bodied met fruit en chocolade. Medium aciditeit, iets hogere intensiteit, de allrounder voor op kantoor.' },
-    { src: 'assets/products/triple.webp', intensity: 4, acidity: 2, hi: true,
+    { src: '/assets/products/triple.webp', intensity: 4, acidity: 2, hi: true,
       title: 'Triple Blend', tag: 'Crowd-pleaser',
       copy: 'Blend van drie bonen, from bean to bag. Vol en romig met chocolade, toegankelijker en intenser. De koffie die iedereen lekker vindt.' },
-    { src: 'assets/products/dark.webp', intensity: 5, acidity: 1, hi: false,
+    { src: '/assets/products/dark.webp', intensity: 5, acidity: 1, hi: false,
       title: 'Dark Roast', tag: 'Diep & rond',
       copy: 'Traditionele Italiaanse stijl met noten van bruine suiker en amandel. Onze meest intense, en minst zure, koffie.' },
-    { src: 'assets/products/lion-hills.webp', intensity: 3, acidity: 4, hi: false, badge: 'Microlot',
+    { src: '/assets/products/lion-hills.webp', intensity: 3, acidity: 4, hi: false, badge: 'Microlot',
       title: 'Emma Microlot', tag: 'Limited edition',
       copy: 'Onze Microlot Series, een single-farm specialty uit Ethiopië, met kenmerkende citrus- en bloemennoten. Voor de fijnproever.' },
   ]).map((item, i) => ({...item, ...PRODUCT_META[i]}));
@@ -501,7 +501,7 @@ function FairchainBlueprint() {
             style={{
               width: '100%',
               aspectRatio: '1 / 1',
-              backgroundImage: 'url(assets/fairchain-circle.png)',
+              backgroundImage: 'url(/assets/fairchain-circle.png)',
               backgroundSize: '235% 100%',
               backgroundPosition: 'left center',
               backgroundRepeat: 'no-repeat',
