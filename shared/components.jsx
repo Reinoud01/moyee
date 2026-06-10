@@ -87,14 +87,14 @@ function NoticeBar() {
 
 /* ───── Navigation, landing-page version with page-cluster switcher ───── */
 const ALL_PAGES = [
-  {key:'bcorp',         nl:'B-Corp & ESG',         en:'B-Corp & ESG',         file:'/b-corps/'},
-  {key:'tech',          nl:'Tech scale-ups',        en:'Tech scale-ups',       file:'/tech/'},
-  {key:'creative',      nl:'Creatieve agencies',    en:'Creative agencies',    file:'/creative/'},
-  {key:'professional',  nl:'Prof. services',         en:'Prof. services',        file:'/professional/'},
-  {key:'cowork',        nl:'Cowork & flex',          en:'Cowork & flex',         file:'/cowork/'},
-  {key:'finance',       nl:'Finance',                en:'Finance',               file:'/finance/'},
-  {key:'horeca',        nl:'HoReCa',                 en:'HoReCa',                file:'/horeca/'},
-  {key:'ngo',           nl:"NGO's",                  en:"NGOs",                  file:'/ngo/'},
+  {key:'bcorp',         nl:'B-Corp & ESG',         en:'B-Corp & ESG',         file:'../b-corps/'},
+  {key:'tech',          nl:'Tech scale-ups',        en:'Tech scale-ups',       file:'../tech/'},
+  {key:'creative',      nl:'Creatieve agencies',    en:'Creative agencies',    file:'../creative/'},
+  {key:'professional',  nl:'Prof. services',         en:'Prof. services',        file:'../professional/'},
+  {key:'cowork',        nl:'Cowork & flex',          en:'Cowork & flex',         file:'../cowork/'},
+  {key:'finance',       nl:'Finance',                en:'Finance',               file:'../finance/'},
+  {key:'horeca',        nl:'HoReCa',                 en:'HoReCa',                file:'../horeca/'},
+  {key:'ngo',           nl:"NGO's",                  en:"NGOs",                  file:'../ngo/'},
 ];
 
 function PageSwitcher({active}) {
@@ -139,8 +139,8 @@ function Nav({active}) {
       padding:'14px 40px',background:'#fff',
       borderBottom:'1px solid #F1F3F5',
     }}>
-      <a href="/b-corps/" style={{cursor:'pointer',display:'flex',alignItems:'center'}}>
-        <img src="/assets/logo/lockup-black.png" alt="moyee" style={{height:32}}/>
+      <a href="../b-corps/" style={{cursor:'pointer',display:'flex',alignItems:'center'}}>
+        <img src="../assets/logo/lockup-black.png" alt="moyee" style={{height:32}}/>
       </a>
 
       {/* Desktop page switcher */}
@@ -221,7 +221,7 @@ function Footer() {
       <div style={{maxWidth:1280,margin:'0 auto'}}>
         <div style={{display:'grid',gridTemplateColumns:'1.5fr 1fr 1fr 1fr',gap:40,marginBottom:50}}>
           <div>
-            <img src="/assets/logo/lockup-black.png" style={{height:32,filter:'brightness(0) invert(1)',marginBottom:18}}/>
+            <img src="../assets/logo/lockup-black.png" style={{height:32,filter:'brightness(0) invert(1)',marginBottom:18}}/>
             <p style={{fontSize:14,color:'rgba(255,255,255,0.7)',lineHeight:1.55,maxWidth:'36ch'}}>{tagline}</p>
           </div>
           {cols.map(c=>(
