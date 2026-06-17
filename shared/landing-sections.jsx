@@ -45,6 +45,7 @@ function Hero({ data, showBcorpBadge = false }) {
         <div className="hero-image" style={{ position: 'relative', aspectRatio: '4/5', background: '#1a1a1a', overflow: 'hidden' }}>
           <image-slot
             id={`hero-${data.key}`}
+            src="../assets/photos/hero.jpg"
             placeholder={data.hero.imagePlaceholder || 'Sleep een sfeerfoto hier'}
             shape="rect"
             style={{ width: '100%', height: '100%', display: 'block', background: '#1a1a1a', color: '#FFD900' }}>
@@ -275,6 +276,7 @@ function FullBleedQuote({ data, quote }) {
     }}>
       <image-slot
         id={`fullbleed-${data.key}`}
+        src="../assets/photos/fullbleed-partner.jpg"
         placeholder="Sleep een breedformaat sfeerfoto hier, koffiebar, team, productie"
         shape="rect"
         style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', display: 'block', background: '#1a1a1a', color: '#FFD900', zIndex: 0 }}>
@@ -306,13 +308,13 @@ function FairchainPillars({ data }) {
     : <>Wat is <span style={{ color: '#E5007D' }}>Fairchain</span> koffie?</>;
 
   const pillars = lang === 'en' ? [
-    { key: 'roast',  caption: ['Roasted in the',     'country of origin'],  placeholder: 'Photo roastery in Addis Ababa / Nairobi' },
-    { key: 'income', caption: ['Living wages',        'for farmers'],        placeholder: 'Photo farmer / cooperative / harvest' },
-    { key: 'forest', caption: ['Protecting and',      'restoring forests'],  placeholder: 'Photo regenerative farming / reforestation' },
+    { key: 'roast',  caption: ['Roasted in the',     'country of origin'],  photo: '../assets/photos/pillar-roast.jpg',  placeholder: 'Photo roastery in Addis Ababa / Nairobi' },
+    { key: 'income', caption: ['Living wages',        'for farmers'],        photo: '../assets/photos/pillar-income.jpg', placeholder: 'Photo farmer / cooperative / harvest' },
+    { key: 'forest', caption: ['Protecting and',      'restoring forests'],  photo: '../assets/photos/pillar-forest.jpg', placeholder: 'Photo regenerative farming / reforestation' },
   ] : [
-    { key: 'roast',  caption: ['Gebrand in het land', 'van herkomst'],       placeholder: 'Foto roastery in Addis Abeba / Nairobi' },
-    { key: 'income', caption: ['Leefbare inkomens',   'voor boeren'],        placeholder: 'Foto boer / cooperatief / oogst' },
-    { key: 'forest', caption: ['Bossen beschermen',   'en herstellen'],      placeholder: 'Foto regeneratieve landbouw / herbebossing' },
+    { key: 'roast',  caption: ['Gebrand in het land', 'van herkomst'],       photo: '../assets/photos/pillar-roast.jpg',  placeholder: 'Foto roastery in Addis Abeba / Nairobi' },
+    { key: 'income', caption: ['Leefbare inkomens',   'voor boeren'],        photo: '../assets/photos/pillar-income.jpg', placeholder: 'Foto boer / cooperatief / oogst' },
+    { key: 'forest', caption: ['Bossen beschermen',   'en herstellen'],      photo: '../assets/photos/pillar-forest.jpg', placeholder: 'Foto regeneratieve landbouw / herbebossing' },
   ];
 
   return (
@@ -335,6 +337,7 @@ function FairchainPillars({ data }) {
         }}>
             <image-slot
             id={`pillar-${data.key}-${p.key}`}
+            src={p.photo}
             placeholder={p.placeholder}
             shape="rect"
             style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', display: 'block', background: '#1a1a1a', color: '#FFD900', zIndex: 0 }}>
