@@ -582,7 +582,7 @@ function Tasting() {
 function Contact() {
   const {lang} = React.useContext(window.LangContext);
 
-  const heading  = lang === 'en' ? 'Call, email or chat' : 'Bellen, mailen of chatten';
+  const heading  = lang === 'en' ? 'Call or email' : 'Bellen of mailen';
   const subline  = lang === 'en'
     ? 'No form with 15 fields. No ticket number. Just a Moyista who knows you and calls you back.'
     : 'Geen formulier-met-15-velden. Geen ticketnummer. Wel een Moyista die je kent en terugbelt.';
@@ -590,11 +590,9 @@ function Contact() {
   const ways = lang === 'en' ? [
     { ic: <IconPhone size={28} />, h: 'Call us',              sub: 'Mon–Fri · 9:00–17:30', v: '020 737 22 95',     href: 'tel:+31207372295' },
     { ic: <IconMail  size={28} />, h: 'Email us',             sub: 'Response within 1 working day', v: 'b2b@moyeecoffee.com', href: 'mailto:b2b@moyeecoffee.com' },
-    { ic: <IconChat  size={28} />, h: 'Chat with a Moyista',  sub: 'Mon–Fri · 9:00–17:30', v: 'Start chat →',        href: '#' },
   ] : [
     { ic: <IconPhone size={28} />, h: 'Bel ons',              sub: 'Ma–vr · 9:00–17:30', v: '020 737 22 95',     href: 'tel:+31207372295' },
     { ic: <IconMail  size={28} />, h: 'Mail ons',             sub: 'Reactie binnen 1 werkdag', v: 'b2b@moyeecoffee.com', href: 'mailto:b2b@moyeecoffee.com' },
-    { ic: <IconChat  size={28} />, h: 'Chat met een Moyista', sub: 'Ma–vr · 9:00–17:30', v: 'Start chat →',        href: '#' },
   ];
 
   return (
@@ -607,22 +605,22 @@ function Contact() {
           </h2>
           <p style={{ fontSize: 17, color: '#495057', margin: 0 }}>{subline}</p>
         </Reveal>
-        <div className="hscroll-mobile contact-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(3,1fr)', gap: 24 }}>
+        <div className="hscroll-mobile contact-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(2,1fr)', gap: 28 }}>
           {ways.map((w, i) =>
           <Reveal key={i} delay={i * 90}>
               <a href={w.href} className="contact-card" style={{
-              display: 'flex', flexDirection: 'column', gap: 16, padding: '34px 30px',
+              display: 'flex', flexDirection: 'column', gap: 20, padding: '48px 44px',
               background: '#F8F9FA', borderRadius: 8, textDecoration: 'none', color: '#212529',
               border: '1px solid transparent', transition: 'all 240ms', height: '100%', boxSizing: 'border-box'
             }}
             onMouseOver={(e) => {e.currentTarget.style.background = '#fff';e.currentTarget.style.borderColor = '#E5007D';e.currentTarget.style.boxShadow = '0 4px 16px rgba(0,0,0,0.08)';}}
             onMouseOut={(e) => {e.currentTarget.style.background = '#F8F9FA';e.currentTarget.style.borderColor = 'transparent';e.currentTarget.style.boxShadow = 'none';}}>
-                <div style={{ width: 56, height: 56, borderRadius: '50%', background: '#E5007D', color: '#fff', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>{w.ic}</div>
+                <div style={{ width: 64, height: 64, borderRadius: '50%', background: '#E5007D', color: '#fff', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>{w.ic}</div>
                 <div>
-                  <h3 style={{ fontFamily: 'Oswald,sans-serif', fontWeight: 500, fontSize: 22, textTransform: 'uppercase', margin: '0 0 4px', color: '#212529' }}>{w.h}</h3>
-                  <span style={{ fontSize: 13, color: '#868E96' }}>{w.sub}</span>
+                  <h3 style={{ fontFamily: 'Oswald,sans-serif', fontWeight: 500, fontSize: 28, textTransform: 'uppercase', margin: '0 0 6px', color: '#212529' }}>{w.h}</h3>
+                  <span style={{ fontSize: 14, color: '#868E96' }}>{w.sub}</span>
                 </div>
-                <div style={{ fontFamily: 'Oswald,sans-serif', fontSize: 22, color: '#E5007D', textTransform: 'uppercase', letterSpacing: '0.02em', marginTop: 'auto' }}>{w.v}</div>
+                <div style={{ fontFamily: 'Oswald,sans-serif', fontSize: 30, color: '#E5007D', textTransform: 'uppercase', letterSpacing: '0.02em', marginTop: 'auto' }}>{w.v}</div>
               </a>
             </Reveal>
           )}
