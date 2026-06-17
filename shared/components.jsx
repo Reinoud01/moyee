@@ -152,14 +152,46 @@ function Nav({active}) {
 function Footer() {
   const {lang} = useContext(window.LangContext);
 
+  const PROEFPAKKET = 'https://www.moyeecoffee.com/shop/4-flavour-pack-4-kg-1640#attribute_values=3';
+  const BUSINESS    = 'https://business.moyeecoffee.com/';
   const cols = lang === 'en' ? [
-    {h:'For businesses', items:['Custom quote','Trial package','Equipment','Service & maintenance']},
-    {h:'Coffee',         items:['Single Origin','Double','Triple','Dark Roast']},
-    {h:'About Moyee',   items:['Fairchain','Our farmers','Impact report','Press']},
+    {h:'For businesses', items:[
+      {l:'Custom quote',        href:BUSINESS},
+      {l:'Trial package',       href:PROEFPAKKET},
+      {l:'Equipment',           href:BUSINESS},
+      {l:'Service & maintenance',href:'https://www.moyeecoffee.com/contact'},
+    ]},
+    {h:'Coffee', items:[
+      {l:'Single Origin', href:'https://www.moyeecoffee.com/shop/single-1-kg-4'},
+      {l:'Double',        href:'https://www.moyeecoffee.com/shop/double-1-kg-5'},
+      {l:'Triple',        href:'https://www.moyeecoffee.com/shop/triple-1-kg-6'},
+      {l:'Dark Roast',    href:'https://www.moyeecoffee.com/shop/dark-1-kg-7'},
+    ]},
+    {h:'About Moyee', items:[
+      {l:'Fairchain',     href:'https://www.moyeecoffee.com/impact/'},
+      {l:'Our farmers',   href:'https://www.moyeecoffee.com/our-social-impact/'},
+      {l:'Impact report', href:'https://www.moyeecoffee.com/radical-impact-coffee'},
+      {l:'Press',         href:'https://www.moyeecoffee.com/blog'},
+    ]},
   ] : [
-    {h:'Voor bedrijven', items:['Offerte op maat','Proefpakket','Apparatuur','Service & onderhoud']},
-    {h:'Koffie',         items:['Single Origin','Double','Triple','Dark Roast']},
-    {h:'Over Moyee',     items:['Fairchain','Onze boeren','Impact rapport','Pers']},
+    {h:'Voor bedrijven', items:[
+      {l:'Offerte op maat',     href:BUSINESS},
+      {l:'Proefpakket',         href:PROEFPAKKET},
+      {l:'Apparatuur',          href:BUSINESS},
+      {l:'Service & onderhoud', href:'https://www.moyeecoffee.com/nl/contact'},
+    ]},
+    {h:'Koffie', items:[
+      {l:'Single Origin', href:'https://www.moyeecoffee.com/shop/single-1-kg-4'},
+      {l:'Double',        href:'https://www.moyeecoffee.com/shop/double-1-kg-5'},
+      {l:'Triple',        href:'https://www.moyeecoffee.com/shop/triple-1-kg-6'},
+      {l:'Dark Roast',    href:'https://www.moyeecoffee.com/shop/dark-1-kg-7'},
+    ]},
+    {h:'Over Moyee', items:[
+      {l:'Fairchain',     href:'https://www.moyeecoffee.com/impact/'},
+      {l:'Onze boeren',   href:'https://www.moyeecoffee.com/our-social-impact/'},
+      {l:'Impact rapport',href:'https://www.moyeecoffee.com/nl/radical-impact-coffee'},
+      {l:'Pers',          href:'https://www.moyeecoffee.com/nl/blog'},
+    ]},
   ];
 
   const tagline = lang === 'en'
@@ -167,8 +199,8 @@ function Footer() {
     : 'Radically good coffee with radical impact. Sinds 2012, vanuit Amsterdam, gebrand in Addis Abeba & Amsterdam-Noord.';
 
   const legalLinks = lang === 'en'
-    ? ['Privacy','Terms','CoC 12345678']
-    : ['Privacy','Voorwaarden','KvK 12345678'];
+    ? [{l:'Privacy',href:'https://www.moyeecoffee.com/privacy-policy/'},{l:'Terms',href:'https://www.moyeecoffee.com/terms-and-conditions'},{l:'CoC 12345678'}]
+    : [{l:'Privacy',href:'https://www.moyeecoffee.com/privacy-policy/'},{l:'Voorwaarden',href:'https://www.moyeecoffee.com/nl/terms-and-conditions'},{l:'KvK 12345678'}];
 
   return (
     <footer style={{background:'#272727',color:'#fff',padding:'70px 40px 32px'}}>
@@ -182,7 +214,7 @@ function Footer() {
             <div key={c.h}>
               <h4 style={{fontFamily:'Oswald,sans-serif',fontWeight:500,fontSize:14,color:'#FFD900',textTransform:'uppercase',letterSpacing:'0.10em',marginBottom:14}}>{c.h}</h4>
               <ul style={{listStyle:'none',padding:0,margin:0,display:'flex',flexDirection:'column',gap:8}}>
-                {c.items.map(i=><li key={i}><a style={{color:'rgba(255,255,255,0.7)',fontSize:14,cursor:'pointer',textDecoration:'none'}}>{i}</a></li>)}
+                {c.items.map(i=><li key={i.l}><a href={i.href} target="_blank" rel="noreferrer" style={{color:'rgba(255,255,255,0.7)',fontSize:14,cursor:'pointer',textDecoration:'none'}}>{i.l}</a></li>)}
               </ul>
             </div>
           ))}
@@ -190,7 +222,9 @@ function Footer() {
         <div style={{borderTop:'1px solid rgba(255,255,255,0.1)',paddingTop:20,display:'flex',justifyContent:'space-between',alignItems:'center',fontSize:12,color:'rgba(255,255,255,0.5)',flexWrap:'wrap',gap:14}}>
           <span>© 2026 Moyee Coffee BV · Make every sip count</span>
           <div style={{display:'flex',gap:20}}>
-            {legalLinks.map(l=><a key={l} style={{color:'inherit',cursor:'pointer'}}>{l}</a>)}
+            {legalLinks.map(l=>l.href
+              ? <a key={l.l} href={l.href} target="_blank" rel="noreferrer" style={{color:'inherit',cursor:'pointer',textDecoration:'none'}}>{l.l}</a>
+              : <span key={l.l}>{l.l}</span>)}
           </div>
         </div>
       </div>
