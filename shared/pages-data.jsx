@@ -7,7 +7,7 @@ const PAGE_DATA = {
     title: 'B-Corps & ESG-kantoren, Moyee',
     hero: {
       eyebrow: 'B-Corp & ESG-kantoren',
-      headline: ['Jij bent gecertificeerd.', 'Je koffie ook.'],
+      headline: ['Jullie zijn gecertificeerd.', 'Jullie koffie ook?'],
       subline: 'Gewone koffie laat 10% van de waarde achter in het productieland. Moyee laat 50% achter, geboerd, gebrand én verpakt in Ethiopië en Kenia. Geen claim maar een businessmodel, en aantoonbaar in je ESG-rapport.',
       ctaPrimary: 'Vraag een proefpakket aan',
       imagePlaceholder: 'Sleep hier een foto van je kantoor / impact-rapport',
@@ -45,7 +45,7 @@ const PAGE_DATA = {
       title: 'B-Corps & ESG offices, Moyee',
       hero: {
         eyebrow: 'B-Corp & ESG offices',
-        headline: ["You're certified.", 'Your coffee too.'],
+        headline: ["You're certified.", 'Your coffee too?'],
         subline: 'Ordinary coffee leaves 10% of the value in the country of origin. Moyee leaves 50%, farmed, roasted and packaged in Ethiopia and Kenya. Not a claim but a business model, and demonstrable in your ESG report.',
         ctaPrimary: 'Request a trial package',
         imagePlaceholder: 'Drop a photo of your office / impact report here',

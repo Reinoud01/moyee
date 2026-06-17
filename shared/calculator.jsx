@@ -123,7 +123,7 @@ function Calculator() {
                 <div className="calc-result-num" style={{fontFamily:'Oswald,sans-serif',fontWeight:500,fontSize:34,lineHeight:1,color: i===3 ? '#FFD900' : '#E5007D'}}>{r.v}</div>
               </div>
             ))}
-            <a href="#cta" style={{marginTop:8,background:'#E5007D',color:'#fff',padding:'16px 22px',fontFamily:'Oswald,sans-serif',fontSize:14,textTransform:'uppercase',letterSpacing:'0.08em',borderRadius:4,cursor:'pointer',textDecoration:'none',textAlign:'center',display:'flex',alignItems:'center',justifyContent:'center',gap:10}}>
+            <a href="#contact" style={{marginTop:8,background:'#E5007D',color:'#fff',padding:'16px 22px',fontFamily:'Oswald,sans-serif',fontSize:14,textTransform:'uppercase',letterSpacing:'0.08em',borderRadius:4,cursor:'pointer',textDecoration:'none',textAlign:'center',display:'flex',alignItems:'center',justifyContent:'center',gap:10}}>
               {t.cta} <IconArrow size={16}/>
             </a>
           </div>
