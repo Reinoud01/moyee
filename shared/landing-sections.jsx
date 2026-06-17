@@ -15,9 +15,6 @@ function Hero({ data, showBcorpBadge = false }) {
     }}>
       <div style={{ maxWidth: 1280, margin: '0 auto', display: 'grid', gridTemplateColumns: '1.1fr 0.9fr', gap: 80, alignItems: 'center', position: 'relative' }}>
         <div>
-          <span className="hero-eyebrow" style={{ display: 'inline-block', fontSize: 12, letterSpacing: '0.24em', textTransform: 'uppercase', color: '#E5007D', fontWeight: 500, marginBottom: 24, borderTop: '2px solid #E5007D', paddingTop: 14 }}>
-            {data.hero.eyebrow}
-          </span>
           <h1 style={{
             fontFamily: 'Oswald,sans-serif', fontWeight: 500,
             fontSize: 'clamp(38px,5.4vw,76px)',

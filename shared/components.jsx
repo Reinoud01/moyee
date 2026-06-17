@@ -128,10 +128,7 @@ function PageSwitcher({active}) {
 
 function Nav({active}) {
   const {lang} = useContext(window.LangContext);
-  const [mobileOpen, setMobileOpen] = useState(false);
-  const ctaLabel   = lang === 'en' ? 'Trial package' : 'Proefpakket';
-  const closeLabel = lang === 'en' ? 'Close menu'   : 'Sluit menu';
-  const openLabel  = lang === 'en' ? 'Open menu'    : 'Open menu';
+  const ctaLabel = lang === 'en' ? 'Trial package' : 'Proefpakket';
   return (
     <nav style={{
       position:'sticky',top:0,zIndex:30,
@@ -139,57 +136,14 @@ function Nav({active}) {
       padding:'14px 40px',background:'#fff',
       borderBottom:'1px solid #F1F3F5',
     }}>
-      <a href="../b-corps/" className="nav-logo" style={{cursor:'pointer',display:'flex',alignItems:'center'}}>
+      <a href="../b-corps/" className="nav-logo" style={{cursor:'pointer',display:'flex',alignItems:'center',marginRight:'auto'}}>
         <img src="../assets/logo/lockup-black.png" alt="moyee" style={{height:32}}/>
       </a>
-
-      {/* Desktop page switcher */}
-      <div className="nav-desktop" style={{display:'flex',alignItems:'center',marginRight:'auto',marginLeft:24,border:'1px solid #F1F3F5'}}>
-        <PageSwitcher active={active}/>
-      </div>
 
       <div className="nav-utility" style={{display:'flex',gap:12,alignItems:'center'}}>
         <LangToggle/>
         <a className="nav-cta" href="https://www.moyeecoffee.com/shop/4-flavour-pack-4-kg-1640#attribute_values=3" target="_blank" rel="noreferrer" style={{color:'#E5007D',fontFamily:'Oswald,sans-serif',fontSize:14,textTransform:'uppercase',letterSpacing:'0.08em',textDecoration:'none',padding:'10px 18px',border:'1px solid #E5007D'}}>{ctaLabel}</a>
-
-        <button aria-label={mobileOpen ? closeLabel : openLabel} className="nav-hamburger" onClick={() => setMobileOpen(o => !o)} style={{
-          background:'transparent',border:0,padding:8,cursor:'pointer',color:'#212529',
-          width:42,height:42,display:'none',alignItems:'center',justifyContent:'center',
-        }}>
-          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-            {mobileOpen
-              ? <><path d="M18 6 6 18"/><path d="m6 6 12 12"/></>
-              : <><path d="M3 6h18"/><path d="M3 12h18"/><path d="M3 18h18"/></>
-            }
-          </svg>
-        </button>
       </div>
-
-      {mobileOpen && (
-        <div style={{
-          position:'absolute',top:'100%',left:0,right:0,
-          background:'#fff',borderBottom:'4px solid #E5007D',boxShadow:'0 8px 24px rgba(0,0,0,0.12)',
-          padding:'8px 0',
-        }}>
-          <ul style={{listStyle:'none',margin:0,padding:0}}>
-            {ALL_PAGES.map(p => {
-              const label = lang === 'en' ? p.en : p.nl;
-              return (
-                <li key={p.key}>
-                  <a href={p.file} style={{
-                    display:'block',padding:'14px 24px',
-                    color: p.key === active ? '#212529' : '#495057',
-                    background: p.key === active ? '#FFD900' : 'transparent',
-                    textDecoration:'none',
-                    fontFamily:'Oswald,sans-serif',fontSize:16,textTransform:'uppercase',letterSpacing:'0.06em',fontWeight:500,
-                    borderBottom:'1px solid #F1F3F5',
-                  }}>{label}</a>
-                </li>
-              );
-            })}
-          </ul>
-        </div>
-      )}
     </nav>
   );
 }
