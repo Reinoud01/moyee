@@ -154,9 +154,9 @@ function Testimonials({ data }) {
             display: 'flex', flexDirection: 'column', gap: 22,
             position: 'relative', height: '100%', boxSizing: 'border-box'
           }}>
-              <div style={{ minHeight: 44, display: 'flex', alignItems: 'center' }}>
+              <div style={{ minHeight: t.logoColor ? 72 : 44, display: 'flex', alignItems: 'center' }}>
                 {t.logo
-                  ? <img src={t.logo} alt={t.client} style={{ maxHeight: t.logoColor ? 48 : 38, maxWidth: 160, objectFit: 'contain', objectPosition: 'left center', ...(t.logoColor ? {} : { filter: 'grayscale(1) brightness(0.15)' }) }} />
+                  ? <img src={t.logo} alt={t.client} style={{ maxHeight: t.logoColor ? 72 : 38, maxWidth: t.logoColor ? 240 : 160, objectFit: 'contain', objectPosition: 'left center', ...(t.logoColor ? {} : { filter: 'grayscale(1) brightness(0.15)' }) }} />
                   : <span style={{ color: '#E5007D' }}><IconQuote size={36} stroke={1.8} /></span>
                 }
               </div>
