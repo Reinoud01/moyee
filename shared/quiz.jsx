@@ -399,7 +399,6 @@ function QuizResult({scores, lang, onRestart, onClose}) {
             {top.notes}
           </div>
           <div style={{display:'flex',gap:10,flexWrap:'wrap'}}>
-            <a href="#contact" onClick={onClose} style={{flex:'1 1 auto',background:'#FFD900',color:'#272727',padding:'14px 20px',fontFamily:'Oswald,sans-serif',fontSize:13,textTransform:'uppercase',letterSpacing:'0.08em',textDecoration:'none',display:'inline-flex',alignItems:'center',justifyContent:'center',gap:8,fontWeight:500}}>{t.quoteBtn}</a>
             <a href={top.url} target="_blank" rel="noreferrer" style={{flex:'1 1 auto',background:'transparent',color:'#fff',padding:'14px 20px',fontFamily:'Oswald,sans-serif',fontSize:13,textTransform:'uppercase',letterSpacing:'0.08em',textDecoration:'none',border:'1px solid rgba(255,255,255,0.3)',display:'inline-flex',alignItems:'center',justifyContent:'center',gap:8}}>{t.shopBtn}</a>
           </div>
         </div>

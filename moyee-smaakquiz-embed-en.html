@@ -1,0 +1,390 @@
+<!-- ============================================================
+     MOYEE SMAAKQUIZ — standalone embed
+     Plak dit hele bestand in een HTML-blok / iframe / CMS-pagina.
+     Volledig self-contained: React + Babel via CDN, NL/EN-toggle,
+     quiz-data en styling inline. Productfoto's komen van
+     https://moyeebusiness.com/assets/products/.
+     ============================================================ -->
+<meta charset="utf-8">
+<div id="moyee-smaakquiz"></div>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500&display=swap" rel="stylesheet">
+
+<script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+<script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+<script type="text/plain" id="moyee-quiz-src">
+(function () {
+  const { useState, useEffect, useContext, createContext } = React;
+  const IMG = 'https://moyeebusiness.com/assets/products/';
+  const CONTACT_URL = 'https://moyeebusiness.com/b-corps/#contact';
+
+  // ── Taal-context (NL standaard) ──
+  const LangContext = createContext({ lang: 'nl', setLang: () => {} });
+
+  // ── Koffie-definities (tweetalig) ──
+  const COFFEES = {
+    nl: {
+      single:   { name:'Single', sub:'Single Origin Limu · Ethiopia', roast:'Light roast',
+        notes:'Citrus, jasmijn, bergamot, rode bessen, cacao', body:'Levendig & helder', price:'€ 27,00',
+        color:'#292C7E', img:IMG+'single.webp',
+        why:'Onze kroonjuweel, langzaam gebrand op 197°C. De floraalste, friste koffie die we hebben. Voor wie zwarte koffie en filterzettingen kan waarderen.',
+        url:'https://www.moyeecoffee.com/shop/single-1-kg-4' },
+      double:   { name:'Double', sub:'Limu × Jimma · Ethiopia', roast:'Light–medium roast',
+        notes:'Honing, sinaasappel, melkchocolade', body:'In balans', price:'€ 25,00',
+        color:'#519E59', img:IMG+'double.webp',
+        why:'De allrounder. Fruitige Limu en zoete Jimma in perfecte balans. Werkt op filter én espresso, ideaal voor een gemengde koffiekeuken op kantoor.',
+        url:'https://www.moyeecoffee.com/shop/double-1-kg-5' },
+      triple:   { name:'Triple', sub:'Uganda · Rwanda · Congo', roast:'Medium roast',
+        notes:'Donkere chocolade, karamel, noten, rijp fruit', body:'Vol & gebalanceerd', price:'€ 23,00',
+        color:'#501644', img:IMG+'triple.webp',
+        why:'De crowd-pleaser. Vol lichaam, chocoladetonen en gematigde zuren. De beste keuze voor cappuccino/latte en grote kantoren met gemengde voorkeuren.',
+        url:'https://www.moyeecoffee.com/shop/triple-1-kg-6' },
+      dark:     { name:'Dark Roast', sub:'East African Blend', roast:'Dark roast',
+        notes:'Donkere chocolade, geroosterde noten, intens', body:'Vol, rond, krachtig', price:'€ 21,00',
+        color:'#292C2C', img:IMG+'dark.webp',
+        why:"Onze meest intense en minst zure koffie. Voor liefhebbers van pittige espresso en stevige melkdrankjes, en collega's die van Lavazza/Illy komen.",
+        url:'https://www.moyeecoffee.com/shop/dark-1-kg-7' },
+      microlot: { name:'Emma Microlot', sub:'Specialty · Limited release', roast:'Light roast · specialty grade',
+        notes:'Complex, hoge cupping score, exclusief', body:'Verfijnd, voor de connaisseur', price:'€ 33,50',
+        color:'#840048', img:IMG+'lion-hills.webp',
+        why:'Onze limited specialty microlot. Geselecteerd voor de koffie-nerd die het allerbeste van het beste wil. Beperkte voorraad, alleen te krijgen zolang de oogst duurt.',
+        url:'https://www.moyeecoffee.com/shop' },
+    },
+    en: {
+      single:   { name:'Single', sub:'Single Origin Limu · Ethiopia', roast:'Light roast',
+        notes:'Citrus, jasmine, bergamot, red berries, cacao', body:'Lively & bright', price:'€ 27.00',
+        color:'#292C7E', img:IMG+'single.webp',
+        why:'Our crown jewel, slow-roasted at 197°C. The most floral, freshest coffee we have. For those who appreciate black coffee and filter methods.',
+        url:'https://www.moyeecoffee.com/shop/single-1-kg-4' },
+      double:   { name:'Double', sub:'Limu × Jimma · Ethiopia', roast:'Light–medium roast',
+        notes:'Honey, orange, milk chocolate', body:'In balance', price:'€ 25.00',
+        color:'#519E59', img:IMG+'double.webp',
+        why:'The all-rounder. Fruity Limu and sweet Jimma in perfect balance. Works on filter and espresso, ideal for a mixed coffee kitchen at the office.',
+        url:'https://www.moyeecoffee.com/shop/double-1-kg-5' },
+      triple:   { name:'Triple', sub:'Uganda · Rwanda · Congo', roast:'Medium roast',
+        notes:'Dark chocolate, caramel, nuts, ripe fruit', body:'Full & balanced', price:'€ 23.00',
+        color:'#501644', img:IMG+'triple.webp',
+        why:'The crowd-pleaser. Full body, chocolate tones and moderate acidity. The best choice for cappuccino/latte and large offices with mixed preferences.',
+        url:'https://www.moyeecoffee.com/shop/triple-1-kg-6' },
+      dark:     { name:'Dark Roast', sub:'East African Blend', roast:'Dark roast',
+        notes:'Dark chocolate, roasted nuts, intense', body:'Full, round, powerful', price:'€ 21.00',
+        color:'#292C2C', img:IMG+'dark.webp',
+        why:"Our most intense and least acidic coffee. For lovers of strong espresso and robust milk drinks, and colleagues who come from Lavazza/Illy.",
+        url:'https://www.moyeecoffee.com/shop/dark-1-kg-7' },
+      microlot: { name:'Emma Microlot', sub:'Specialty · Limited release', roast:'Light roast · specialty grade',
+        notes:'Complex, high cupping score, exclusive', body:'Refined, for the connoisseur', price:'€ 33.50',
+        color:'#840048', img:IMG+'lion-hills.webp',
+        why:'Our limited specialty microlot. Selected for the coffee nerd who wants the very best of the best. Limited stock, only available while the harvest lasts.',
+        url:'https://www.moyeecoffee.com/shop' },
+    },
+  };
+
+  const SCORES = [
+    [ {dark:4, triple:1},  {triple:4, dark:2, double:1},  {double:4, triple:2},        {single:5, microlot:3, double:1} ],
+    [ {single:4, microlot:3, double:2}, {double:3, triple:4}, {dark:4, triple:1}, {single:1, double:1, triple:1, dark:1, microlot:1} ],
+    [ {single:3, microlot:4}, {double:4, triple:1}, {triple:4, dark:2}, {dark:5, triple:2} ],
+    [ {single:3, microlot:5}, {double:4, triple:3}, {triple:4, double:2, dark:2}, {microlot:5, single:2} ],
+    [ {single:4, microlot:3, double:2}, {triple:2, dark:4}, {triple:4, dark:3, double:2}, {double:3, triple:2} ],
+    [ {triple:3, dark:3, double:2}, {double:3, triple:3, dark:2}, {single:4, microlot:3, double:2}, {double:1, triple:1} ],
+  ];
+
+  const QUESTIONS = {
+    nl: [
+      { id:'acidity', q:'Wat is jullie smaak?',
+        sub:'Je koffie kan intens zijn (dark roast) of frisser (met wat aciditeit). Hou je van wat zuren in je koffie?',
+        opts:['Liever helemaal niet zuur: ik hou van intens','Een vleugje zuren is prima','Stevig, laat het smaken','Geef mij maar levendig & fris'] },
+      { id:'roast', q:'Welke branding past bij jou?',
+        sub:'Licht = behoud van origin-smaken. Donker = vollere, gebrande tonen.',
+        opts:['Licht gebrand','Medium gebrand','Donker gebrand','Geen voorkeur'] },
+      { id:'intensity', q:'Hoe sterk mag het smaken?',
+        sub:'Sterkte gaat over intensiteit en body, hoeveel "punch" heeft die kop?',
+        opts:['Subtiel & verfijnd','In balans, niet te heftig','Stevig, laat het smaken',"Vol & krachtig, recht voor z'n raap"] },
+      { id:'specialty', q:'Hoe veel ben je met koffie bezig?',
+        sub:'Even concreet: zoek je een specialty-ervaring of gewoon iets lekkers in de mok?',
+        opts:['Specialty, ik ben best een koffie-nerd','Lekkere everyday-koffie zonder fratsen','Iets gangbaars dat iedereen lekker vindt','Het allerbeste, koste wat het kost'] },
+      { id:'drink', q:'Hoe drink je je koffie het liefst?',
+        opts:['Zwart, filter of pour-over','Espresso puur','Cappuccino, latte, met melk','Een mix, hangt van de dag af'] },
+      { id:'machine', q:'Wat voor machine staat er op kantoor?',
+        sub:'We leveren bonen heel, of voorgemalen als filter- of espressomaling.',
+        opts:['Espressomachine met bonenmaler','Volautomaat (bonen erin, kop eruit)','Filter / V60 / Chemex / Moccamaster','Weet ik nog niet, adviseer me'] },
+    ],
+    en: [
+      { id:'acidity', q:"What's your taste?",
+        sub:'Your coffee can be intense (dark roast) or fresher (with some acidity). Do you like some acidity in your coffee?',
+        opts:['Prefer no acidity at all: I like it intense','A hint of acidity is fine','Substantial, let it shine','Give me lively & fresh'] },
+      { id:'roast', q:'Which roast level suits you?',
+        sub:'Light = preserving origin flavours. Dark = fuller, roasted tones.',
+        opts:['Light roast','Medium roast','Dark roast','No preference'] },
+      { id:'intensity', q:'How intense should it taste?',
+        sub:'Intensity is about body, how much punch does that cup have?',
+        opts:['Subtle & refined','Balanced, not too heavy','Substantial, let it shine','Full & powerful, straight to the point'] },
+      { id:'specialty', q:'How into coffee are you?',
+        sub:'Honestly: are you looking for a specialty experience or just something tasty in the mug?',
+        opts:["Specialty, I'm quite the coffee nerd",'Good everyday coffee without fuss','Something common that everyone likes','The very best, whatever it costs'] },
+      { id:'drink', q:'How do you prefer your coffee?',
+        opts:['Black, filter or pour-over','Pure espresso','Cappuccino, latte, with milk','A mix, depends on the day'] },
+      { id:'machine', q:'What machine is at the office?',
+        sub:'We deliver whole beans, or pre-ground as filter or espresso grind.',
+        opts:['Espresso machine with bean grinder','Bean-to-cup machine','Filter / V60 / Chemex / Moccamaster','Not sure yet, advise me'] },
+    ],
+  };
+
+  function buildQuestions(lang) {
+    return QUESTIONS[lang].map((q, qi) => ({
+      ...q,
+      opts: q.opts.map((label, oi) => ({ label, score: SCORES[qi][oi] })),
+    }));
+  }
+
+  function QuizButton({ onOpen }) {
+    const { lang } = useContext(LangContext);
+    const label = lang === 'en' ? "What's your taste? Take the quiz" : 'Wat is jouw smaak? Doe de quiz';
+    return (
+      <button onClick={onOpen} style={{
+        background:'#272727', color:'#FFD900', border:'2px solid #FFD900',
+        padding:'18px 30px', fontFamily:'Oswald,sans-serif', fontSize:15,
+        textTransform:'uppercase', letterSpacing:'0.08em', fontWeight:500,
+        cursor:'pointer', display:'inline-flex', alignItems:'center', gap:12,
+        transition:'transform 240ms, background 240ms',
+      }}
+      onMouseOver={e => { e.currentTarget.style.background='#FFD900'; e.currentTarget.style.color='#272727'; }}
+      onMouseOut={e => { e.currentTarget.style.background='#272727'; e.currentTarget.style.color='#FFD900'; }}>
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+          <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><path d="M12 17h.01"/><circle cx="12" cy="12" r="10"/>
+        </svg>
+        {label}
+      </button>
+    );
+  }
+
+  function QuizTeaser({ onOpen }) {
+    const { lang, setLang } = useContext(LangContext);
+    const eyebrow = lang === 'en' ? 'Taste quiz · 6 questions · 60 seconds' : 'Smaakquiz · 6 vragen · 60 seconden';
+    const heading = lang === 'en'
+      ? <>Which Moyee fits <span style={{color:'#E5007D'}}>your office</span>?</>
+      : <>Welke Moyee past bij <span style={{color:'#E5007D'}}>jouw kantoor</span>?</>;
+    return (
+      <section style={{ background:'#FFD900', color:'#212529', padding:'56px 40px', position:'relative', overflow:'hidden', fontFamily:'system-ui,-apple-system,Segoe UI,Roboto,sans-serif' }}>
+        <button onClick={() => setLang(lang === 'en' ? 'nl' : 'en')} style={{
+          position:'absolute', top:16, right:20, background:'transparent', border:'1px solid #272727',
+          color:'#272727', fontFamily:'Oswald,sans-serif', fontSize:12, letterSpacing:'0.10em',
+          padding:'6px 12px', cursor:'pointer', textTransform:'uppercase',
+        }}>{lang === 'en' ? 'NL' : 'EN'}</button>
+        <div style={{ maxWidth:1280, margin:'0 auto', display:'flex', alignItems:'center', justifyContent:'space-between', gap:36, flexWrap:'wrap' }}>
+          <div style={{ display:'flex', gap:24, alignItems:'center' }}>
+            <div style={{ width:64, height:64, borderRadius:'50%', background:'#272727', color:'#FFD900', display:'flex', alignItems:'center', justifyContent:'center', flexShrink:0 }}>
+              <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><path d="M12 17h.01"/><circle cx="12" cy="12" r="10"/>
+              </svg>
+            </div>
+            <div>
+              <div style={{ fontSize:12, letterSpacing:'0.24em', textTransform:'uppercase', color:'#840048', fontWeight:500, marginBottom:6 }}>{eyebrow}</div>
+              <h2 style={{ fontFamily:'Oswald,sans-serif', fontWeight:500, fontSize:'clamp(28px,3.4vw,42px)', margin:0, color:'#212529', textTransform:'uppercase', lineHeight:1.05 }}>{heading}</h2>
+            </div>
+          </div>
+          <QuizButton onOpen={onOpen}/>
+        </div>
+      </section>
+    );
+  }
+
+  function QuizModal({ open, onClose }) {
+    const { lang } = useContext(LangContext);
+    const questions = buildQuestions(lang);
+    const [step, setStep] = useState(0);
+    const [answers, setAnswers] = useState({});
+    const isResult = step >= questions.length;
+    const total = questions.length;
+
+    useEffect(() => { if (open) { setStep(0); setAnswers({}); } }, [open]);
+    useEffect(() => {
+      const h = e => { if (e.key === 'Escape') onClose(); };
+      if (open) document.addEventListener('keydown', h);
+      return () => document.removeEventListener('keydown', h);
+    }, [open]);
+
+    if (!open) return null;
+
+    function pick(qid, oi) {
+      setAnswers({ ...answers, [qid]: oi });
+      setTimeout(() => setStep(s => s + 1), 220);
+    }
+
+    function computeScores() {
+      const scores = { single:0, double:0, triple:0, dark:0, microlot:0 };
+      const maxPossible = { single:0, double:0, triple:0, dark:0, microlot:0 };
+      questions.forEach(q => {
+        const oi = answers[q.id];
+        const optMaxes = { single:0, double:0, triple:0, dark:0, microlot:0 };
+        q.opts.forEach(o => Object.entries(o.score).forEach(([k,v]) => { if (v > optMaxes[k]) optMaxes[k] = v; }));
+        Object.entries(optMaxes).forEach(([k,v]) => { maxPossible[k] += v; });
+        if (oi == null) return;
+        Object.entries(q.opts[oi].score).forEach(([k,v]) => { scores[k] += v; });
+      });
+      const pct = {};
+      Object.keys(scores).forEach(k => { pct[k] = maxPossible[k] > 0 ? Math.round((scores[k] / maxPossible[k]) * 100) : 0; });
+      return pct;
+    }
+
+    const q = questions[step];
+    const progress = Math.round((step / total) * 100);
+    const quizLabel  = lang === 'en' ? 'Taste quiz' : 'Smaakquiz';
+    const questionOf = lang === 'en' ? `Question ${step+1} of ${total}` : `Vraag ${step+1} van ${total}`;
+    const prevLabel  = lang === 'en' ? '← Previous question' : '← Vorige vraag';
+
+    return (
+      <div onClick={onClose} style={{
+        position:'fixed', inset:0, zIndex:100, background:'rgba(0,0,0,0.75)', backdropFilter:'blur(6px)',
+        display:'flex', alignItems:'center', justifyContent:'center', padding:'40px 20px',
+        animation:'qfade 240ms ease-out', fontFamily:'system-ui,-apple-system,Segoe UI,Roboto,sans-serif',
+      }}>
+        <style>{`@keyframes qfade{from{opacity:0}to{opacity:1}}@keyframes qpop{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}@keyframes qbar{from{width:0}}`}</style>
+        <div onClick={e => e.stopPropagation()} style={{
+          background:'#272727', color:'#fff', width:'100%', maxWidth:880, maxHeight:'92vh', overflow:'auto',
+          position:'relative', animation:'qpop 320ms ease-out', borderTop:'4px solid #FFD900',
+        }}>
+          <button onClick={onClose} aria-label="Sluit quiz" style={{
+            position:'absolute', top:18, right:18, zIndex:2, background:'transparent', border:0, color:'#fff',
+            cursor:'pointer', width:36, height:36, display:'flex', alignItems:'center', justifyContent:'center', lineHeight:1,
+          }}>
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+          </button>
+
+          {!isResult ? (
+            <div style={{ padding:'40px 44px 44px' }}>
+              <div style={{ display:'flex', justifyContent:'space-between', alignItems:'center', marginBottom:22 }}>
+                <span style={{ fontSize:11, letterSpacing:'0.24em', textTransform:'uppercase', color:'#FFD900', fontWeight:500 }}>{quizLabel}</span>
+                <span style={{ fontFamily:'Oswald,sans-serif', fontSize:13, color:'rgba(255,255,255,0.6)', letterSpacing:'0.08em', textTransform:'uppercase' }}>{questionOf}</span>
+              </div>
+              <div style={{ height:3, background:'rgba(255,255,255,0.12)', marginBottom:36, position:'relative', overflow:'hidden' }}>
+                <div style={{ position:'absolute', inset:0, width:`${progress}%`, background:'#FFD900', transition:'width 400ms ease-out' }}/>
+              </div>
+              <h3 style={{ fontFamily:'Oswald,sans-serif', fontWeight:500, fontSize:'clamp(22px,3.8vw,40px)', lineHeight:1.1, margin:'0 0 10px', textTransform:'uppercase', color:'#fff' }}>{q.q}</h3>
+              {q.sub && <p style={{ fontSize:15, color:'rgba(255,255,255,0.65)', margin:'0 0 30px', lineHeight:1.5 }}>{q.sub}</p>}
+              <div style={{ display:'flex', flexDirection:'column', gap:10 }}>
+                {q.opts.map((o,i) => (
+                  <button key={i} onClick={() => pick(q.id, i)} style={{
+                    textAlign:'left', background:'transparent', color:'#fff', border:'1px solid rgba(255,255,255,0.18)',
+                    padding:'18px 22px', fontSize:16, cursor:'pointer', fontFamily:'inherit', transition:'all 180ms',
+                    display:'flex', alignItems:'center', gap:14,
+                  }}
+                  onMouseOver={e=>{e.currentTarget.style.background='#FFD900';e.currentTarget.style.color='#272727';e.currentTarget.style.borderColor='#FFD900';e.currentTarget.style.transform='translateX(4px)';}}
+                  onMouseOut={e=>{e.currentTarget.style.background='transparent';e.currentTarget.style.color='#fff';e.currentTarget.style.borderColor='rgba(255,255,255,0.18)';e.currentTarget.style.transform='translateX(0)';}}>
+                    <span style={{ flexShrink:0, width:28, height:28, border:'1.5px solid currentColor', display:'flex', alignItems:'center', justifyContent:'center', fontFamily:'Oswald,sans-serif', fontSize:13, fontWeight:500 }}>{String.fromCharCode(65+i)}</span>
+                    <span style={{ flex:1 }}>{o.label}</span>
+                  </button>
+                ))}
+              </div>
+              {step > 0 && (
+                <button onClick={() => setStep(s => Math.max(0, s-1))} style={{
+                  marginTop:24, background:'transparent', color:'rgba(255,255,255,0.5)', border:0, fontSize:13, cursor:'pointer',
+                  fontFamily:'Oswald,sans-serif', textTransform:'uppercase', letterSpacing:'0.10em', display:'inline-flex', alignItems:'center', gap:6,
+                }}>{prevLabel}</button>
+              )}
+            </div>
+          ) : (
+            <QuizResult scores={computeScores()} lang={lang} onRestart={() => { setStep(0); setAnswers({}); }} onClose={onClose}/>
+          )}
+        </div>
+      </div>
+    );
+  }
+
+  function QuizResult({ scores, lang, onRestart, onClose }) {
+    const coffees = COFFEES[lang];
+    const ranked = Object.entries(scores).sort((a,b) => b[1]-a[1]);
+    const [topKey, topPct] = ranked[0];
+    const top = coffees[topKey];
+
+    const t = lang === 'en' ? {
+      matchLabel:'Your match', matchHeading:<>Our <span style={{color:'#FFD900'}}>{top.name}</span> fits best</>,
+      matchSub:'Based on your 6 answers.', flavorLabel:'Taste profile', quoteBtn:'Request quote →', shopBtn:'Visit shop',
+      restTitle:'The other roasts', restart:'↺ Redo the quiz',
+      tastingCta:<>Not sure? <a href="https://www.moyeecoffee.com/nl/shop/3-smaakpakketten-750-gram-90?category=1#attribute_values=3" target="_blank" rel="noreferrer" style={{color:'#FFD900',textDecoration:'underline'}}>Order a trial package</a>, drink, compare, choose.</>,
+    } : {
+      matchLabel:'Jouw match', matchHeading:<>Onze <span style={{color:'#FFD900'}}>{top.name}</span> past het best</>,
+      matchSub:'Op basis van jouw 6 antwoorden.', flavorLabel:'Smaakprofiel', quoteBtn:'Vraag offerte aan →', shopBtn:'Bekijk shop',
+      restTitle:'De andere roasts', restart:'↺ Quiz opnieuw doen',
+      tastingCta:<>Niet zeker? <a href="https://www.moyeecoffee.com/nl/shop/3-smaakpakketten-750-gram-90?category=1#attribute_values=3" target="_blank" rel="noreferrer" style={{color:'#FFD900',textDecoration:'underline'}}>Bestel een proefpakket</a>, drink, vergelijk, kies.</>,
+    };
+
+    return (
+      <div>
+        <div style={{ padding:'40px 44px 24px' }}>
+          <span style={{ fontSize:11, letterSpacing:'0.24em', textTransform:'uppercase', color:'#FFD900', fontWeight:500 }}>{t.matchLabel}</span>
+          <h3 style={{ fontFamily:'Oswald,sans-serif', fontWeight:500, fontSize:'clamp(34px,4.4vw,52px)', lineHeight:1, margin:'10px 0 6px', textTransform:'uppercase', color:'#fff' }}>{t.matchHeading}</h3>
+          <p style={{ fontSize:15, color:'rgba(255,255,255,0.7)', margin:0, lineHeight:1.5 }}>{t.matchSub}</p>
+        </div>
+        <div style={{ display:'grid', gridTemplateColumns:'1fr 1.05fr', gap:0, alignItems:'stretch' }}>
+          <div style={{ background:top.color, padding:'40px 44px', position:'relative', display:'flex', flexDirection:'column', justifyContent:'space-between', minHeight:380, overflow:'hidden' }}>
+            <div style={{ position:'absolute', top:24, right:24, background:'#FFD900', color:'#272727', padding:'10px 18px', fontFamily:'Oswald,sans-serif', fontSize:13, letterSpacing:'0.10em', textTransform:'uppercase', fontWeight:500 }}>{topPct}% match</div>
+            <img src={top.img} alt={top.name} style={{ width:'100%', maxWidth:240, margin:'auto', display:'block', objectFit:'contain', filter:'drop-shadow(4px 8px 24px rgba(0,0,0,0.4))' }}/>
+          </div>
+          <div style={{ padding:'40px 44px', background:'#1a1a1a' }}>
+            <div style={{ fontFamily:'Oswald,sans-serif', fontWeight:500, fontSize:11, color:'#FFD900', textTransform:'uppercase', letterSpacing:'0.14em', marginBottom:6 }}>{top.sub}</div>
+            <div style={{ fontSize:14, color:'rgba(255,255,255,0.55)', marginBottom:18 }}>{top.roast} · {top.body} · {top.price}</div>
+            <p style={{ fontSize:15, lineHeight:1.55, color:'rgba(255,255,255,0.88)', margin:'0 0 18px' }}>{top.why}</p>
+            <div style={{ fontSize:13, color:'rgba(255,255,255,0.55)', padding:'14px 0', borderTop:'1px solid rgba(255,255,255,0.1)', borderBottom:'1px solid rgba(255,255,255,0.1)', marginBottom:18 }}>
+              <strong style={{ color:'#FFD900', fontFamily:'Oswald,sans-serif', textTransform:'uppercase', letterSpacing:'0.10em', fontSize:11, display:'block', marginBottom:4 }}>{t.flavorLabel}</strong>
+              {top.notes}
+            </div>
+            <div style={{ display:'flex', gap:10, flexWrap:'wrap' }}>
+              <a href={top.url} target="_blank" rel="noreferrer" style={{ flex:'1 1 auto', background:'transparent', color:'#fff', padding:'14px 20px', fontFamily:'Oswald,sans-serif', fontSize:13, textTransform:'uppercase', letterSpacing:'0.08em', textDecoration:'none', border:'1px solid rgba(255,255,255,0.3)', display:'inline-flex', alignItems:'center', justifyContent:'center', gap:8 }}>{t.shopBtn}</a>
+            </div>
+          </div>
+        </div>
+        <div style={{ padding:'30px 44px 44px', borderTop:'1px solid rgba(255,255,255,0.08)' }}>
+          <div style={{ fontFamily:'Oswald,sans-serif', fontWeight:500, fontSize:13, color:'rgba(255,255,255,0.5)', textTransform:'uppercase', letterSpacing:'0.12em', marginBottom:16 }}>{t.restTitle}</div>
+          <div style={{ display:'flex', flexDirection:'column', gap:8 }}>
+            {ranked.slice(1).map(([k,p]) => {
+              const c = coffees[k];
+              return (
+                <div key={k} style={{ display:'grid', gridTemplateColumns:'auto 1fr auto auto', alignItems:'center', gap:14, padding:'10px 0' }}>
+                  <span style={{ width:10, height:10, background:c.color }}/>
+                  <div>
+                    <div style={{ fontFamily:'Oswald,sans-serif', fontWeight:500, fontSize:15, color:'#fff', textTransform:'uppercase', letterSpacing:'0.04em' }}>{c.name}</div>
+                    <div style={{ fontSize:12, color:'rgba(255,255,255,0.5)' }}>{c.notes}</div>
+                  </div>
+                  <div style={{ width:160, height:4, background:'rgba(255,255,255,0.08)', position:'relative' }}>
+                    <div style={{ position:'absolute', inset:0, width:`${p}%`, background:c.color, animation:'qbar 600ms ease-out' }}/>
+                  </div>
+                  <span style={{ fontFamily:'Oswald,sans-serif', fontSize:14, color:'rgba(255,255,255,0.8)', minWidth:42, textAlign:'right' }}>{p}%</span>
+                </div>
+              );
+            })}
+          </div>
+          <div style={{ display:'flex', gap:14, marginTop:30, paddingTop:24, borderTop:'1px solid rgba(255,255,255,0.08)', justifyContent:'space-between', alignItems:'center', flexWrap:'wrap' }}>
+            <button onClick={onRestart} style={{ background:'transparent', color:'rgba(255,255,255,0.6)', border:0, fontFamily:'Oswald,sans-serif', fontSize:13, cursor:'pointer', textTransform:'uppercase', letterSpacing:'0.10em', padding:0 }}>{t.restart}</button>
+            <div style={{ fontSize:13, color:'rgba(255,255,255,0.45)', maxWidth:'42ch' }}>{t.tastingCta}</div>
+          </div>
+        </div>
+      </div>
+    );
+  }
+
+  function App() {
+    const [lang, setLang] = useState('en');
+    const [open, setOpen] = useState(false);
+    return (
+      <LangContext.Provider value={{ lang, setLang }}>
+        <QuizTeaser onOpen={() => setOpen(true)}/>
+        <QuizModal open={open} onClose={() => setOpen(false)}/>
+      </LangContext.Provider>
+    );
+  }
+
+  ReactDOM.createRoot(document.getElementById('moyee-smaakquiz')).render(<App/>);
+})();
+</script>
+
+<script>
+  // Compileer de quiz met de classic JSX-runtime (React.createElement) en voer uit.
+  (function () {
+    var src = document.getElementById('moyee-quiz-src').textContent;
+    var out = Babel.transform(src, { presets: [['react', { runtime: 'classic' }]] });
+    (0, eval)(out.code);
+  })();
+</script>

@@ -1,0 +1,141 @@
+<!-- Moyee coffee calculator — standalone embed (EN). No dependencies, paste this whole block into any page. -->
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500&display=swap" rel="stylesheet">
+<section id="moyee-calculator" style="background:#EEECE1;padding:110px 40px;position:relative;font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif;box-sizing:border-box">
+  <div style="max-width:1280px;margin:0 auto">
+    <div style="margin:0 auto 50px;max-width:780px;text-align:center">
+      <span style="font-size:12px;letter-spacing:0.24em;text-transform:uppercase;color:#E5007D;font-weight:500">Calculate your subscription</span>
+      <h2 style="font-family:Oswald,sans-serif;font-weight:500;font-size:clamp(36px,4.4vw,58px);margin:12px 0 14px;color:#212529;line-height:1;text-transform:uppercase">
+        How much coffee does <span style="color:#E5007D">your office</span> need?
+      </h2>
+      <p style="font-size:17px;line-height:1.55;color:#495057;margin:0;max-width:60ch">
+        We calculate with 3 cups per day per drinker (1 cup = 9 grams), 5 days a week. Slide or type, we calculate along.
+      </p>
+    </div>
+
+    <div class="mc-card" style="background:#fff;padding:48px 56px;border-radius:8px;box-shadow:0 4px 16px rgba(0,0,0,0.06);display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,340px),1fr));gap:64px;align-items:center">
+      <div style="min-width:0">
+        <label for="mc-emp" style="display:block;font-family:Oswald,sans-serif;text-transform:uppercase;letter-spacing:0.10em;font-size:13px;color:#495057;margin-bottom:18px;font-weight:500">
+          Number of coffee drinkers at the office
+        </label>
+        <div style="display:flex;align-items:baseline;gap:14px;margin-bottom:24px">
+          <input id="mc-emp" type="number" min="1" max="500" value="20"
+            style="width:160px;font-family:Oswald,sans-serif;font-weight:500;font-size:84px;color:#E5007D;background:transparent;border:0;border-bottom:2px solid #E5007D;outline:none;padding:0 0 4px;line-height:1">
+          <span class="mc-colleagues" style="font-family:Oswald,sans-serif;font-size:22px;color:#212529;text-transform:uppercase;letter-spacing:0.04em">colleagues</span>
+        </div>
+        <input id="mc-range" type="range" min="1" max="200" value="20" style="width:100%;accent-color:#E5007D;height:4px">
+        <div style="display:flex;justify-content:space-between;font-size:12px;color:#868E96;margin-top:8px;font-family:Oswald,sans-serif;letter-spacing:0.08em;text-transform:uppercase">
+          <span>1</span><span>50</span><span>100</span><span>200+</span>
+        </div>
+
+        <div style="margin-top:36px;padding:18px 22px;background:#F2DAE6;border-radius:8px;font-size:14px;color:#212529;line-height:1.5">
+          <strong style="font-family:Oswald,sans-serif;text-transform:uppercase;letter-spacing:0.08em;font-size:13px;color:#E5007D;display:block;margin-bottom:4px">Our calculation</strong>
+          <span id="mc-formula">20 × 3 cups × 9 g × 5 days = <strong>2.7 kg / week</strong></span>
+        </div>
+      </div>
+
+      <div style="display:flex;flex-direction:column;gap:16px;min-width:0">
+        <!-- Per day -->
+        <div class="mc-row" style="display:flex;justify-content:space-between;align-items:center;padding:18px 22px;background:#F8F9FA;border-radius:8px;color:#212529;border-left:4px solid #E5007D">
+          <div>
+            <div style="font-family:Oswald,sans-serif;text-transform:uppercase;letter-spacing:0.10em;font-size:12px;color:#868E96;font-weight:500">Per day</div>
+            <div id="mc-day-sub" style="font-size:13px;margin-top:4px;color:#495057">60 cups</div>
+          </div>
+          <div id="mc-day-val" class="mc-result-num" style="font-family:Oswald,sans-serif;font-weight:500;font-size:34px;line-height:1;color:#E5007D">0.54 kg</div>
+        </div>
+        <!-- Per week -->
+        <div class="mc-row" style="display:flex;justify-content:space-between;align-items:center;padding:18px 22px;background:#F8F9FA;border-radius:8px;color:#212529;border-left:4px solid #E5007D">
+          <div>
+            <div style="font-family:Oswald,sans-serif;text-transform:uppercase;letter-spacing:0.10em;font-size:12px;color:#868E96;font-weight:500">Per week</div>
+            <div id="mc-week-sub" style="font-size:13px;margin-top:4px;color:#495057">300 cups</div>
+          </div>
+          <div id="mc-week-val" class="mc-result-num" style="font-family:Oswald,sans-serif;font-weight:500;font-size:34px;line-height:1;color:#E5007D">2.7 kg</div>
+        </div>
+        <!-- Per month -->
+        <div class="mc-row" style="display:flex;justify-content:space-between;align-items:center;padding:18px 22px;background:#F8F9FA;border-radius:8px;color:#212529;border-left:4px solid #E5007D">
+          <div>
+            <div style="font-family:Oswald,sans-serif;text-transform:uppercase;letter-spacing:0.10em;font-size:12px;color:#868E96;font-weight:500">Per month</div>
+            <div id="mc-month-sub" style="font-size:13px;margin-top:4px;color:#495057">≈ 12 bags of 1 kg</div>
+          </div>
+          <div id="mc-month-val" class="mc-result-num" style="font-family:Oswald,sans-serif;font-weight:500;font-size:34px;line-height:1;color:#E5007D">11.7 kg</div>
+        </div>
+        <!-- Indicative -->
+        <div class="mc-row" style="display:flex;justify-content:space-between;align-items:center;padding:18px 22px;background:#272727;border-radius:8px;color:#fff;border-left:4px solid #FFD900">
+          <div>
+            <div style="font-family:Oswald,sans-serif;text-transform:uppercase;letter-spacing:0.10em;font-size:12px;color:rgba(255,255,255,0.6);font-weight:500">Indicative</div>
+            <div style="font-size:13px;margin-top:4px;color:rgba(255,255,255,0.8)">per month · excl. VAT</div>
+          </div>
+          <div id="mc-eur-val" class="mc-result-num" style="font-family:Oswald,sans-serif;font-weight:500;font-size:34px;line-height:1;color:#FFD900">€ 292</div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <style>
+    /* big number may shrink, never overflow */
+    #moyee-calculator #mc-emp{ max-width:100%; }
+    @media (max-width: 760px){
+      #moyee-calculator{padding:64px 20px}
+      #moyee-calculator .mc-card{grid-template-columns:1fr;gap:40px;padding:32px 24px}
+    }
+    @media (max-width: 480px){
+      #moyee-calculator{padding:48px 16px}
+      #moyee-calculator .mc-card{padding:24px 18px;gap:32px}
+      #moyee-calculator #mc-emp{font-size:64px;width:120px}
+      #moyee-calculator .mc-colleagues{font-size:18px}
+      #moyee-calculator .mc-result-num{font-size:28px}
+      #moyee-calculator .mc-row{padding:14px 16px}
+    }
+    @media (max-width: 360px){
+      #moyee-calculator #mc-emp{font-size:52px;width:96px}
+      #moyee-calculator .mc-result-num{font-size:24px}
+    }
+  </style>
+
+  <script>
+  (function(){
+    var emp   = document.getElementById('mc-emp');
+    var range = document.getElementById('mc-range');
+    var fmt = function(num, d){ return num.toLocaleString('en-GB', {maximumFractionDigits: d}); };
+
+    function render(){
+      var n = parseInt(emp.value, 10);
+      if (isNaN(n)) n = 0;
+      var gramsPerDay = n * 27;              // 1 drinker = 3 cups × 9 g
+      var kgPerWeek   = (gramsPerDay * 5) / 1000;
+      var kgPerMonth  = kgPerWeek * 4.33;
+      var bags1kg     = Math.ceil(kgPerMonth);
+      var eurPerMonth = Math.round(kgPerMonth * 25);
+
+      document.getElementById('mc-day-val').textContent   = fmt(gramsPerDay/1000, 2) + ' kg';
+      document.getElementById('mc-day-sub').textContent   = (n*3) + ' cups';
+      document.getElementById('mc-week-val').textContent  = fmt(kgPerWeek, 1) + ' kg';
+      document.getElementById('mc-week-sub').textContent  = (n*15) + ' cups';
+      document.getElementById('mc-month-val').textContent = fmt(kgPerMonth, 1) + ' kg';
+      document.getElementById('mc-month-sub').textContent = '≈ ' + bags1kg + ' bags of 1 kg';
+      document.getElementById('mc-eur-val').textContent   = '€ ' + fmt(eurPerMonth, 0);
+      document.getElementById('mc-formula').innerHTML     =
+        n + ' × 3 cups × 9 g × 5 days = <strong>' + fmt(gramsPerDay*5/1000, 2) + ' kg / week</strong>';
+    }
+
+    emp.addEventListener('input', function(){
+      var v = emp.value;
+      if (v === '') { render(); return; }
+      var num = parseInt(v, 10);
+      if (isNaN(num)) return;
+      num = Math.min(500, Math.max(0, num));
+      if (num <= 200) range.value = Math.max(1, num);
+      render();
+    });
+    emp.addEventListener('blur', function(){
+      if (emp.value === '' || Number(emp.value) < 1) { emp.value = 1; range.value = 1; render(); }
+    });
+    range.addEventListener('input', function(){
+      emp.value = range.value;
+      render();
+    });
+
+    render();
+  })();
+  </script>
+</section>
