@@ -696,6 +696,16 @@ function PriceValue() {
       { label: 'Full traceability', text: 'You know exactly where the coffee comes from, traceable to a cooperative, farmer, region or even a single micro-lot.' },
       { label: 'Arabica only', text: 'Specialty coffee always comes from the high-quality Arabica plant, known for its complexity of flavour.' },
     ],
+    chartHeading: 'Moyee vs similar brands',
+    axisPrice: 'PRICE',
+    axisBrand: 'BRAND',
+    brands: [
+      { name: 'MOYEE COFFEE',     sub: 'Triple Blend',   price: '23€',   h: 150, img: '../assets/products/triple.webp',        alt: 'Moyee Triple',        hi: true },
+      { name: 'LOT61',            sub: 'FIVR',            price: '28€',   h: 256, img: '../assets/products/lot61.png',          alt: 'Lot61' },
+      { name: 'WAKULI',           sub: 'House Blend',     price: '28.7€', h: 270, img: '../assets/products/wakuli.png',         alt: 'Wakuli' },
+      { name: 'BOCCA',            sub: 'Espresso Blend',  price: '30€',   h: 298, img: '../assets/products/bocca.png',          alt: 'Bocca' },
+      { name: 'DE KOFFIE JONGENS', sub: 'Medium Roast',   price: '32€',   h: 340, img: '../assets/products/koffiejongens.png',  alt: 'De Koffie Jongens' },
+    ],
   } : {
     eyebrow: 'Prijs & kwaliteit',
     heading: 'Specialty coffee. Verrassend betaalbaar.',
@@ -713,6 +723,16 @@ function PriceValue() {
       { label: 'Onderscheidend terroir', text: 'Het unieke karakter van de grond, het klimaat en de hoogte waarop de koffie groeit, is duidelijk proefbaar in de kop.' },
       { label: 'Volledige transparantie', text: 'Je weet precies waar de koffie vandaan komt, traceerbaar tot een specifieke coöperatie, boer, regio of zelfs micro-kavel.' },
       { label: 'Alleen Arabica', text: 'Specialty coffee is altijd afkomstig van de hoogwaardige Arabica-plant, bekend om zijn complexiteit in smaak.' },
+    ],
+    chartHeading: 'Moyee vs vergelijkbare merken',
+    axisPrice: 'PRIJS',
+    axisBrand: 'MERK',
+    brands: [
+      { name: 'MOYEE COFFEE',     sub: 'Triple Blend',   price: '23€',   h: 150, img: '../assets/products/triple.webp',        alt: 'Moyee Triple',        hi: true },
+      { name: 'LOT61',            sub: 'FIVR',            price: '28€',   h: 256, img: '../assets/products/lot61.png',          alt: 'Lot61' },
+      { name: 'WAKULI',           sub: 'House Blend',     price: '28,7€', h: 270, img: '../assets/products/wakuli.png',         alt: 'Wakuli' },
+      { name: 'BOCCA',            sub: 'Espresso Blend',  price: '30€',   h: 298, img: '../assets/products/bocca.png',          alt: 'Bocca' },
+      { name: 'DE KOFFIE JONGENS', sub: 'Medium Roast',   price: '32€',   h: 340, img: '../assets/products/koffiejongens.png',  alt: 'De Koffie Jongens' },
     ],
   };
 
@@ -766,6 +786,43 @@ function PriceValue() {
             </div>
           </div>
         )}
+
+        {/* Prijsvergelijking, staafdiagram Moyee vs vergelijkbare merken */}
+        <Reveal delay={150}>
+          <div className="mpc-chart-wrap" style={{ marginTop: 72, textAlign: 'center' }}>
+            <div className="mpc-chart" style={{ position: 'relative', display: 'flex', alignItems: 'flex-end', justifyContent: 'center', gap: 'clamp(8px,2.4vw,26px)', padding: '0 0 0 16px', minHeight: 380, maxWidth: 900, margin: '0 auto', borderLeft: '3px solid rgba(255,255,255,0.85)', borderBottom: '3px solid rgba(255,255,255,0.85)' }}>
+              <span style={{ position: 'absolute', top: -6, left: 18, fontSize: 13, letterSpacing: '0.12em', color: 'rgba(255,255,255,0.9)' }}>{t.axisPrice}</span>
+              <span style={{ position: 'absolute', bottom: -28, right: 0, fontSize: 13, letterSpacing: '0.12em', color: 'rgba(255,255,255,0.9)' }}>{t.axisBrand}</span>
+
+              {t.brands.map(b => (
+                <div key={b.name} className="mpc-col" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', flex: '1 1 0', maxWidth: 130 }}>
+                  <div style={{ background: b.hi ? '#fff' : '#272727', color: b.hi ? '#E5007D' : '#fff', border: b.hi ? '3px solid #fff' : 'none', borderRadius: '50%', width: 'clamp(56px,11vw,76px)', height: 'clamp(56px,11vw,76px)', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', marginBottom: 14, boxShadow: b.hi ? '0 0 0 4px rgba(255,255,255,0.35)' : 'none' }}>
+                    <span style={{ fontWeight: 700, fontSize: 'clamp(14px,3.2vw,21px)', lineHeight: 1 }}>{b.price}</span>
+                    <span style={{ fontSize: 9, fontWeight: 500, opacity: b.hi ? 0.75 : 0.7 }}>(1KG)</span>
+                  </div>
+                  <div className="mpc-bar" style={{ position: 'relative', overflow: 'hidden', height: b.h, width: '100%', background: '#fff', borderRadius: '4px 4px 0 0' }}>
+                    <span style={{ position: 'absolute', bottom: 88, left: '50%', transform: 'translateX(-50%) rotate(180deg)', writingMode: 'vertical-rl', fontFamily: 'Oswald,sans-serif', fontWeight: 700, fontSize: 'clamp(13px,2.6vw,17px)', lineHeight: 1.05, color: b.hi ? '#E5007D' : '#272727', textTransform: 'uppercase', letterSpacing: '0.02em' }}>
+                      {b.name}<br/><span style={{ fontWeight: 500, fontSize: '0.8em' }}>{b.sub}</span>
+                    </span>
+                    <img src={b.img} alt={b.alt} style={{ position: 'absolute', bottom: 8, left: '50%', transform: 'translateX(-50%)', width: '78%', maxHeight: 74, objectFit: 'contain' }}/>
+                  </div>
+                </div>
+              ))}
+            </div>
+            <h3 style={{ fontFamily: 'Oswald,sans-serif', fontWeight: 700, fontSize: 'clamp(26px,5vw,52px)', color: '#fff', margin: '64px 0 0', textTransform: 'uppercase', letterSpacing: '0.01em' }}>{t.chartHeading}</h3>
+          </div>
+        </Reveal>
+
+        <style>{`
+          @media (max-width: 600px) {
+            section .mpc-chart { min-height: 300px !important; gap: 6px !important; }
+            section .mpc-col:nth-child(3) .mpc-bar { height: 120px !important; }
+            section .mpc-col:nth-child(4) .mpc-bar { height: 200px !important; }
+            section .mpc-col:nth-child(5) .mpc-bar { height: 212px !important; }
+            section .mpc-col:nth-child(6) .mpc-bar { height: 236px !important; }
+            section .mpc-col:nth-child(7) .mpc-bar { height: 268px !important; }
+          }
+        `}</style>
       </div>
     </section>
   );
